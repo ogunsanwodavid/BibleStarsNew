@@ -293,40 +293,63 @@
 
 
     <!-- Here is information about the Big House-->
-    <section class="w-full flex flex-col space-y-4 bg-transparent px-7 py-6 md:px-[10%]">
+    <section class="w-full flex flex-col space-y-4 bg-transparent px-7 py-5 max-w-[800px] mx-auto">
         <!-- Heading -->
         <h2 class="text-darkgold text-3xl font-bold font-nunito md:text-4xl">Welcome!</h2>
 
-        <!-- The main info about the big house -->
-        <div class="space-y-2 md:space-y-3">
-            <p class="text-white text-base font-raleway font-semibold md:text-lg">This is the Bible Stars! A multi-facetted faith based reality show and entertainment experience! Are you ready for the biggest reality show experience that will inspire, and entertain you like never before? With the EVICTION SHOW wrapped up we are set to bring on the next phase of our journey with action packed surprises, bigger platform and give a big house experience like never done before.
-            </p>
+        <p class="text-white text-base font-raleway font-semibold md:text-lg">This is the Bible Stars! A multi-facetted faith based reality show and entertainment experience! Are you ready for the biggest reality show experience that will inspire, and entertain you like never before? With the EVICTION SHOW wrapped up we are set to bring on the next phase of our journey with action packed surprises, bigger platform and give a big house experience like never done before.
+        </p>
 
-            <!----- The Big House Experience -->
-            <div class="w-full space-y-1 bg-[rgba(32,33,35,0.05)]">
-                <h3 class="mt-2 text-darkgold text-2xl font-nunito font-bold md:mt-5 md:text-3xl">The Big House Experience</h3>
-                <p class="text-white text-base font-raleway font-medium md:text-lg">Kingdom Royalty and Values, Glamour, Amazing Prizes, Surprise Celebrity Guests, Fiercer Battles, State of Art Masterpieces! THIS IS BIG HOUSE! Brace yourself for 15 thrilling activities in just 30 days, culminating in the crowning of our champion "The Bible Personality of the Year"!</p> 
-                <p class="text-white text-base font-raleway font-medium md:text-lg"><a href="./stars.html" class="inline text-magenta font-bold underline">MEET OUR STARS</a>, who won the 12 keys to the big house. They have blazed through the EVICTION SHOW, hailing from diverse backgrounds and church denominations across Nigeria. Your favorite stars can brace on in the show with your votes and online presence. 
-                </p>
-            </div>
+        <!------- Accordion for Sub Headings ----->
+        <ul class="w-full flex flex-col space-y-2 bg-transparent mt-3 md:mt-6" id="accordion">
 
-            <!----- Amazing Prices ------>
-            <div class="space-y-1 md:space-y-2">
-                <h3 class="mt-2 text-darkgold text-2xl font-nunito font-bold md:mt-5 md:text-3xl">Amazing Prices</h3>
-                <p class="text-white text-base font-raleway font-medium md:text-lg">While the winner of the show will drive off with a brand-new car and a whopping 10 million Naira cash prize, the first runner up and second runner up are not left out of winning!</p>
-                <p class="text-white text-base font-raleway font-medium md:text-lg">Also other housemates get win other amazing instant prizes in different segments! On this show everyone is a winner!</p>
-                <p class="text-white text-base font-raleway font-medium md:text-lg">As you follow the gripping journey of our stars, you'll have the chance to join in and win amazing cash prizes of up to 100,000 Naira through our <a href="viewersprizeplay.html" class="inline text-magenta font-bold underline">VIEWERS PRIZE PLAY</a>.</p>
-            </div>
-            
-            <!----- Operation 100 Partners Campaign ---->
-            <div class="space-y-1 md:space-y-2">
-                <h3 class="mt-2 text-darkgold text-2xl font-nunito font-bold md:mt-5 md:text-3xl">Operation 100 Partners Campaign</h3>
-                <p class="text-white text-base font-raleway font-medium md:text-lg">We are bringing together a team that is ready to reclaim entertainment and win back our youths who have gone into crime and recapture the instability of Nigeria through good entertainment.</p>
-                <p class="text-white text-base font-raleway font-medium md:text-lg">Regular shows have attracted and kept our youth busy while promoting nothing but nudity, drunkenness and immorality, join us to raise the bar and produce a show with quality entertainment that produces more value and will influence the change of hearts!</p>
-                <p class="text-white text-base font-raleway font-medium md:text-lg">Only 100 slots! <a href="partners.html" class="inline text-magenta font-bold underline">Click here</a> to join the powerful team today!</p>
-            </div>
-        </div>
-        
+            <!--The Big House Experience-->
+            <li class="accordion py-2 px-2 rounded-md bg-[rgba(255,255,255,0.1)] space-y-2 md:px-4">
+                <h1 class="flex items-center justify-between">
+                    <div class="w-[80%] h-max text-base font-bold text-darkgold cursor-pointer hover:text-light-purple md:text-lg">The Big House Experience</div>
+
+                    <img src="./public/images/icon-plus.svg" class="accordion-ctrl h-6 cursor-pointer  duration-150 ease-linear" alt="">
+
+                </h1>
+                
+                <div class="accordion-text closed hidden text-white text-sm font-extralight font-raleway md:text-base">
+                    <p class="">Kingdom Royalty and Values, Glamour, Amazing Prizes, Surprise Celebrity Guests, Fiercer Battles, State of Art Masterpieces! THIS IS BIG HOUSE! Brace yourself for 15 thrilling activities in just 30 days, culminating in the crowning of our champion "The Bible Personality of the Year"!</p>
+                    <p class=""><a href="./stars.html" class="inline text-magenta font-bold underline">MEET OUR STARS</a>, who won the 12 keys to the big house. They have blazed through the EVICTION SHOW, hailing from diverse backgrounds and church denominations across Nigeria. Your favorite stars can brace on in the show with your votes and online presence.</p>
+                </div>
+            </li>
+
+            <!--Amazing Prices-->
+            <li class="accordion py-2 px-2 rounded-md bg-[rgba(255,255,255,0.1)] space-y-2 md:px-4">
+                <h1 class="flex items-center justify-between">
+                    <div class="w-[80%] h-max text-base font-bold text-darkgold cursor-pointer hover:text-light-purple md:text-lg">Amazing Prices</div>
+
+                    <img src="./public/images/icon-plus.svg" class="accordion-ctrl h-6 cursor-pointer duration-150 ease-linear" alt="">
+
+                </h1>
+                
+                <div class="accordion-text closed hidden text-white text-sm font-extralight font-raleway md:text-base">
+                    <p class="">While the winner of the show will drive off with a brand-new car and a whopping 10 million Naira cash prize, the first runner up and second runner up are not left out of winning!</p>
+                    <p class="">Also other housemates get win other amazing instant prizes in different segments! On this show everyone is a winner!</p>
+                    <p class="">As you follow the gripping journey of our stars, you'll have the chance to join in and win amazing cash prizes of up to 100,000 Naira through our <a href="viewersprizeplay.html" class="inline text-magenta font-bold underline">VIEWERS PRIZE PLAY</a>.</p>
+                </div>
+            </li>
+
+            <!--Operation 100 Partners Campaign-->
+            <li class="accordion py-2 px-2 rounded-md bg-[rgba(255,255,255,0.1)] space-y-2 md:px-4">
+                <h1 class="flex items-center justify-between">
+                    <div class="w-[80%] h-max text-base font-bold text-darkgold cursor-pointer hover:text-light-purple md:text-lg">Operation 100 Partners Campaign</div>
+
+                    <img src="./public/images/icon-plus.svg" class="accordion-ctrl h-6 cursor-pointer duration-150 ease-linear" alt="">
+
+                </h1>
+                
+                <div class="accordion-text closed hidden text-white text-sm font-extralight font-raleway md:text-base">
+                    <p class="">We are bringing together a team that is ready to reclaim entertainment and win back our youths who have gone into crime and recapture the instability of Nigeria through good entertainment.</p>
+                    <p class="">Regular shows have attracted and kept our youth busy while promoting nothing but nudity, drunkenness and immorality, join us to raise the bar and produce a show with quality entertainment that produces more value and will influence the change of hearts!</p>
+                    <p class="">Only 100 slots! <a href="partners.html" class="inline text-magenta font-bold underline">Click here</a> to join the powerful team today!</p>
+                </div>
+            </li>
+        </ul>        
     </section>
 
 
