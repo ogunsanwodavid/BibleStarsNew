@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-----------Important meta tags----------->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Christian Quiz, Reality Bible Stars">
+    <meta name="description" content="Bible Star TV Show">
+    <meta name="author" content="">
+    <meta property="og:description" content="Bible Star TV Show">
+    <meta property="og:author" content="">
+    <meta property="og:image" itemprop="image" content="https://drive.google.com/file/d/1z9sSYCaCuPBYzNkCYUkruwU_q57V9_68/view?usp=drive_link">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:image:width" content="300">
+    <meta property="og:image:height" content="300">
+    <meta property="og:title" content="">
+    <link href="./public/images/bible-stars-logo.png" rel="shortcut icon" type="image/png">
+    <link href="./public/images/bible-stars-logo.png" rel="apple-touch-icon">
+    <link href="./public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="./public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="114x114">
+
+    <!-----------Title---------->
+    <title>Bible Stars TV Show : More than just a show</title>
+
+    <!------------Favicon------------->
+    <link rel="shortcut icon" href="./public/images/bible-stars-logo.png" type="image/x-icon">
+
+    <!-------Linked stylesheets, fonts, icons and libraries------------>
+    <link rel="stylesheet" href="./css/output.css">
+
+    <!----------Fontawesome icons---------->
+
+    
+    <!--------Google Fonts----------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!---- Swiper js ---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+
+    <!--------------Added Styles------------>
+    <style>
+        body{
+            background-image: url('./public/images/web-bg-compressed.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        @media (min-width: 900px) {
+            body{
+                background-image: url('./public/images/rotated-web-bg.jpg');
+            }
+        }
+
+        /** Ensures proper background positioning for carousel slides ***/
+        .mySlides, .swiper-slide{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        /** Style for scrollbar of latest contents **/
+        #latest-con-slide::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        #latest-con-slide::-webkit-scrollbar-track {
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        
+        #latest-con-slide::-webkit-scrollbar-thumb {
+            background-color: #FCAE1E;
+            border-radius:10px;
+        }
+
+
+        /***** This animation is responsible for the smooth yellow transitions****/ 
+        
+        .yellow-move {
+            animation-name: move;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+        }
+
+        @-webkit-keyframes move {
+            0% {width:0px}
+            50% {width: 100%}
+            100% {width:0px}
+        }
+
+        @keyframes move {
+            0% {width:0px}
+            50% {width: 100%}
+            100% {width: 0px}
+        }
+
+        @media (max-width:250px) {
+            #sidebar-main{
+                width: 100%
+            }
+        }
+
+        @media (min-width: 900px) {
+            .day-review:nth-of-type(odd) .color-showcase{
+                border-radius: 0.75rem 0 0 0.75rem !important;
+            }
+
+            .day-review:nth-of-type(even) .color-showcase{
+                border-radius: 0 0.75rem 0.75rem 0 !important;
+            }
+
+            .day-review:nth-of-type(odd) .review-text{
+                border-radius: 0 0.75rem 0.75rem 0 !important;
+            }
+
+            .day-review:nth-of-type(even) .review-text{
+                border-radius: 0.75rem 0 0 0.75rem !important;
+            }
+
+            .day-review .connecting-line{
+                display: none !important;
+            }
+
+            /**  absolute top-[50%] left-0 -translate-x-24 -translate-y-1/2 h-16 w-16 rounded-full bg-slate-900 **/
+            .day-review:nth-of-type(odd) .connecting-circle{
+                right:0;
+                transform: translate(6rem , -50%);
+                background-color: #FCAE1E;
+            }
+
+            .day-review:nth-of-type(even) .connecting-circle{
+                left:0;
+                transform: translate(-6rem , -50%);
+                background-color: #0f1729;
+            }
+
+            /** absolute top-[50%] left-0 -translate-x-8 -translate-y-1/2 w-8 h-1 bg-light-orange **/
+            .day-review:nth-of-type(odd) .support-con-line{
+                right: 0;
+                transform: translate(2rem , 50%);
+                background-color: #0f1729;
+            }
+
+            .day-review:nth-of-type(even) .support-con-line{
+                left: 0;
+                transform: translate(-2rem , -50%);
+                background-color: #FCAE1E;
+            }
+
+            /**absolute bottom-[50%] left-0 -translate-x-16 w-1 h-24 bg-light-orange -z-10**/
+            .day-review:nth-of-type(odd) .support-con-line-2{
+                right:0;
+                transform: translate(4rem);
+                background-color: #0f1729;
+            }
+
+            .day-review:nth-of-type(even) .support-con-line-2{
+                left:0;
+                transform: translate(-4rem);
+                background-color: #FCAE1E;
+            }
+
+            .day-review:first-of-type .connecting-circle , .day-review:first-of-type  .support-con-line, .day-review:first-of-type .support-con-line-2{
+                display: none;
+            }
+
+            /****** Custom CSS properties for the swiper *****/
+            :root{
+                --swiper-pagination-color: #FCAE1E;
+                --swiper-pagination-bullet-width: 1.5rem;
+                --swiper-pagination-bullet-height: 2px;
+                --swiper-pagination-bullet-vertical-gap: 10px;
+                --swiper-pagination-bullet-inactive-color: #000;
+                --swiper-pagination-bullet-inactive-opacity: 0.4;
+                --swiper-navigation-color: #FCAE1E;
+                --swiper-navigation-size: 36px;
+                --swiper-navigation-sides-offset: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body class="relative">
+    
+    <!--Navbar is fixed to the top of the webpage-->
+    <nav class="fixed top-0 left-0 w-full flex items-center justify-between bg-slate-900 px-4 py-0 z-40 md:px-[5%]">
+        <!--Logo-->
+        <a href="index.html"><img src="./public/images/bible-stars-logo.png" alt="" class="h-20 md:h-24" ></a>
+
+        <!-- Text links-->
+        <div class="hidden items-center space-x-6 font-nunito text-white md:flex">
+            <ul class="flex text-base font-bold space-x-5">
+                <li><a href="index.html" class="page-active hover:underline ease-linear">Home</a></li>
+                <li><a href="blog.html" class="hover:underline ease-linear">Blog</a></li>
+                <li><a href="stars.html" class="hover:underline ease-linear">Stars</a></li>
+                <li><a href="votenow.html" class="hover:underline ease-linear">Vote Now</a></li>
+                <li><a href="catchtheactions.html" class="hover:underline ease-linear">Catch the Actions</a></li>
+                <li><a href="crew.html" class="hover:underline ease-linear">Crew</a></li>
+                <li><a href="viewersprizeplay.html" class="hover:underline ease-linear">Viewers prize play</a></li>
+            </ul>
+        </div>
+
+        <!-- Partner With Us button -->
+        <a href="partners.html" class="hidden w-max md:block"><button class="w-36 h-12 bg-light-orange text-white text-base font-nunito font-bold rounded-lg hover:bg-dark-orange ease-linear duration-200">Partner With Us</button></a>
+
+        <!--Hamburger/Fries menu icon to open hidden navigation for mobile-->
+        <img src="./public/images/fries-menu-icon.svg" alt="" class="h-7 md:hidden" id="fries-menu-icon">
+    </nav>
+    
+    <!--------- Hidden side navbar ----------->
+    <section class="fixed top-0 left-0 w-0 h-[100vh] overflow-hidden bg-[rgba(0,0,0,0.3)] z-50 font-nunito ease-in duration-200 md:hidden" id="sidebar">
+
+        <!--This has the white background for the links-->
+        <div class="h-full w-[250px] bg-white overflow-y-auto overflow-x-hidden" id="sidebar-main">
+
+            <!--Close icon-->
+            <img src="./public/images/close-icon.svg" alt="" class="h-8 ml-auto mt-6 mr-5" id="close-icon">
+
+            <!--Text links and respective icons-->
+            <ul class="flex flex-col space-y-5 py-4 mt-8 mx-5 border-y-[1.5px] border-slate-500 !text-slate-900 text-base font-bold" style="width:calc(100% - 2.5rem)">
+
+                <!--Home Link-->
+                <li><a href="index.html" class="flex items-center space-x-3"><img src="./public/images/home-icon.svg" alt="" class="w-6"> <span>Home</span></a></li>
+
+                <!--Blog Link-->
+                <li><a href="blog.html" class="flex items-center space-x-3"><img src="./public/images/blog-icon.svg" alt="" class="w-6"> <span>Blog</span></a></li>
+
+                <!--Stars Link-->
+                <li><a href="stars.html" class="flex items-center space-x-3"><img src="./public/images/stars-icon.svg" alt="" class="w-6"> <span>Stars</span></a></li>
+
+                <!--Vote Now Link-->
+                <li><a href="votenow.html" class="flex items-center space-x-3"><img src="./public/images/votenow-icon.svg" alt="" class="w-6"> <span>Vote Now</span></a></li>
+
+                <!--Catch The Actions Link-->
+                <li><a href="catchtheactions.html" class="flex items-center space-x-3"><img src="./public/images/catchtheactions-icon.svg" alt="" class="w-6"> <span>Catch The Actions</span></a></li>
+
+                <!--Crew Link-->
+                <li><a href="crew.html" class="flex items-center space-x-3"><img src="./public/images/crew-icon.svg" alt="" class="w-6"> <span>Crew</span></a></li>
+
+                <!--Viewers Prize Play Link-->
+                <li><a href="viewersprizeplay.html" class="flex items-center space-x-3"><img src="./public/images/viewersprizeplay-icon.svg" alt="" class="w-6"> <span>Viewers Prize Play</span></a></li>
+                
+            </ul>
+
+            <!-- Partner With Us Button -->
+            <div class="mt-6 mx-5" style="width: calc(100% - 2.5rem)">
+                <a href="partners.html" class="block w-max mx-auto"><button class="w-36 h-12 bg-light-orange text-white text-base font-bold rounded-lg">Partner With Us</button></a>
+            </div>
+
+        </div>
+    </section>
+    <!---- #0f1729 is equivalent of slate-gray-900 -->
+
+    <!--------- Carousel ----------->
+    <div class="swiper bg-slate-900 w-full mt-[80px] overflow-hidden  md:mt-[96px]">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide w-full">
+                <img src="./assets/home/home-slide-1.jpg" alt="" class="w-full">
+            </div>
+            <div class="swiper-slide w-full">
+                <img src="./assets/home/home-slide-2.jpg" alt="" class="w-full">
+            </div>
+            <div class="swiper-slide w-full">
+                <img src="./assets/home/home-slide-3.jpg" alt="" class="w-full">
+            </div>
+            <div class="swiper-slide w-full">
+                <img src="./assets/home/home-slide-4.jpg" alt="" class="w-full">
+            </div>
+            <div class="swiper-slide w-full">
+                <img src="./assets/home/home-slide-5.jpg" alt="" class="w-full">
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination !hidden md:!block"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev !hidden md:!block"></div>
+        <div class="swiper-button-next !hidden  md:!block"></div>
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+
+    <!-- Here is information about the Big House-->
+    <section class="w-full flex flex-col space-y-4 bg-transparent px-7 py-6 md:px-[10%]">
+        <!-- Heading -->
+        <h2 class="text-darkgold text-3xl font-bold font-nunito md:text-4xl">Welcome!</h2>
+
+        <!-- The main info about the big house -->
+        <div class="space-y-2 md:space-y-3">
+            <p class="text-white text-base font-raleway font-semibold md:text-lg">This is the Bible Stars! A multi-facetted faith based reality show and entertainment experience! Are you ready for the biggest reality show experience that will inspire, and entertain you like never before? With the EVICTION SHOW wrapped up we are set to bring on the next phase of our journey with action packed surprises, bigger platform and give a big house experience like never done before.
+            </p>
+
+            <!----- The Big House Experience -->
+            <div class="w-full space-y-1 bg-[rgba(32,33,35,0.05)]">
+                <h3 class="mt-2 text-darkgold text-2xl font-nunito font-bold md:mt-5 md:text-3xl">The Big House Experience</h3>
+                <p class="text-white text-base font-raleway font-medium md:text-lg">Kingdom Royalty and Values, Glamour, Amazing Prizes, Surprise Celebrity Guests, Fiercer Battles, State of Art Masterpieces! THIS IS BIG HOUSE! Brace yourself for 15 thrilling activities in just 30 days, culminating in the crowning of our champion "The Bible Personality of the Year"!</p> 
+                <p class="text-white text-base font-raleway font-medium md:text-lg"><a href="./stars.html" class="inline text-magenta font-bold underline">MEET OUR STARS</a>, who won the 12 keys to the big house. They have blazed through the EVICTION SHOW, hailing from diverse backgrounds and church denominations across Nigeria. Your favorite stars can brace on in the show with your votes and online presence. 
+                </p>
+            </div>
+
+            <!----- Amazing Prices ---->
+            <div class="space-y-1 md:space-y-2">
+                <h3 class="mt-2 text-darkgold text-2xl font-nunito font-bold md:mt-5 md:text-3xl">Amazing Prices</h3>
+                <p class="text-white text-base font-raleway font-medium md:text-lg">While the winner of the show will drive off with a brand-new car and a whopping 10 million Naira cash prize, the first runner up and second runner up are not left out of winning!</p>
+                <p class="text-white text-base font-raleway font-medium md:text-lg">Also other housemates get win other amazing instant prizes in different segments! On this show everyone is a winner!</p>
+                <p class="text-white text-base font-raleway font-medium md:text-lg">As you follow the gripping journey of our stars, you'll have the chance to join in and win amazing cash prizes of up to 100,000 Naira through our <a href="viewersprizeplay.html" class="inline text-magenta font-bold underline">VIEWERS PRIZE PLAY</a>.</p>
+            </div>
+            
+            <!----- Operation 100 Partners Campaign ---->
+            <div class="space-y-1 md:space-y-2">
+                <h3 class="mt-2 text-darkgold text-2xl font-nunito font-bold md:mt-5 md:text-3xl">Operation 100 Partners Campaign</h3>
+                <p class="text-white text-base font-raleway font-medium md:text-lg">We are bringing together a team that is ready to reclaim entertainment and win back our youths who have gone into crime and recapture the instability of Nigeria through good entertainment.</p>
+                <p class="text-white text-base font-raleway font-medium md:text-lg">Regular shows have attracted and kept our youth busy while promoting nothing but nudity, drunkenness and immorality, join us to raise the bar and produce a show with quality entertainment that produces more value and will influence the change of hearts!</p>
+                <p class="text-white text-base font-raleway font-medium md:text-lg">Only 100 slots! <a href="partners.html" class="inline text-magenta font-bold underline">Click here</a> to join the powerful team today!</p>
+            </div>
+        </div>
+        
+    </section>
+
+
+    <!-- Daily Review section-->
+    <section class="hidden relative w-full before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-slate-900 before:-z-10">
+
+        <main class="relative w-full bg-white flex flex-col space-y-4 px-4 py-3 pb-7 rounded-br-[3rem] z-10 md:px-[10%] md:rounded-br-[10%]">
+            <h2 class="text-slate-900 text-4xl font-bold font-nunito md:text-5xl">Daily Review</h2>
+
+            <!-- Daily reviews segment-->
+            <div class="w-full flex flex-col space-y-7 [&>*:nth-child(even)]:md:flex-row-reverse [&>*:nth-child(even)]:md:ml-auto">
+                <!------------- NOTE!!!! -------->
+                <!----- ADD THE LATEST REVIEW TO THE TOPMOST DIV NOT THE BOTTOM PLEASE -->
+
+                <!-- Individual daily review or Day Review-->
+                <div class="day-review relative w-full rounded-xl md:flex md:h-[120px] md:w-[600px]" style="box-shadow:0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025)">
+
+                    <!--This is the header in the mobile and circle in the desktop to show colors-->
+                    <div class="color-showcase w-full h-[65px] rounded-t-xl md:h-full md:w-[120px]"></div>
+
+                    <!--This is the title of the review-->
+                    <div class="daily-review-title w-full h-[60px] flex items-center justify-center text-white text-xl font-semibold font-nunito md:h-full md:w-[200px]"><p>Day 6</p></div>
+
+                    <!--This is the brief description of the review for the day-->
+                    <!--Not more than 150 characters to avoid overflow problems-->
+                    <div class="review-text w-full h-max bg-white overflow-hidden p-4 rounded-b-xl md:h-full md:p-3" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum aut vero quo minima impedit, modi quod pariatur, consequatur dignissimos magnam culpa!</div>
+
+                    <!-- This is the connecting line between the reviews for mobile-->
+                    <div class="connecting-line absolute -bottom-6 left-[50%] -translate-x-1/2  translate-y-4 h-10 w-1 -z-10 bg-light-orange"></div>
+
+                    <!-- Circle div for desktop view -->
+                    <div class="connecting-circle absolute top-[50%] h-16 w-16 rounded-full"></div>
+
+                    <!-- Supporting connecting line 1 for desktop view -->
+                    <div class="support-con-line absolute top-[50%] w-8 h-1"></div>
+
+                    <!-- Supporting connecting line 2 for desktop view -->
+                    <div class="support-con-line-2 absolute bottom-[50%] w-1 h-24 -z-10"></div>
+                </div>
+                
+                <!-- Individual daily review or Day Review-->
+                <div class="day-review relative w-full rounded-xl md:flex md:h-[120px] md:w-[600px]" style="box-shadow:0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025)">
+
+                    <!--This is the header in the mobile and circle in the desktop to show colors-->
+                    <div class="color-showcase w-full h-[65px] rounded-t-xl md:h-full md:w-[120px]"></div>
+
+                    <!--This is the title of the review-->
+                    <div class="daily-review-title w-full h-[60px] flex items-center justify-center text-white text-xl font-semibold font-nunito md:h-full md:w-[200px]"><p>Day 5</p></div>
+
+                    <!--This is the brief description of the review for the day-->
+                    <!--Not more than 150 characters to avoid overflow problems-->
+                    <div class="review-text w-full h-max bg-white overflow-hidden p-4 rounded-b-xl md:h-full md:p-3" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum aut vero quo minima impedit, modi quod pariatur, consequatur dignissimos magnam culpa!</div>
+
+                    <!-- This is the connecting line between the reviews for mobile-->
+                    <div class="connecting-line absolute -bottom-6 left-[50%] -translate-x-1/2  translate-y-4 h-10 w-1 -z-10 bg-light-orange"></div>
+
+                    <!-- Circle div for desktop view -->
+                    <div class="connecting-circle absolute top-[50%] h-16 w-16 rounded-full"></div>
+
+                    <!-- Supporting connecting line 1 for desktop view -->
+                    <div class="support-con-line absolute top-[50%] w-8 h-1"></div>
+
+                    <!-- Supporting connecting line 2 for desktop view -->
+                    <div class="support-con-line-2 absolute bottom-[50%] w-1 h-24 -z-10"></div>
+                </div>
+                
+                <!-- Individual daily review or Day Review-->
+                <div class="day-review relative w-full rounded-xl md:flex md:h-[120px] md:w-[600px]" style="box-shadow:0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025)">
+
+                    <!--This is the header in the mobile and circle in the desktop to show colors-->
+                    <div class="color-showcase w-full h-[65px] rounded-t-xl md:h-full md:w-[120px]"></div>
+
+                    <!--This is the title of the review-->
+                    <div class="daily-review-title w-full h-[60px] flex items-center justify-center text-white text-xl font-semibold font-nunito md:h-full md:w-[200px]"><p>Day 4</p></div>
+
+                    <!--This is the brief description of the review for the day-->
+                    <!--Not more than 150 characters to avoid overflow problems-->
+                    <div class="review-text w-full h-max bg-white overflow-hidden p-4 rounded-b-xl md:h-full md:p-3" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum aut vero quo minima impedit, modi quod pariatur, consequatur dignissimos magnam culpa!</div>
+
+                    <!-- This is the connecting line between the reviews for mobile-->
+                    <div class="connecting-line absolute -bottom-6 left-[50%] -translate-x-1/2  translate-y-4 h-10 w-1 -z-10 bg-light-orange"></div>
+
+                    <!-- Circle div for desktop view -->
+                    <div class="connecting-circle absolute top-[50%] h-16 w-16 rounded-full"></div>
+
+                    <!-- Supporting connecting line 1 for desktop view -->
+                    <div class="support-con-line absolute top-[50%] w-8 h-1"></div>
+
+                    <!-- Supporting connecting line 2 for desktop view -->
+                    <div class="support-con-line-2 absolute bottom-[50%] w-1 h-24 -z-10"></div>
+                </div>
+
+                <!-- Individual daily review or Day Review-->
+                <div class="day-review relative w-full rounded-xl md:flex md:h-[120px] md:w-[600px]" style="box-shadow:0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025)">
+
+                    <!--This is the header in the mobile and circle in the desktop to show colors-->
+                    <div class="color-showcase w-full h-[65px] rounded-t-xl md:h-full md:w-[120px]"></div>
+
+                    <!--This is the title of the review-->
+                    <div class="daily-review-title w-full h-[60px] flex items-center justify-center text-white text-xl font-semibold font-nunito md:h-full md:w-[200px]"><p>Day 3</p></div>
+
+                    <!--This is the brief description of the review for the day-->
+                    <!--Not more than 150 characters to avoid overflow problems-->
+                    <div class="review-text w-full h-max bg-white overflow-hidden p-4 rounded-b-xl md:h-full md:p-3" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum aut vero quo minima impedit, modi quod pariatur, consequatur dignissimos magnam culpa!</div>
+
+                    <!-- This is the connecting line between the reviews for mobile-->
+                    <div class="connecting-line absolute -bottom-6 left-[50%] -translate-x-1/2  translate-y-4 h-10 w-1 -z-10 bg-light-orange"></div>
+
+                    <!-- Circle div for desktop view -->
+                    <div class="connecting-circle absolute top-[50%] h-16 w-16 rounded-full"></div>
+
+                    <!-- Supporting connecting line 1 for desktop view -->
+                    <div class="support-con-line absolute top-[50%] w-8 h-1"></div>
+
+                    <!-- Supporting connecting line 2 for desktop view -->
+                    <div class="support-con-line-2 absolute bottom-[50%] w-1 h-24 -z-10"></div>
+                </div>
+
+                <!-- Individual daily review or Day Review-->
+                <div class="day-review relative w-full rounded-xl md:flex md:h-[120px] md:w-[600px]" style="box-shadow:0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025)">
+
+                    <!--This is the header in the mobile and circle in the desktop to show colors-->
+                    <div class="color-showcase w-full h-[65px] rounded-t-xl md:h-full md:w-[120px]"></div>
+
+                    <!--This is the title of the review-->
+                    <div class="daily-review-title w-full h-[60px] flex items-center justify-center text-white text-xl font-semibold font-nunito md:h-full md:w-[200px]"><p>Day 2</p></div>
+
+                    <!--This is the brief description of the review for the day-->
+                    <!--Not more than 150 characters to avoid overflow problems-->
+                    <div class="review-text w-full h-max bg-white overflow-hidden p-4 rounded-b-xl md:h-full md:p-3" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum aut vero quo minima impedit, modi quod pariatur, consequatur dignissimos magnam culpa!</div>
+
+                    <!-- This is the connecting line between the reviews for mobile-->
+                    <div class="connecting-line absolute -bottom-6 left-[50%] -translate-x-1/2  translate-y-4 h-10 w-1 -z-10 bg-light-orange"></div>
+
+                    <!-- Circle div for desktop view -->
+                    <div class="connecting-circle absolute top-[50%] h-16 w-16 rounded-full"></div>
+
+                    <!-- Supporting connecting line 1 for desktop view -->
+                    <div class="support-con-line absolute top-[50%] w-8 h-1"></div>
+
+                    <!-- Supporting connecting line 2 for desktop view -->
+                    <div class="support-con-line-2 absolute bottom-[50%] w-1 h-24 -z-10"></div>
+                </div>
+
+                <!-- Individual daily review or Day Review-->
+                <div class="day-review relative w-full rounded-xl md:flex md:h-[120px] md:w-[600px]" style="box-shadow:0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025)">
+
+                    <!--This is the header in the mobile and circle in the desktop to show colors-->
+                    <div class="color-showcase w-full h-[65px] rounded-t-xl md:h-full md:w-[120px]"></div>
+
+                    <!--This is the title of the review-->
+                    <div class="daily-review-title w-full h-[60px] flex items-center justify-center text-white text-xl font-semibold font-nunito md:h-full md:w-[200px]"><p>Day 1</p></div>
+
+                    <!--This is the brief description of the review for the day-->
+                    <!--Not more than 150 characters to avoid overflow problems-->
+                    <div class="review-text w-full h-max bg-white overflow-hidden p-4 rounded-b-xl md:h-full md:p-3" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum aut vero quo minima impedit, modi quod pariatur, consequatur dignissimos magnam culpa!</div>
+
+                    <!-- This is the connecting line between the reviews for mobile-->
+                    <div class="connecting-line absolute -bottom-6 left-[50%] -translate-x-1/2  translate-y-4 h-10 w-1 -z-10 bg-light-orange"></div>
+
+                    <!-- Circle div for desktop view -->
+                    <div class="connecting-circle absolute top-[50%] h-16 w-16 rounded-full"></div>
+
+                    <!-- Supporting connecting line 1 for desktop view -->
+                    <div class="support-con-line absolute top-[50%] w-8 h-1"></div>
+
+                    <!-- Supporting connecting line 2 for desktop view -->
+                    <div class="support-con-line-2 absolute bottom-[50%] w-1 h-24 -z-10"></div>
+                </div>
+
+                <!-- Individual daily review or Day Review-->
+                <div class="day-review relative w-full rounded-xl md:flex md:h-[120px] md:w-[600px]" style="box-shadow:0 30px 60px -12px rgba(50, 50, 93, 0.25), 0 18px 36px -18px rgba(0, 0, 0, 0.3), 0 -12px 36px -8px rgba(0, 0, 0, 0.025)">
+
+                    <!--This is the header in the mobile and circle in the desktop to show colors-->
+                    <div class="color-showcase w-full h-[65px] rounded-t-xl md:h-full md:w-[120px]"></div>
+
+                    <!--This is the title of the review-->
+                    <div class="daily-review-title w-full h-[60px] flex items-center justify-center text-white text-xl font-semibold font-nunito md:h-full md:w-[200px]"><p>Camping</p></div>
+
+                    <!--This is the brief description of the review for the day-->
+                    <!--Not more than 150 characters to avoid overflow problems-->
+                    <div class="review-text w-full h-max bg-white overflow-hidden p-4 rounded-b-xl md:h-full md:p-3" >Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium harum aut vero quo minima impedit, modi quod pariatur, consequatur dignissimos magnam culpa!</div>
+
+                    <!-- This is the connecting line between the reviews for mobile-->
+                    <div class="connecting-line absolute -bottom-6 left-[50%] -translate-x-1/2  translate-y-4 h-10 w-1 -z-10 bg-light-orange"></div>
+
+                    <!-- Circle div for desktop view -->
+                    <div class="connecting-circle absolute top-[50%] h-16 w-16 rounded-full"></div>
+
+                    <!-- Supporting connecting line 1 for desktop view -->
+                    <div class="support-con-line absolute top-[50%] w-8 h-1"></div>
+
+                    <!-- Supporting connecting line 2 for desktop view -->
+                    <div class="support-con-line-2 absolute bottom-[50%] w-1 h-24 -z-10"></div>
+                </div>
+
+            </div>
+
+            <button class="mx-auto w-36 h-12 border-2 bg-slate-700 border-slate-700 text-white text-base font-nunito font-bold rounded-lg md:bg-white md:text-slate-700 md:hover:bg-slate-700 md:hover:text-white md:w-40 md:h-13 md:text-lg" id="show-more-btn">Show More</button>
+        </main>
+
+        <!-- This div is reponsible for the animation below this section-->
+        <div class="absolute top-0 left-0 w-0 h-full bg-light-orange z-[5] rounded-br-[3rem] translate-y-1 yellow-move md:rounded-br-[10%]"></div>
+    </section>
+
+    <!--Social Media links section-->
+    <section class="w-full bg-transparent px-4 py-8 md:px-[10%] md:py-14">
+        <!------ Social media links ------>
+        <main class="w-full flex items-center justify-between rounded-lg bg-[rgba(255,255,255,0.1)] px-4 py-2">
+            <a href="https://www.facebook.com/biblestarstvshow?mibextid=ZbWKwL" target="_blank"><img src="./public/images/yellow-facebook-icon.svg" alt="" class="h-7 md:h-8"></a>
+            <a href="https://instagram.com/biblestarsrealityshow?igshid=OGQ5ZDc2ODk2ZA" target="_blank"><img src="./public/images/yellow-instagram-icon.svg" alt="" class="h-7  md:h-8"></a>
+            <a href="https://youtube.com/@biblestarstvshow?si=3jKBGLKHaG8H5MWz" target="_blank"><img src="./public/images/yellow-youtube-icon.svg" alt="" class="h-7  md:h-8"></a>
+            <a href="https://x.com/Biblestarstv?t=rB3yxWYDfQPK-vWxMPoR5A&s=09" target="_blank"><img src="./public/images/yellow-x-icon.svg" alt="" class="h-7  md:h-8"></a>
+            <a href="https://pin.it/2ImWZCJ7v" target="_blank"><img src="./public/images/yellow-pinterest-icon.svg" alt="" class="h-7  md:h-8"></a>
+            <a href="https://www.tiktok.com/@biblestarstv?_t=8ggYPo47wTG&_r=1" target="_blank"><img src="./public/images/yellow-tiktok-icon.svg" alt="" class="h-7  md:h-8"></a>
+
+        </main>
+    </section>
+
+    <!------- Latest Content Section ------->
+    <section class="bg-transparent relative w-full before:absolute before:top-0 before:left-0 before:w-full before:h-full before:bg-slate-900 before:-z-10">
+
+        <!-- This div is reponsible for the animation above this section-->
+        <div class="absolute top-0 right-0 w-0 h-full bg-light-orange z-[5] rounded-tl-[3rem] -translate-y-1 yellow-move md:rounded-tl-[10%]"></div>
+
+        <main class="relative w-full bg-white flex flex-col space-y-4 px-4 py-5 rounded-tl-[3rem] z-10 md:px-[10%] md:rounded-tl-[10%] md:py-10">
+            <h2 class="text-slate-900 text-3xl font-bold font-nunito md:text-4xl">Latest Contents</h2>
+        
+            <!--Main part that exhibits glassmorphism-->
+            <main class="w-full rounded-xl bg-[#f5f7fa] p-4 md:flex md:space-x-8">
+                <!--The large content div-->
+                <a href="#" class="w-full flex flex-col md:w-3/5">
+                    <img src="./assets/home/stock1.jpg" alt="#" class="rounded-lg md:h-[380px] md:rounded-xl">
+
+                    <!--Its type and title-->
+                    <div class="flex space-x-4 py-2 font-nunito text-slate-900 text-lg font-bold md:text-xl">
+                        <img src="./public/images/blog-icon.svg" alt="" class="inline-block w-6 md:w-8"><h3>Title of Content is Here </h3>
+                    </div>
+                </a>
+
+                <!-- Other contents -->
+                <div class="w-full flex flex-col space-y-4 h-[300px] mt-5 mr-4 overflow-y-auto overflow-x-hidden md:mt-0 md:mr-0 md:w-2/5 md:h-[380px] md:space-y-6" id="latest-con-slide">
+                    <!--Individual content div -->
+                    <a href="#" class="w-full flex space-x-4">
+                        <img src="./assets/home/stock2.jpg" alt="#" class="h-[85px] w-[130px] rounded-md">
+
+                        <!-- Its type and title-->
+                        <div class="w flex flex-col justify-center font-nunito text-slate-900" style="width: calc(100% - 146px)">
+                            <h3 class="text-base font-bold text-ellipsis text-nowrap">Some title is here</h3>
+                            <p class="w-full text-sm text-ellipsis overflow-hidden whitespace-nowrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eos minima vel id error facilis sapiente ad accusamus eum deserunt.</p>
+                        </div>
+                    </a>
+
+                    <!--Individual content div -->
+                    <a href="#" class="w-full flex space-x-4">
+                        <img src="./assets/home/stock3.jpg" alt="#" class="h-[85px] w-[130px] rounded-md">
+
+                        <!-- Its type and title-->
+                        <div class="w flex flex-col justify-center font-nunito text-slate-900" style="width: calc(100% - 146px)">
+                            <h3 class="text-base font-bold text-ellipsis text-nowrap">Some title is here</h3>
+                            <p class="w-full text-sm text-ellipsis overflow-hidden whitespace-nowrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eos minima vel id error facilis sapiente ad accusamus eum deserunt.</p>
+                        </div>
+                    </a>
+
+                    <!--Individual content div -->
+                    <a href="#" class="w-full flex space-x-4">
+                        <img src="./assets/home/stock4.jpg" alt="#" class="h-[85px] w-[130px] rounded-md">
+
+                        <!-- Its type and title-->
+                        <div class="w flex flex-col justify-center font-nunito text-slate-900" style="width: calc(100% - 146px)">
+                            <h3 class="text-base font-bold text-ellipsis text-nowrap">Some title is here</h3>
+                            <p class="w-full text-sm text-ellipsis overflow-hidden whitespace-nowrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eos minima vel id error facilis sapiente ad accusamus eum deserunt.</p>
+                        </div>
+                    </a>
+
+                    <!--Individual content div -->
+                    <a href="#" class="w-full flex space-x-4">
+                        <img src="./assets/home/stock1.jpg" alt="#" class="h-[85px] w-[130px] rounded-md">
+
+                        <!-- Its type and title-->
+                        <div class="w flex flex-col justify-center font-nunito text-slate-900" style="width: calc(100% - 146px)">
+                            <h3 class="text-base font-bold text-ellipsis text-nowrap">Some title is here</h3>
+                            <p class="w-full text-sm text-ellipsis overflow-hidden whitespace-nowrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eos minima vel id error facilis sapiente ad accusamus eum deserunt.</p>
+                        </div>
+                    </a>
+
+                    <!--Individual content div -->
+                    <a href="#" class="w-full flex space-x-4">
+                        <img src="./assets/home/stock2.jpg" alt="#" class="h-[85px] w-[130px] rounded-md">
+
+                        <!-- Its type and title-->
+                        <div class="w flex flex-col justify-center font-nunito text-slate-900" style="width: calc(100% - 146px)">
+                            <h3 class="text-base font-bold text-ellipsis text-nowrap">Some title is here</h3>
+                            <p class="w-full text-sm text-ellipsis overflow-hidden whitespace-nowrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eos minima vel id error facilis sapiente ad accusamus eum deserunt.</p>
+                        </div>
+                    </a>
+                </div>
+            </main>
+        </main>
+    </section>
+
+    <!---------  Footer ---------->
+    <footer class="w-full bg-slate-900 px-4 py-6 pb-28 font-nunito text-base md:px-[5%]">
+
+        <!-- Everything except copyright -->
+        <section class="w-full">
+            <!--- Footer logo---->
+            <a href="index.html"><img src="./public/images/bible-stars-logo.png" alt="" class="h-20 md:h-24" ></a>
+
+            <!-- Other contents-->
+            <section class="w-full lg:flex">
+                <!---- Contact info ---->
+                <div class="w-full flex flex-col space-y-4 mt-6 smd:flex-row smd:space-y-0 smd:space-x-4 lg:mt-0 lg:w-[500px]">
+                    <!-- Location-->
+                    <div class="w-full flex space-x-4">
+                        <img src="./public/images/location-icon.svg" alt="" class="h-5">
+
+                        <p class="text-white">Suite 8, Dabic Shopping Plaza, Yoruba Rd, 240212, Ilorin, Kwara</p>
+                    </div>
+
+                    <!-- Telephone and email-->
+                    <div class="w-full flex flex-col space-y-3">
+                        <!-- Telephone info -->
+                        <a href="tel:+2347048811294" class="w-full flex space-x-4" target="_blank">
+                            <img src="./public/images/contact-icon.svg" alt="" class="h-5">
+
+                            <p class="text-white underline">+2347048811294</p>
+                        </a>
+
+                        <!-- Email info -->
+                        <a href="mailto:biblestarstv@gmail.com" class="w-full flex space-x-4" target="_blank">
+                            <img src="./public/images/email-icon.svg" alt="" class="h-5">
+
+                            <p class="text-white underline">biblestarstv@gmail.com</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!----  Navigation text and social icon Links ---->
+                <div class="flex flex-col space-y-14 mt-10 smd:flex-row smd:space-y-0 smd:space-x-4 lg:mt-0 lg:overflow-hidden">
+                    <!---- Navigation text links ---->
+                    <div class="w-full grid grid-cols-2 gap-4 text-white">
+                        <a href="index.html" class="w-full md:hover:underline ease-linear">Home</a>
+                        <a href="blog.html" class="w-full md:hover:underline ease-linear">Blog</a>
+                        <a href="stars.html" class="w-full md:hover:underline ease-linear">Meet our stars</a>
+                        <a href="votenow.html" class="w-full md:hover:underline ease-linear">Vote Now</a>
+                        <a href="catchtheactions.html" class="w-full md:hover:underline ease-linear">Catch the actions</a>
+                        <a href="crew.html" class="w-full md:hover:underline ease-linear">Meet our crew</a>
+                        <a href="viewersprizeplay.html" class="w-full md:hover:underline ease-linear">Viewers prize play</a>
+                        <a href="partners.html" class="w-full md:hover:underline ease-linear">Partner with us</a>
+                    </div>
+
+                    <!------ Social icon links ------>
+                    <div class="w-full flex flex-wrap items-center justify-center space-x-5 smd:justify-start smd:items-start lg:w-[380px]">
+                        <!-- Facebook icon ---->
+                        <a href="https://www.facebook.com/biblestarstvshow?mibextid=ZbWKwL" target="_blank"><img src="./public/images/white-facebook-icon.svg" alt="#" class="h-7"></a>
+
+                        <!-- Instagram icon ---->
+                        <a href="https://instagram.com/biblestarsrealityshow?igshid=OGQ5ZDc2ODk2ZA" target="_blank"><img src="./public/images/white-instagram-icon.svg" alt="#" class="h-7"></a>
+
+                        <!-- Youtube icon ---->
+                        <a href="https://youtube.com/@biblestarstvshow?si=3jKBGLKHaG8H5MWz" target="_blank"><img src="./public/images/white-youtube-icon.svg" alt="#" class="h-7"></a>
+
+                        <!-- Twitter icon ---->
+                        <a href="https://x.com/Biblestarstv?t=rB3yxWYDfQPK-vWxMPoR5A&s=09" target="_blank"><img src="./public/images/white-twitter-icon.svg" alt="#" class="h-6"></a>
+
+                        <!--Pinterest icon-->
+                        <a href="https://pin.it/2ImWZCJ7v" target="_blank"><img src="./public/images/white-pinterest-icon.svg" alt="#" class="h-7"></a>
+
+                        <!-- Tiktok icon ---->
+                        <a href="https://www.tiktok.com/@biblestarstv?_t=8ggYPo47wTG&_r=1" target="_blank" class="lg:!ml-0"><img src="./public/images/white-tiktok-icon.svg" alt="#" class="h-7"></a>
+                    </div>
+                </div>
+                
+            </section>
+        </section>
+        
+
+        <!-- Copyright -->
+        <div class="w-full flex justify-center text-white text-sm mt-8 lg:mt-16 lg:text-base">
+            <span class="text-center">© Copyright BSTV <script defer="">document.write(new Date().getFullYear())</script>. All rights reserved</span>
+        </div>
+
+    </footer>
+
+    
+    <!--- Fixed whatsapp icon ---->
+    <a href="https://wa.me/2348087863562" class="fixed bottom-8 right-4 flex items-center space-x-3 font-nunito font-medium z-30 md:bottom-12 md:right-[5%]" target="_blank">
+        <!-- Chat with us text-->
+        <div class="chat-with-us relative bg-[#00a500] rounded-md p-1 text-[0.75rem] text-white after:absolute after:-right-[0.37rem] after:top-[50%] after:-translate-y-1/2 after:bg-[#00a500] after:w-2 after:h-1 after:rotate-90 md:text-[0.8rem]">Chat With Us</div>
+
+        <!-- Whatsapp logo-->
+        <img src="./public/images/whatsapp-logo.png" alt="" class="h-11 md:h-14">
+    </a>
+
+    <!--General js file-->
+    <script src="./js/main.js"></script>
+
+    <!--Js file for index.html only-->
+    <script src="./js/index.js"></script>
+</body>

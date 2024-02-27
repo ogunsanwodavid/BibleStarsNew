@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-----------Important meta tags----------->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Christian Quiz, Reality Bible Stars">
+    <meta name="description" content="Bible Star TV Show">
+    <meta name="author" content="">
+    <meta property="og:description" content="Bible Star TV Show">
+    <meta property="og:author" content="">
+    <meta property="og:image" content="">
+    <meta property="og:title" content="">
+    <link href="../public/images/bible-stars-logo.png" rel="shortcut icon" type="image/png">
+    <link href="../public/images/bible-stars-logo.png" rel="apple-touch-icon">
+    <link href="../public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="114x114">
+
+    <!-----------Title---------->
+    <title>Bible Stars TV Show : BlogPage Title Here</title>
+
+    <!------------Favicon------------->
+    <link rel="shortcut icon" href="../public/images/bible-stars-logo.png" type="image/x-icon">
+
+    <!-------Linked stylesheets, fonts, icons and libraries------------>
+    <link rel="stylesheet" href="../css/output.css">
+
+    <!----------Fontawesome icons---------->
+
+    
+    <!--------Google Fonts----------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+
+    <!--------------Added Styles------------>
+    <style>
+
+    </style>
+</head>
+
+<body clas="relative">
+    
+    <!--Navbar is fixed to the top of the webpage-->
+    <nav class="fixed top-0 left-0 w-full flex items-center justify-between bg-slate-900 px-4 py-0 z-40 md:px-[5%]">
+        <!--Logo-->
+        <a href="index.html"><img src="../public/images/bible-stars-logo.png" alt="" class="h-20 md:h-24" ></a>
+
+        <!-- Text links-->
+        <div class="hidden items-center space-x-6 font-nunito text-white md:flex">
+            <ul class="flex text-base font-bold space-x-5">
+                <li><a href="../index.html" class="hover:underline ease-linear">Home</a></li>
+                <li><a href="../blog.html" class="page-active hover:underline ease-linear">Blog</a></li>
+                <li><a href="../stars.html" class="hover:underline ease-linear">Stars</a></li>
+                <li><a href="../votenow.html" class="hover:underline ease-linear">Vote Now</a></li>
+                <li><a href="../catchtheactions.html" class="hover:underline ease-linear">Catch the Actions</a></li>
+                <li><a href="../crew.html" class="hover:underline ease-linear">Crew</a></li>
+                <li><a href="../viewersprizeplay.html" class="hover:underline ease-linear">Viewers prize play</a></li>
+            </ul>
+        </div>
+
+        <!-- Partner With Us button -->
+        <a href="../partners.html" class="hidden w-max md:block"><button class="w-36 h-12 bg-light-orange text-white text-base font-bold font-nunito rounded-lg hover:bg-dark-orange ease-linear duration-200">Partner With Us</button></a>
+
+        <!--Hamburger/Fries menu icon to open hidden navigation for mobile-->
+        <img src="../public/images/fries-menu-icon.svg" alt="" class="h-7 md:hidden" id="fries-menu-icon">
+    </nav>
+    
+    <!--------- Hidden side navbar ----------->
+    <section class="fixed top-0 left-0 w-0 h-[100vh] overflow-hidden bg-[rgba(0,0,0,0.3)] z-50 font-nunito ease-in duration-200 md:hidden" id="sidebar">
+
+        <!--This has the white background for the links-->
+        <div class="h-full w-[250px] bg-white overflow-y-auto overflow-x-hidden" id="sidebar-main">
+
+            <!--Close icon-->
+            <img src="../public/images/close-icon.svg" alt="" class="h-8 ml-auto mt-6 mr-5" id="close-icon">
+
+            <!--Text links and respective icons-->
+            <ul class="flex flex-col space-y-5 py-4 mt-8 mx-5 border-y-[1.5px] border-slate-500 !text-slate-900 text-base font-bold" style="width:calc(100% - 2.5rem)">
+
+                <!--Home Link-->
+                <li><a href="../index.html" class="flex items-center space-x-3"><img src="../public/images/home-icon.svg" alt="" class="w-6"> <span>Home</span></a></li>
+
+                <!--Blog Link-->
+                <li><a href="../blog.html" class="flex items-center space-x-3"><img src="../public/images/blog-icon.svg" alt="" class="w-6"> <span>Blog</span></a></li>
+
+                <!--Stars Link-->
+                <li><a href="../stars.html" class="flex items-center space-x-3"><img src="../public/images/stars-icon.svg" alt="" class="w-6"> <span>Stars</span></a></li>
+
+                <!--Vote Now Link-->
+                <li><a href="../votenow.html" class="flex items-center space-x-3"><img src="../public/images/votenow-icon.svg" alt="" class="w-6"> <span>Vote Now</span></a></li>
+
+                <!--Catch The Actions Link-->
+                <li><a href="../catchtheactions.html" class="flex items-center space-x-3"><img src="../public/images/catchtheactions-icon.svg" alt="" class="w-6"> <span>Catch The Actions</span></a></li>
+
+                <!--Crew Link-->
+                <li><a href="../crew.html" class="flex items-center space-x-3"><img src="../public/images/crew-icon.svg" alt="" class="w-6"> <span>Crew</span></a></li>
+
+                <!--Viewers Prize Play Link-->
+                <li><a href="../viewersprizeplay.html" class="flex items-center space-x-3"><img src="../public/images/viewersprizeplay-icon.svg" alt="" class="w-6"> <span>Viewers Prize Play</span></a></li>
+                
+            </ul>
+
+            <!-- Partner With Us Button -->
+            <div class="mt-6 mx-5" style="width: calc(100% - 2.5rem)">
+                <a href="../partners.html" class="block w-max mx-auto"><button class="w-36 h-12 bg-light-orange text-white text-base font-bold rounded-lg">Partner With Us</button></a>
+            </div>
+
+        </div>
+    </section>
+    <!---- #0f1729 is equivalent of slate-gray-900 -->
+
+
+    <!--------- Header --------->
+    <header class="flex flex-col space-y-2  max-w-[650px] mx-auto mt-[80px] px-4 pt-6 pb-3 font-nunito text-slate-900 md:mt-[96px]">
+
+        <!--- Blog title --->
+        <h2 class="text-slate-900 text-2xl font-bold md:text-3xl">Blog Title Here. Blog Title Here</h2>
+
+        <!-- New tag and date -->
+        <div class="w-full flex items-center justify-between">
+            <!-- News tag -->
+            <div class="flex items-center space-x-2">
+                <img src="../public/images/blog-icon.svg" alt="" class="h-6 md:h-7">
+
+                <span class="font-semibold text-base md:text-lg">News</span>
+            </div>
+
+            <!--Date-->
+            <div class="flex items-center space-x-2">
+                <img src="../public/images/date-icon.svg" alt="" class="h-4 md:h-5">
+
+                <span class="font-semibold text-sm md:text-base">31st January, 2024</span>
+            </div>
+        </div>
+
+        <!--- Sub Title --->
+        <p class="font-semibold text-base text-black md:text-lg">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet minus rem cumqu quas?</p>
+
+        <!---- Blog Image ---->
+        <img src="../assets/home/stock1.jpg" alt="#" class="w-full rounded-lg" >
+    </header>
+
+    <!-- Main Blog Article Content -->
+    <article class="w-full flex flex-col max-w-[650px] mx-auto px-4 pt-3 pb-10 space-y-2 text-black font-nunito font-medium text-base md:text-lg">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda velit excepturi perspiciatis veritatis consequatur qui itaque pariatur ipsam est perferendis deserunt, consequuntur dolorum molestias explicabo quaerat doloremque cum, blanditiis vel.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda velit excepturi perspiciatis veritatis consequatur qui itaque pariatur ipsam est perferendis deserunt, consequuntur dolorum molestias explicabo quaerat doloremque cum, blanditiis vel.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda velit excepturi perspiciatis veritatis consequatur qui itaque pariatur ipsam est perferendis deserunt, consequuntur dolorum molestias explicabo quaerat doloremque cum, blanditiis vel.</p>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda velit excepturi perspiciatis veritatis consequatur qui itaque pariatur ipsam est perferendis deserunt, consequuntur dolorum molestias explicabo quaerat doloremque cum, blanditiis vel.</p>
+    </article>
+
+
+    <!---------  Footer ---------->
+    <footer class="w-full bg-slate-900 px-4 py-6 pb-28 font-nunito text-base md:px-[5%]">
+
+        <!-- Everything except copyright -->
+        <section class="w-full">
+            <!--- Footer logo---->
+            <a href="../index.html"><img src="../public/images/bible-stars-logo.png" alt="" class="h-20 md:h-24" ></a>
+
+            <!-- Other contents-->
+            <section class="w-full lg:flex">
+                <!---- Contact info ---->
+                <div class="w-full flex flex-col space-y-4 mt-6 smd:flex-row smd:space-y-0 smd:space-x-4 lg:mt-0 lg:w-[500px]">
+                    <!-- Location-->
+                    <div class="w-full flex space-x-4">
+                        <img src="../public/images/location-icon.svg" alt="" class="h-5">
+
+                        <p class="text-white">Suite 8, Dabic Shopping Plaza, Yoruba Rd, 240212, Ilorin, Kwara</p>
+                    </div>
+
+                    <!-- Telephone and email-->
+                    <div class="w-full flex flex-col space-y-3">
+                        <!-- Telephone info -->
+                        <a href="tel:+2347048811294" class="w-full flex space-x-4" target="_blank">
+                            <img src="../public/images/contact-icon.svg" alt="" class="h-5">
+
+                            <p class="text-white underline">+2347048811294</p>
+                        </a>
+
+                        <!-- Email info -->
+                        <a href="mailto:biblestarstv@gmail.com" class="w-full flex space-x-4" target="_blank">
+                            <img src="../public/images/email-icon.svg" alt="" class="h-5">
+
+                            <p class="text-white underline">biblestarstv@gmail.com</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!----  Navigation text and social icon Links ---->
+                <div class="flex flex-col space-y-14 mt-10 smd:flex-row smd:space-y-0 smd:space-x-4 lg:mt-0 lg:overflow-hidden">
+                    <!---- Navigation text links ---->
+                    <div class="w-full grid grid-cols-2 gap-4 text-white">
+                        <a href="../index.html" class="w-full md:hover:underline ease-linear">Home</a>
+                        <a href="../blog.html" class="w-full md:hover:underline ease-linear">Blog</a>
+                        <a href="../stars.html" class="w-full md:hover:underline ease-linear">Meet our stars</a>
+                        <a href="../votenow.html" class="w-full md:hover:underline ease-linear">Vote Now</a>
+                        <a href="../catchtheactions.html" class="w-full md:hover:underline ease-linear">Catch the actions</a>
+                        <a href="../crew.html" class="w-full md:hover:underline ease-linear">Meet our crew</a>
+                        <a href="../viewersprizeplay.html" class="w-full md:hover:underline ease-linear">Viewers prize play</a>
+                        <a href="../partners.html" class="w-full md:hover:underline ease-linear">Partner with us</a>
+                    </div>
+
+                    <!------ Social icon links ------>
+                    <div class="w-full flex flex-wrap items-center justify-center space-x-5 smd:justify-start smd:items-start lg:w-[380px]">
+                        <!-- Facebook icon ---->
+                        <a href="https://www.facebook.com/biblestarstvshow?mibextid=ZbWKwL" target="_blank"><img src="../public/images/white-facebook-icon.svg" alt="#" class="h-7"></a>
+
+                        <!-- Instagram icon ---->
+                        <a href="https://instagram.com/biblestarsrealityshow?igshid=OGQ5ZDc2ODk2ZA" target="_blank"><img src="../public/images/white-instagram-icon.svg" alt="#" class="h-7"></a>
+
+                        <!-- Youtube icon ---->
+                        <a href="https://youtube.com/@biblestarstvshow?si=3jKBGLKHaG8H5MWz" target="_blank"><img src="../public/images/white-youtube-icon.svg" alt="#" class="h-7"></a>
+
+                        <!-- Twitter icon ---->
+                        <a href="https://x.com/Biblestarstv?t=rB3yxWYDfQPK-vWxMPoR5A&s=09" target="_blank"><img src="../public/images/white-twitter-icon.svg" alt="#" class="h-6"></a>
+
+                        <!--Pinterest icon-->
+                        <a href="https://pin.it/2ImWZCJ7v" target="_blank"><img src="../public/images/white-pinterest-icon.svg" alt="#" class="h-7"></a>
+
+                        <!-- Tiktok icon ---->
+                        <a href="https://www.tiktok.com/@biblestarstv?_t=8ggYPo47wTG&_r=1" target="_blank" class="lg:!ml-0"><img src="../public/images/white-tiktok-icon.svg" alt="#" class="h-7"></a>
+                    </div>
+                </div>
+                
+            </section>
+        </section>
+        
+
+        <!-- Copyright -->
+        <div class="w-full flex justify-center text-white text-sm mt-8 lg:mt-16 lg:text-base">
+            <span class="text-center">© Copyright BSTV <script defer="">document.write(new Date().getFullYear())</script>. All rights reserved</span>
+        </div>
+
+    </footer>
+
+    <!--- Fixed whatsapp icon ---->
+    <a href="https://wa.me/2348087863562" class="fixed bottom-8 right-4 flex items-center space-x-3 font-nunito font-medium z-30 md:bottom-12 md:right-[5%]" target="_blank">
+        <!-- Chat with us text-->
+        <div class="chat-with-us relative bg-[#00a500] rounded-md p-1 text-[0.75rem] text-white after:absolute after:-right-[0.37rem] after:top-[50%] after:-translate-y-1/2 after:bg-[#00a500] after:w-2 after:h-1 after:rotate-90 md:text-[0.8rem]">Chat With Us</div>
+
+        <!-- Whatsapp logo-->
+        <img src="./public/images/whatsapp-logo.png" alt="" class="h-11 md:h-14">
+    </a>
+
+
+
+    <!--General js file-->
+    <script src="../js/main.js"></script>
+
+</body>

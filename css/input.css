@@ -1,0 +1,132 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/***** Pre sets *****/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+button , a , i{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+input,select{
+    outline-width:0;
+}
+
+/* @font-face {
+    font-family: 'Open Sans';
+    src: url('../public/fonts/Open_Sans/OpenSans-VariableFont_wdth\,wght.ttf') format('truetype'),
+    url('../public/fonts/Open_Sans/OFL.txt') format('woff')
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('../public/fonts/Raleway/Raleway-VariableFont_wght.ttf') format('truetype'),
+    url('../public/fonts/Raleway/OFL.txt') format('woff')
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../public/fonts/Nunito/Nunito-VariableFont_wght.ttf') format('truetype'),
+    url('../public/fonts/Nunito/OFL.txt') format('woff')
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../public/fonts/Poppins/Poppins-Regular.ttf') format('truetype'),
+    url('../public/fonts/Poppins/OFL.txt') format('woff');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../public/fonts/Poppins/Poppins-Medium.ttf') format('truetype'),
+    url('../public/fonts/Poppins/OFL.txt') format('woff');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../public/fonts/Poppins/Poppins-SemiBold.ttf') format('truetype'),
+    url('/public/fonts/Poppins/OFL.txt') format('woff');
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../public/fonts/Poppins/Poppins-Bold.ttf') format('truetype'),
+    url('../public/fonts/Poppins/OFL.txt') format('woff');
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('../public/fonts/Poppins/Poppins-ExtraBold.ttf') format('truetype'),
+    url('../public/fonts/Poppins/OFL.txt') format('woff');
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../public/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype'),
+    url('../public/fonts/Montserrat/OFL.txt') format('woff')
+} */
+
+/** Style for active webpage **/
+.page-active{
+    color: #FCAE1E;
+}
+
+/** Style for active carousel dot **/
+.dot-active{
+    background-color: #FCAE1E;
+    height: 2.5px;
+    width: 1.6rem;
+}
+
+@media (min-width: 900px) {
+    .dot-active{
+        width: 2rem !important;
+    }
+}
+
+/*** This styles the scrollbar for the sidebar***/
+#sidebar-main::-webkit-scrollbar {
+    width: 8px;
+}
+
+#sidebar-main::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+#sidebar-main::-webkit-scrollbar-thumb {
+    background-color: #FCAE1E;
+    border-radius:10px;
+}
+
+.chat-with-us::after{
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    transform:rotate('90deg');
+}
+
+.rotate {
+    animation: rotateAnimation 1s ease forwards;
+  }
+  
+@keyframes rotateAnimation {
+    from {
+        transform: perspective(400px) rotateY(0deg);
+      }
+      to {
+        transform: perspective(400px) rotateY(180deg);
+      }
+}

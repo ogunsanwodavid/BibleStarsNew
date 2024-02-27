@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-----------Important meta tags----------->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Christian Quiz, Reality Bible Stars">
+    <meta name="description" content="Bible Star TV Show">
+    <meta name="author" content="">
+    <meta property="og:description" content="Bible Star TV Show">
+    <meta property="og:author" content="">
+    <meta property="og:image" content="">
+    <meta property="og:title" content="">
+    <link href="./public/images/bible-stars-logo.png" rel="shortcut icon" type="image/png">
+    <link href="./public/images/bible-stars-logo.png" rel="apple-touch-icon">
+    <link href="./public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="./public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="114x114">
+
+    <!-----------Title---------->
+    <title>Bible Stars TV Show : Be our partner today</title>
+
+    <!------------Favicon------------->
+    <link rel="shortcut icon" href="./public/images/bible-stars-logo.png" type="image/x-icon">
+
+    <!-------Linked stylesheets, fonts, icons and libraries------------>
+    <link rel="stylesheet" href="./css/output.css">
+
+    <!----------Fontawesome icons---------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    
+    <!--------Google Fonts----------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+
+    <!---- Swiper js ---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!--------------Added Styles------------>
+    <style>     
+        /** Ensures proper background positioning for carousel slides ***/
+        .swiper-slide{
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }  
+
+        /****** Custom CSS properties for the swiper *****/
+        :root{
+            --swiper-pagination-color: #FF00FF;
+            --swiper-pagination-bullet-vertical-gap: 10px;
+            --swiper-pagination-bullet-inactive-color: #000;
+            --swiper-pagination-bullet-inactive-opacity: 0.4;
+        }
+    </style>
+</head>
+
+<body class="relative bg-white">
+    
+    <!--Navbar is fixed to the top of the webpage-->
+    <nav class="fixed top-0 left-0 w-full flex items-center justify-between bg-slate-900 px-4 py-0 z-40 md:px-[5%]">
+        <!--Logo-->
+        <a href="partners.html"><img src="./public/images/100-partners-logo.png" alt="" class="h-20 md:h-24" ></a>
+
+        <!-- Text links-->
+        <div class="hidden items-center space-x-6 font-nunito text-white md:flex">
+            <ul class="flex text-base font-bold space-x-5">
+                <li><a href="index.html" class="hover:underline ease-linear">Home</a></li>
+                <li><a href="blog.html" class="hover:underline ease-linear">Blog</a></li>
+                <li><a href="stars.html" class="hover:underline ease-linear">Stars</a></li>
+                <li><a href="votenow.html" class="hover:underline ease-linear">Vote Now</a></li>
+                <li><a href="catchtheactions.html" class="hover:underline ease-linear">Catch the Actions</a></li>
+                <li><a href="crew.html" class="hover:underline ease-linear">Crew</a></li>
+                <li><a href="viewersprizeplay.html" class="hover:underline ease-linear">Viewers prize play</a></li>
+            </ul>
+        </div>
+
+        <!-- Partner With Us button -->
+        <a href="partners.html" class="hidden w-max md:block"><button class="w-36 h-12 text-slate-900 text-base font-bold font-nunito rounded-lg bg-magenta ease-linear duration-200">Partner With Us</button></a>
+
+        <!--Hamburger/Fries menu icon to open hidden navigation for mobile-->
+        <img src="./public/images/fries-menu-icon.svg" alt="" class="h-7 md:hidden" id="fries-menu-icon">
+    </nav>
+    
+    <!--------- Hidden side navbar ----------->
+    <section class="fixed top-0 left-0 w-0 h-[100vh] overflow-hidden bg-[rgba(0,0,0,0.3)] z-50 font-nunito ease-in duration-200 md:hidden" id="sidebar">
+
+        <!--This has the white background for the links-->
+        <div class="h-full w-[250px] bg-white overflow-y-auto overflow-x-hidden" id="sidebar-main">
+
+            <!--Close icon-->
+            <img src="./public/images/close-icon.svg" alt="" class="h-8 ml-auto mt-6 mr-5" id="close-icon">
+
+            <!--Text links and respective icons-->
+            <ul class="flex flex-col space-y-5 py-4 mt-8 mx-5 border-y-[1.5px] border-slate-500 !text-slate-900 text-base font-bold" style="width:calc(100% - 2.5rem)">
+
+                <!--Home Link-->
+                <li><a href="index.html" class="flex items-center space-x-3"><img src="./public/images/home-icon.svg" alt="" class="w-6"> <span>Home</span></a></li>
+
+                <!--Blog Link-->
+                <li><a href="blog.html" class="flex items-center space-x-3"><img src="./public/images/blog-icon.svg" alt="" class="w-6"> <span>Blog</span></a></li>
+
+                <!--Stars Link-->
+                <li><a href="stars.html" class="flex items-center space-x-3"><img src="./public/images/stars-icon.svg" alt="" class="w-6"> <span>Stars</span></a></li>
+
+                <!--Vote Now Link-->
+                <li><a href="votenow.html" class="flex items-center space-x-3"><img src="./public/images/votenow-icon.svg" alt="" class="w-6"> <span>Vote Now</span></a></li>
+
+                <!--Catch The Actions Link-->
+                <li><a href="catchtheactions.html" class="flex items-center space-x-3"><img src="./public/images/catchtheactions-icon.svg" alt="" class="w-6"> <span>Catch The Actions</span></a></li>
+
+                <!--Crew Link-->
+                <li><a href="crew.html" class="flex items-center space-x-3"><img src="./public/images/crew-icon.svg" alt="" class="w-6"> <span>Crew</span></a></li>
+
+                <!--Viewers Prize Play Link-->
+                <li><a href="viewersprizeplay.html" class="flex items-center space-x-3"><img src="./public/images/viewersprizeplay-icon.svg" alt="" class="w-6"> <span>Viewers Prize Play</span></a></li>
+                
+            </ul>
+
+            <!-- Partner With Us Button -->
+            <div class="mt-6 mx-5" style="width: calc(100% - 2.5rem)">
+                <a href="partners.html" class="block w-max mx-auto"><button class="w-36 h-12 bg-magenta text-white text-base font-bold rounded-lg">Partner With Us</button></a>
+            </div>
+
+        </div>
+    </section>
+    <!---- #0f1729 is equivalent of slate-gray-900 -->
+
+
+    <!--------- Carousel ----------->
+    <div class="swiper bg-slate-900 w-full mt-[80px] overflow-hidden md:mt-[96px]">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide swiper-1 w-full">
+                <img src="./assets/partners/partners-slide-1.jpg" alt="" class="w-full">
+            </div>
+            <div class="swiper-slide swiper-2 w-full">
+                <img src="./assets/partners/partners-slide-2.jpg" alt="" class="w-full">
+            </div>
+            <div class="swiper-slide swiper-3 w-full">
+                <img src="./assets/partners/partners-slide-3.jpg" alt="" class="w-full">
+            </div>
+            <div class="swiper-slide swiper-4 w-full">
+                <img src="./assets/partners/partners-slide-4.jpg" alt="" class="w-full">
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination !hidden md:!block"></div>
+
+        <!-- If we need navigation buttons -->
+        <!-- <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div> -->
+
+        <!-- If we need scrollbar -->
+        <!-- <div class="swiper-scrollbar"></div> -->
+    </div>
+
+
+    <!-- Information about Operation 100 partners-->
+    <section class="w-full px-7 py-6 font-nunito max-w-[680px] mx-auto md:py-10">
+        <h2 class="text-slate-900 text-3xl font-bold md:text-4xl">Operation 100 Partners Campaign</h2>
+
+        <!-- Short info about the partnership-->
+        <div class="w-full flex flex-col py-3 font-raleway space-y-2 md:mt-2">
+            <p class="text-slate-700 text-lg font-raleway font-semibold md:text-xl">Dear Beloved,</p>
+            <p class="text-black text-base font-medium md:text-lg">The 100 Partners Campaign is more than just a call to action; it's a divine summon to join hands in a sacred mission. Inspired by the heartfelt offerings of the Israelites in Exodus 35 and 36, this initiative seeks to rally believers who share a deep love for the expansion of the kingdom. Just as the people contributed materials for the tabernacle, we are called to offer our resources to support the production, post-production, and transmission of the Bible Stars Reality Show.</p>
+        </div>
+
+        <!-- Ready to partner -->
+        <div class="w-full flex flex-col space-y-3" id="ready-to-partner">
+            <h2 class="text-slate-900 text-2xl font-bold md:text-3xl">Ready to Partner?</h2>
+
+            <!--Info about all partnership-->
+            <div class="w-full flex flex-col space-y-7 bg-[#f5f7fa] p-4 rounded-lg">
+                
+
+                <!-- Reach Out to us -->
+                <div class="flex flex-col space-y-3">
+                    <h3 class="flex items-center space-x-3"><img src="./public/images/reach-out-icon.svg" alt="#" class="h-6"><span class="text-slate-900 text-xl font-semibold md:text-2xl">Contact us</span></h3>
+
+                    <ul class="w-full flex flex-col space-y-2 list-none text-base md:text-lg">
+                        <a href="tel:+2347048811294" class="flex items-center space-x-2 underline" target="_blank"><img src="./public/images/call-icon.svg" alt="" class="h-6"><span>+2347048811294</span></a>
+
+                        <a href="mailto:biblestarstv@gmail.com" class="flex items-center space-x-2 underline" target="_blank"><img src="./public/images/email-icon-2.svg" alt="" class="h-6"><span>biblestarstv@gmail.com</span></a>
+                    </ul>
+                </div>
+
+                <!-- Sign up as a partner -->
+                <div class="flex flex-col space-y-3">
+                    <h3 class="flex items-center space-x-3"><img src="./public/images/sign-up-icon.svg" alt="#" class="h-6"><span class="text-slate-900 text-xl font-semibold md:text-2xl">Sign Up as a Partner Today</span></h3>
+
+                    <!---- Sign up form  ----->
+                    <!--- Client side validation already effected ---->
+                    <form class="sign-up-form w-full flex flex-col space-y-3 font-nunito text-base font-medium md:text-lg" id="sign-up-form">
+
+                        <!-- Donation range -->
+                        <div class="w-full">
+                            <label for="donation" class="">Donation range</label>
+                            <select type="text" name="contribution" class="w-full bg-white font-raleway px-2 h-9 border-2 border-slate-900 rounded-md focus:!bg-white focus-within:!bg-white" required id="donation">
+                                <option value="one-star-partners">₦500,000 - One Star Partners</option>
+                                <option value="tqo-stars-partners">₦1,000,000 - Two Stars Partners</option>
+                                <option value="three-stars-partners">₦2,000,000 - Three Stars Partners</option>
+                                <option value="four-stars-partners">₦5,000,000 - Four Stars Partners</option>
+                                <option value="five-stars-partners">₦10,000,000 - Five Stars Partners</option>
+                                <option value="six-stars-partners">₦25,000,000 - Six Stars Partners</option>
+                                <option value="seven-stars-partners">₦50,000,000 - Seven Stars Partners</option>
+                            </select>
+                        </div>
+                      
+                        <!--Bank Transfer-->
+                        <div class="flex flex-col space-y-3 px-4 font-raleway">
+                            <h3 class="flex items-center space-x-3"><img src="./public/images/bank-icon.svg" alt="" class="h-4"><span class="text-slate-900 text-lg font-semibold md:text-xl">Bank Transfer</span></h3>
+                            
+                            <ul class="w-full flex flex-col space-y-2 list-square list-outside px-4 text-black text-sm font-semibold md:text-base">
+                                <li>
+                                    <p>4532022094</p>
+                                    <p>Ecobank</p>
+                                    <p>Bible world International Ministry</p>
+                                </li>
+                            </ul>
+                        </div>
+
+                         <!-- Name input -->
+                         <div class="w-full">
+                            <label for="name" class="">Name</label>
+                            <input type="text" name="name" class="w-full font-raleway bg-white p-2 h-9 border-2 border-slate-900 rounded-md focus:!bg-white focus-within:!bg-white" oninput="this.value = this.value.replace(/[^a-zA-Z\s-]/g, '')" required id="sign-up-name">
+
+                            <!-- Error message for name input-->
+                            <div class="hidden text-[0.8rem] text-error-red" id="name-error">Field is required</div>
+                        </div>
+
+                        <!-- Email Address input -->
+                        <div class="w-full">
+                            <label for="email" class="">Email Address</label>
+                            <input type="text" name="email" class="w-full font-raleway bg-white p-2 h-9 border-2 border-slate-900 rounded-md focus:!bg-white focus-within:!bg-white" oninput="this.value = this.value.replace(/[^a-z0-9@.]/g, '')" required id="sign-up-email">
+
+                            <!-- Error message for email input-->
+                            <div class="hidden text-[0.8rem] text-error-red" id="email-error">Invalid email address</div>
+                        </div>
+
+                        <!-- Phone number input -->
+                        <div class="w-full">
+                            <label for="phone-number" class="">Phone number</label>
+                            <input type="text" name="phone-number" class="w-full font-raleway bg-white p-2 h-9 border-2 border-slate-900 rounded-md focus:!bg-white focus-within:!bg-white" oninput="this.value = this.value.replace(/\D/g, '')" required id="sign-up-phone-number">
+
+                            <!-- Error message for phone-number input-->
+                            <div class="hidden text-[0.8rem] text-error-red" id="phone-number-error">Field is required</div>
+                        </div>
+
+
+                        <!-- Submit Button -->
+                        <div class="w-full">
+                            <button type="submit" class="w-full font-raleway h-9 bg-gradient-to-br from-light-orange to-dark-orange text-white rounded-md mt-3 ease-linear duration-200 hover:from-dark-orange hover:to-light-orange" onclick="validateSignUp(event)" id="submit-sign-up">Sign Up</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!------- Accordion for Sub Headings ----->
+        <ul class="w-full flex flex-col mt-3 md:mt-6" id="accordion">
+
+            <!--Why do we need Bible Stars TV Show?-->
+            <li class="accordion py-2 px-2 rounded-md border-b-[1.5px] border-b-gray bg-slate-900 space-y-2 md:px-4">
+                <h1 class="flex items-center justify-between">
+                    <div class="w-[80%] h-max text-base font-bold text-white cursor-pointer hover:text-light-purple md:text-lg">Why do we need Bible Stars TV Show?</div>
+
+                    <img src="./public/images/icon-plus.svg" class="accordion-ctrl h-6 cursor-pointer  duration-150 ease-linear" alt="">
+
+                </h1>
+                
+                <div class="accordion-text closed hidden text-white text-sm font-extralight font-raleway md:text-base">
+                    <p class="">In a world where the allure of secular entertainment often overshadows the principles of our faith, the need for shows like Bible Stars has never been more critical. Our youth are bombarded with messages that lead them away from God's truth, and it's time we reclaim the airwaves for His glory. Bible Stars is not just a show; it's a divine mandate entrusted to a young preacher of the gospel; Pastor Bectta Eferobome by the Almighty Himself. Through this platform, we can inspire a generation to rediscover the beauty and richness of God's Word.</p>
+                    <p class="">We urge you, dear prospective partners today to heed this divine clarion call. Let us rise together and be counted among the faithful stewards of God's kingdom. Together, we can shine the light of His truth into the darkest corners of our society and usher in the peace and stability that we so desire as a Nation and the world at large.</p>
+                </div>
+            </li>
+
+            <!--The Story Behind Bible Stars: The Vision-->
+            <li class="accordion py-2 px-2 rounded-md border-b-[1.5px] border-b-gray bg-slate-900 space-y-2 md:px-4">
+                <h1 class="flex items-center justify-between">
+                    <div class="w-[80%] h-max text-base font-bold text-white cursor-pointer hover:text-light-purple md:text-lg">The Story Behind Bible Stars: The Vision</div>
+
+                    <img src="./public/images/icon-plus.svg" class="accordion-ctrl h-6 cursor-pointer duration-150 ease-linear" alt="">
+
+                </h1>
+                
+                <div class="accordion-text closed hidden text-white text-sm font-extralight font-raleway md:text-base">
+                    <p class="">Bible Stars Reality Show was conceived during one of my yearly retreats—a personal fasting and prayer regimen from 6 am to 6 pm, spanning 93 days (October 1st to December 31st) every year. In 1999, during one of these retreats, God began revealing this vision to me. However, it took two years for me to gain clarity, though only about 15%. Initially, I struggled with God as my personal aspirations were quite different. </p>
+                    <p class="">I envisioned myself as a preacher, a crusade evangelist traversing countries to spread the gospel. Not being a social person, let alone interested in television, I pleaded with God to assign this mission to someone else. Like Jonah, I resisted and pursued my own endeavors, but God persisted. Various signs indicated the importance of this vision, including the failure of my desired business and ministry ventures.</p>
+                    <p class="">In 2009, despite my reservations, we conducted a small-scale trial in Ilorin, Kwara state, to test the concept's acceptance. Approximately 250 participants showed interest, and the grand finale garnered significant attendance. The grand prize back then was 50,000 Naira with a television set, the 2nd runner-up received a 43-inch television, and the third-place winner received a small generator, while other contestants received consolation prizes. Despite its success, I retreated from the project once more due to my lack of enthusiasm.</p>
+                    <p class="">However, during a trip to Pennsylvania, United States, I experienced a significant encounter. I woke up feeling paralyzed on the left side of my body, initially thinking it was a demonic attack. However, God revealed that it was a consequence of my stubbornness—ignoring His call. He made it clear that this was His final warning.Recognizing the significance of the project, I returned to Nigeria and assembled a team. </p>
+                    <p class="">Despite numerous setbacks and failures, we persisted with renewed passion and commitment. Fast forward to the present, and after three years of dedicated effort, we successfully concluded the eviction show of Bible Stars Reality Show Season 1 and are gearing up for the main event.</p>
+                    <p class="">One vision that holds me steadfast to this project is an image of God shedding tears as His people abandoned His word. This reflects the prevalent hypocrisy and superficial Christian life prevalent today. Christianity is not just about denominational affiliation; it's a supernatural experience and lifestyle with God—a reality we aim to showcase with the Bible Stars Reality Show.</p>
+                    <p class="">The journey continues, driven by a divine mandate. Bible Stars Reality Show is more than just a project; it's God's own endeavor, aimed at bringing His people back to Him. All glory to God for the journey so far, and may His name be praised for the journey ahead.</p>
+                    <h4 class="text-right font-bold">-Pastor Eferobome Bectta</h4>
+                </div>
+            </li>
+
+            <!--The Show-->
+            <li class="accordion py-2 px-2 rounded-md border-b-[1.5px] border-b-gray bg-slate-900 space-y-2 md:px-4">
+                <h1 class="flex items-center justify-between">
+                    <div class="w-[80%] h-max text-base font-bold text-white cursor-pointer hover:text-light-purple md:text-lg">The Show</div>
+
+                    <img src="./public/images/icon-plus.svg" class="accordion-ctrl h-6 cursor-pointer  duration-150 ease-linear" alt="">
+
+                </h1>
+                
+                <div class="accordion-text closed hidden text-white text-sm font-extralight font-raleway md:text-base">
+                    <p class="">The journey began with auditions drawing hundreds of hopefuls from across Nigeria and various church denominations. After rigorous online tests, the victorious few advanced to the eviction show, where they battled individually and in groups for the coveted 12 keys to the big house. Now, after weeks of challenges filled with endurance, knowledge, suspense, and action, we proudly present the final <a href="./stars.html" class="inline text-magenta font-bold underline">12 stars</a> who will vie for the title "Bible Personality of the Year." With the grand prize of 10 Million Naira and a brand new car.</p>
+                </div>
+            </li>
+
+            <!--The Big House Experience (Sneak Peek)-->
+            <li class="accordion py-2 px-2 rounded-md border-b-[1.5px] border-b-gray bg-slate-900 space-y-2 md:px-4">
+                <h1 class="flex items-center justify-between">
+                    <div class="w-[80%] h-max text-base font-bold text-white cursor-pointer hover:text-light-purple md:text-lg">The Big House Experience (Sneak Peek)</div>
+
+                    <img src="./public/images/icon-plus.svg" class="accordion-ctrl h-6 cursor-pointer  duration-150 ease-linear" alt="">
+
+                </h1>
+                
+                <div class="accordion-text closed hidden text-white text-sm font-extralight font-raleway md:text-base">
+                    <p class="">The Big House is the heart of the Bible Stars Reality show, providing a 30-day housing experience for the 12 final stars, streamed for viewers' participation and voting.</p>
+                    <p class="">Pre-production to production spans 45 days: 30 days for housing and 15days for pre-camping to prepare and orientate the stars.</p>
+                    <p class="">Promising to set a new standard in television, the Big House boasts over 15 segments of pure and worthy entertainment, ensuring non-stop inspiration and excitement. From planned appearances of A-list celebrities ministering to the stars to mind-blowing intellectual challenges in "The Showroom" hosted by top Nigerian hosts, every moment is set to harmonize spiritual and entertaining elements while streaming on DSTV Channels for a worldwide audience.</p>
+                    <p class="">The proposed budget of the bible stars reality show is 300 Million Naira only. This amount will cater to the show-stopping arrangements and standard structure of this kingdom valued show. The vision is to showcase heaven on earth and its riches!</p>
+
+                    <p class="">Plans for the Big House Experience include:</p>
+
+                    <ul class="list-inside">
+                        <li><span class="font-bold">1. Appearance of Angels:</span> We are making use of top celebrities to represent brands by ministering prizes to those who win prizes within the show and they will also minister with or minister to the stars.</li>
+                        <li><span class="font-bold">2. The Showroom:</span> This segment of the big house experience is an avenue created for intellectual and spiritual challenges hosted by top Nigerian personalities. The stars will not only compete, they will have the opportunity to showcase God's wisdom and their perspective on different topics and heir approach to a kingdom lifestyle.</li>
+                        <li><span class="font-bold">3. The Lord's Garden:</span> A part of the big house that is reserved as a scared place where the contestants will have a feel of a one-on-one relationship with God. It is an interactive area where Stars will go time to time to fellowship with God when they are called upon by "The voice in the garden" (another beautiful aspect of the show). The garden is a beautiful display of Kingdom royalty, depicting heaven on earth.</li>
+                        <li><span class="font-bold">4. Realms of Glory:</span> This is a special aspect of the show which is designed to be a treasure house of heavenly blessings. In this part of the big house, the keys won by the housemates during the eviction show will be used to unlock the heavenly blessings stored in this Realms of Glory for themselves. An exhibition of God's favor, offering free and worthy gifts to the stars.</li>
+                        <li><span class="font-bold">And many more amazing segments!</span>
+                    </ul>
+                </div>
+            </li>
+
+            <!--Brochure-->
+            <li class="accordion py-2 px-2 rounded-md border-b-[1.5px] border-b-gray bg-slate-900 space-y-2 md:px-4">
+                <h1 class="flex items-center justify-between">
+                    <div class="w-[80%] h-max text-base font-bold text-white cursor-pointer hover:text-light-purple md:text-lg">Brochure</div>
+
+                    <img src="./public/images/icon-plus.svg" class="accordion-ctrl h-6 cursor-pointer  duration-150 ease-linear" alt="">
+
+                </h1>
+                
+                <div class="accordion-text closed hidden text-white text-sm font-extralight font-raleway md:text-base">
+                    <p class="mb-2 md:mb-4">To have a visual explanation or more insight please click the button below to download The Bible Star's Reality Brochure.</p>
+                    
+                    <!-- Download brochure button -->
+                    <a href="./assets/partners/Operation-100-Partners-Brochure.pdf" target="_blank">
+                        <button class="w-full h-9 border-2 text-sm border-magenta bg-magenta text-white md:bg-transparent md:text-magenta font-medium rounded-md md:hover:bg-magenta md:hover:text-white md:text-base md:h-10"  id="download-bronchure-btn">Download Brochure</button>
+                    </a>
+                </div>
+            </li>
+
+            <!--How To Partner-->
+            <li class="accordion py-2 px-2 rounded-md border-b-[1.5px] border-b-gray bg-slate-900 space-y-2 md:px-4">
+                <h1 class="flex items-center justify-between">
+                    <div class="w-[80%] h-max text-base font-bold text-white cursor-pointer hover:text-light-purple md:text-lg">How To Partner</div>
+
+                    <img src="./public/images/icon-plus.svg" class="accordion-ctrl h-6 cursor-pointer  duration-150 ease-linear" alt="">
+
+                </h1>
+                
+                <div class="accordion-text closed hidden text-white text-sm font-extralight font-raleway md:text-base">
+                    <p class="">We have allocated 100 slots for passionate partners who will heed the call and join us in shouldering this noble burden. Each slot is designated to cater to various needs across different aspects of the show.</p>
+                    <p class="">You have the opportunity to select any aspect you'd like to support. Each item on the list carries its own significance, ad have been categorized into four tiers:</p>
+                    <ul class="list-disc list-inside">
+                        <li class="font-bold">1 star partner</li>
+                        <li class="font-bold">3 stars partner</li>
+                        <li class="font-bold">5 stars partner</li>
+                        <li class="font-bold">7 stars partner</li>
+                    </ul>
+                </div>
+            </li>
+
+            <!--Partners' Benefits-->
+            <li class="accordion py-2 px-2 rounded-md border-b-[1.5px] border-b-gray bg-slate-900 space-y-2 md:px-4">
+                <h1 class="flex items-center justify-between">
+                    <div class="w-[80%] h-max text-base font-bold text-white cursor-pointer hover:text-light-purple md:text-lg">Partners' Benefits</div>
+
+                    <img src="./public/images/icon-plus.svg" class="accordion-ctrl h-6 cursor-pointer  duration-150 ease-linear" alt="">
+
+                </h1>
+                
+                <div class="accordion-text closed hidden text-white text-sm font-extralight font-raleway md:text-base">
+                    <!-- 1 star partner benefits -->
+                    <div>
+                        <h4 class="font-bold">1 star partners:</h4>
+                        
+                        <ul class="list-square list-inside ml-2 md:text-[1.05rem] md:ml-10">
+                            <li>Advertisement slots: 15 seconds</li>
+                            <li>Automatic promotions with our celebrity partners</li>
+                            <li>Named as a supporting sponsor</li>
+                            <li>Enhanced visibility and promotion of integrity</li>
+                        </ul>
+                    </div>
+
+                    <!-- 3 stars partner benefits -->
+                    <div>
+                        <h4 class="font-bold">3 star partners:</h4>
+                        
+                        <ul class="list-square list-inside ml-2 md:text-[1.05rem] md:ml-10">
+                            <li>Advertisement slots: 30 seconds</li>
+                            <li>Opportunity to speak on the show: 1 minute</li>
+                            <li>Automatic promotions with our celebrity partners</li>
+                            <li>Named as a supporting sponsor</li>
+                            <li>Extended relationship connections to the brand</li>
+                            <li>Enhanced visibility and promotion of integrity</li>
+                        </ul>
+                    </div>
+
+                    <!-- 5 stars partner benefits -->
+                    <div>
+                        <h4 class="font-bold">5 star partners:</h4>
+                        
+                        <ul class="list-square list-inside ml-2md:text-[1.05rem] md:ml-10">
+                            <li>Advertisement slots: 45 seconds</li>
+                            <li>Opportunity to speak on the show: 5 minutes</li>
+                            <li>Automatic promotions with our celebrity partners</li>
+                            <li>Named as a prominent associate.</li>
+                            <li>Extended relationship connections to the brand</li>
+                            <li>Enhanced visibility and promotion of integrity</li>
+                            <li>Priority consideration for exclusive partnership opportunities</li>
+                            <li>Advertisement space on the website</li>
+                            <li>Tickets to the grand finale show*</li>
+                        </ul>
+                    </div>
+
+                    <!-- 7 stars partner benefits -->
+                    <div>
+                        <h4 class="font-bold">7 star partners:</h4>
+                        
+                        <ul class="list-square list-inside ml-2 md:text-[1.05rem] md:ml-10">
+                            <li>Advertisement slots: 1 minute</li>
+                            <li>Opportunity to speak on the show: 10 minutes (time with stars)</li>
+                            <li>Automatic promotions with our celebrity partners</li>
+                            <li>Named as a headline sponsor</li>
+                            <li>Extended relationship connections to the brand</li>
+                            <li>Enhanced visibility and promotion of integrity</li>
+                            <li>Priority consideration for exclusive partnership opportunities</li>
+                            <li>Advertisement space on the website</li>
+                            <li>VIP access to special events and engagements hosted by Bible Stars</li>
+                            <li>Personalized and tailored brand integration opportunities throughout the show</li>
+                            <li>Tickets to the grand finale show*</li>
+                        </ul>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <!-- Video-->
+        <div class="w-full flex flex-col mt-8 mb-5">
+            <!-- Video iframe -->
+            <iframe src="https://www.youtube.com/embed/K2HAiebWTEk" title="Partners video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-60 md:h-96"></iframe>
+        </div>
+        
+    </section>
+
+
+    <!------------------  Thanks  modal ---------------------->
+    <section class="hidden fixed w-[100vw] h-[100vh] left-0 top-0 z-[100] bg-[rgba(0,0,0,0.4)] overflow-y-auto md:items-center md:justify-center" id="thanks-modal">
+
+        <!--- Main content--->
+        <div class="flex flex-col bg-white rounded-lg mt-[7rem] mx-8 md:mx-auto md:w-[45%!important] md:mt-0 lg:w-[30%!important]" style="width: calc(100% - 4rem)">
+            <img src="./public/images/partners-icon.svg" alt="" class="h-20 mx-auto mt-4">
+
+            <h2 class="text-slate-900 text-xl font-nunito font-bold text-center mx-4 mt-0 md:mt-0">Thanks for your support!</h2>
+
+            <p class="text-slate-900 text-base font-raleway font-medium text-center mx-4 mt-4 md:mx-6 md:leading-[1.8]">Your contribution brings us one step closer to making Bible Stars TV Show a reality. You will get an email once your partnership has been verified</p>
+
+            <a href="partners.html" class="mx-auto">
+                <button class="bg-light-orange text-white text-base font-medium rounded-full w-28 h-12 mt-5 mb-6 md:mt-2 md:mb-8 hover:bg-dark-orange" id="got-it-btn">Got it</button>
+            </a>
+        </div>
+    </section>
+
+
+    <!---------  Footer ---------->
+    <footer class="w-full bg-slate-900 px-4 py-6 pb-28 font-nunito text-base md:px-[5%]">
+
+        <!-- Everything except copyright -->
+        <section class="w-full">
+            <!--- Footer logo---->
+            <a href="partners.html"><img src="./public/images/100-partners-logo.png" alt="" class="h-20 md:h-24" ></a>
+
+            <!-- Other contents-->
+            <section class="w-full lg:flex">
+                <!---- Contact info ---->
+                <div class="w-full flex flex-col space-y-4 mt-6 smd:flex-row smd:space-y-0 smd:space-x-4 lg:mt-0 lg:w-[500px]">
+                    <!-- Location-->
+                    <div class="w-full flex space-x-4">
+                        <img src="./public/images/location-icon.svg" alt="" class="h-5">
+
+                        <p class="text-white">Suite 8, Dabic Shopping Plaza, Yoruba Rd, 240212, Ilorin, Kwara</p>
+                    </div>
+
+                    <!-- Telephone and email-->
+                    <div class="w-full flex flex-col space-y-3">
+                        <!-- Telephone info -->
+                        <a href="tel:+2347048811294" class="w-full flex space-x-4" target="_blank">
+                            <img src="./public/images/contact-icon.svg" alt="" class="h-5">
+
+                            <p class="text-white underline">+2347048811294</p>
+                        </a>
+
+                        <!-- Email info -->
+                        <a href="mailto:biblestarstv@gmail.com" class="w-full flex space-x-4" target="_blank">
+                            <img src="./public/images/email-icon.svg" alt="" class="h-5">
+
+                            <p class="text-white underline">biblestarstv@gmail.com</p>
+                        </a>
+                    </div>
+                </div>
+
+                <!----  Navigation text and social icon Links ---->
+                <div class="flex flex-col space-y-14 mt-10 smd:flex-row smd:space-y-0 smd:space-x-4 lg:mt-0 lg:overflow-hidden">
+                    <!---- Navigation text links ---->
+                    <div class="w-full grid grid-cols-2 gap-4 text-white">
+                        <a href="index.html" class="w-full md:hover:underline ease-linear">Home</a>
+                        <a href="blog.html" class="w-full md:hover:underline ease-linear">Blog</a>
+                        <a href="stars.html" class="w-full md:hover:underline ease-linear">Meet our stars</a>
+                        <a href="votenow.html" class="w-full md:hover:underline ease-linear">Vote now</a>
+                        <a href="catchtheactions.html" class="w-full md:hover:underline ease-linear">Catch the actions</a>
+                        <a href="crew.html" class="w-full md:hover:underline ease-linear">Meet our crew</a>
+                        <a href="viewersprizeplay.html" class="w-full md:hover:underline ease-linear">Viewers prize play</a>
+                        <a href="partners.html" class="w-full md:hover:underline ease-linear">Partner with us</a>
+                    </div>
+
+                    <!------ Social icon links ------>
+                    <div class="w-full flex flex-wrap items-center justify-center space-x-5 smd:justify-start smd:items-start lg:w-[380px]">
+                        <!-- Facebook icon ---->
+                        <a href="https://www.facebook.com/biblestarstvshow?mibextid=ZbWKwL" target="_blank"><img src="./public/images/white-facebook-icon.svg" alt="#" class="h-7"></a>
+
+                        <!-- Instagram icon ---->
+                        <a href="https://instagram.com/biblestarsrealityshow?igshid=OGQ5ZDc2ODk2ZA" target="_blank"><img src="./public/images/white-instagram-icon.svg" alt="#" class="h-7"></a>
+
+                        <!-- Youtube icon ---->
+                        <a href="https://youtube.com/@biblestarstvshow?si=3jKBGLKHaG8H5MWz" target="_blank"><img src="./public/images/white-youtube-icon.svg" alt="#" class="h-7"></a>
+
+                        <!-- Twitter icon ---->
+                        <a href="https://x.com/Biblestarstv?t=rB3yxWYDfQPK-vWxMPoR5A&s=09" target="_blank"><img src="./public/images/white-twitter-icon.svg" alt="#" class="h-6"></a>
+
+                        <!--Pinterest icon-->
+                        <a href="https://pin.it/2ImWZCJ7v" target="_blank"><img src="./public/images/white-pinterest-icon.svg" alt="#" class="h-7"></a>
+
+                        <!-- Tiktok icon ---->
+                        <a href="https://www.tiktok.com/@biblestarstv?_t=8ggYPo47wTG&_r=1" target="_blank" class="lg:!ml-0"><img src="./public/images/white-tiktok-icon.svg" alt="#" class="h-7"></a>
+                    </div>
+                </div>
+                
+            </section>
+        </section>
+        
+
+        <!-- Copyright -->
+        <div class="w-full flex justify-center text-white text-sm mt-8 lg:mt-16 lg:text-base">
+            <span class="text-center">© Copyright BSTV <script defer="">document.write(new Date().getFullYear())</script>. All rights reserved</span>
+        </div>
+
+    </footer>
+
+    <section class="fixed bottom-8 right-4 z-30 flex flex-col space-y-1 font-nunito font-medium md:bottom-12 md:right-[5%]">
+        <!--- Fixed Sign Up Icon---->
+        <div class="flex items-center cursor-pointer " onclick="scrollToSignUp()">
+            <!-- Sign Up Now text-->
+            <div class="chat-with-us relative w-[82px] bg-black rounded-md p-1 text-[0.75rem] text-white after:absolute after:-right-[0.37rem] after:top-[50%] after:-translate-y-1/2 after:bg-black after:w-2 after:h-1 after:rotate-90 md:w-[90px] md:text-[0.8rem]">Sign up Now</div>
+
+            <!-- Partners icon-->
+            <div class="flex items-center justify-center h-10 w-10 rounded-full ml-3 md:h-12 md:w-12 bg-black"><img src="./public/images/white-partners-icon.svg" alt="" class="h-11 md:h-14"></div>
+        </div>
+
+        <!--- Fixed whatsapp icon ---->
+        <a href="https://wa.me/2348087863562" class="flex items-center space-x-3" target="_blank">
+            <!-- Chat with us text-->
+            <div class="chat-with-us relative w-[82px] bg-[#00a500] rounded-md p-1 text-[0.75rem] text-white after:absolute after:-right-[0.37rem] after:top-[50%] after:-translate-y-1/2 after:bg-[#00a500] after:w-2 after:h-1 after:rotate-90 md:w-[90px] md:text-[0.8rem]">Chat With Us</div>
+
+            <!-- Whatsapp logo-->
+            <img src="./public/images/whatsapp-logo.png" alt="" class="h-11 md:h-14">
+        </a>
+    </section>
+
+    <!--General js file-->
+    <script src="./js/main.js"></script>
+
+    <!--Js file for partners.html only-->
+    <script src="./js/partners.js"></script>
+</body>
