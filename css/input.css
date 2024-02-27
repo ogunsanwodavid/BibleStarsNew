@@ -118,15 +118,15 @@ input,select{
     transform:rotate('90deg');
 }
 
-.rotate {
-    animation: rotateAnimation 1s ease forwards;
+.flipped {
+    animation: flipAnimation 1500ms ease forwards;
   }
   
-@keyframes rotateAnimation {
+@keyframes flipAnimation {
     from {
         transform: perspective(400px) rotateY(0deg);
-      }
-      to {
+        }
+    to {
         transform: perspective(400px) rotateY(180deg);
-      }
+    }
 }

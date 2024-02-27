@@ -28,6 +28,8 @@
 
  /********* This script shuffles the card arrangement ********/
 
+
+ /************** This script ensures the cards rotate when they appear on the page and on scroll */
  const starsImages = this.document.getElementsByClassName("star-image")
 
 
@@ -40,9 +42,9 @@
       let position = starsImages[i].getBoundingClientRect();
       
       if (position.top >= 0 && position.bottom <= window.innerHeight) {
-        starsImages[i].classList.add("rotate");
+        starsImages[i].classList.add("flipped");
       } else {
-        starsImages[i].classList.remove("rotate");
+        starsImages[i].classList.remove("flipped");
       }
     }
   });
@@ -54,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var observer = new IntersectionObserver(function(entries) {
       entries.forEach(function(entry) {
         if (entry.isIntersecting) {
-          starsImages[i].classList.add("rotate");
+          starsImages[i].classList.add("flipped");
           observer.unobserve(starsImages[i]); // Stop observing once flipped
         }
       });
@@ -63,3 +65,5 @@ document.addEventListener("DOMContentLoaded", function() {
     observer.observe(starsImages[i]);
   }
 });
+
+ /************** This script ensures the cards rotate when they appear on the page and on scroll */
