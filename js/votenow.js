@@ -67,3 +67,82 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
  /************** This script ensures the cards rotate when they appear on the page and on scroll */
+
+
+ /***** THE VOTE BUTTONS */
+ const voteButtons = document.getElementsByClassName("vote-btn")
+
+
+ 
+
+
+
+ /******************** This script for the PERMANENT voting functionality ****************************/
+ const voteModal = document.getElementById("vote-modal")
+ const voteModalMain = document.getElementById("vote-modal-main")
+ var desktopWidth = window.matchMedia("(min-width:900px)")
+ const closeVoteModalIcon = document.getElementById("close-vote-modal-icon")
+ const votedStarName= document.getElementById("voted-star-name")
+
+ function showvoteModal() {
+  if(desktopWidth.matches){
+      //Display no Voting Modal for desktop
+      voteModal.classList.remove("hidden")
+      voteModal.classList.add("flex")
+  }else{
+      //Display no Voting Modal for mobile
+      voteModal.classList.remove("hidden")
+      voteModal.classList.add("block")
+  }
+}
+
+function closevoteModal() {
+if(desktopWidth.matches){
+    //Display no Voting Modal for desktop
+    voteModal.classList.remove("flex")
+    voteModal.classList.add("hidden")
+}else{
+    //Display no Voting Modal for mobile
+    voteModal.classList.remove("block")
+    voteModal.classList.add("hidden")
+}
+}
+
+/////This script ensures a smooth responsiveness of the no Voting Modal
+function voteModalResp(e) {
+  if(e.matches && voteModal.classList.contains("block")){
+      voteModal.classList.remove("block")
+      voteModal.classList.add("flex")
+  }else{
+      voteModal.classList.remove("flex")
+      voteModal.classList.add("block")
+  }
+}
+
+desktopWidth.addListener(voteModalResp)
+voteModalResp(desktopWidth)
+
+/////Loops through the voteButtons and show the modal
+for (let i = 0; i < voteButtons.length; i++) {
+  voteButtons[i].addEventListener("click" , ()=> {
+    showvoteModal();
+  })
+}
+
+/////closes the modal
+closeVoteModalIcon.addEventListener("click" , ()=> {
+    closevoteModal();
+})
+
+////tis closes the modal if anywhere outside the modal has been clicked.
+voteModal.addEventListener("click" , (event)=> {
+    var isClickedInside = voteModalMain.contains(event.target);
+
+    // If the clicked element is outside the div, log a message
+    if (!isClickedInside) {
+      closevoteModal()
+    }
+})
+
+
+ /******************** This script for the PERMANENT voting functionality ****************************/

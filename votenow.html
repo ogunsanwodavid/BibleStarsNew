@@ -136,7 +136,77 @@
     </section>
     <!---- #0f1729 is equivalent of slate-gray-900 -->
 
+    <!------------------  No Voting Yet  modal ---------------------->
+    <section class="hidden fixed w-[100vw] h-[100vh] left-0 top-0 z-[100] bg-[rgba(0,0,0,0.4)] overflow-y-auto md:items-center md:justify-center" id="no-voting-modal">
 
+        <!--- Main content--->
+        <div class="flex flex-col bg-white rounded-lg mt-[7rem] mx-8 md:mx-auto md:w-[45%!important] md:mt-0 lg:w-[30%!important]" style="width: calc(100% - 4rem)" id="no-voting-modal-main">
+            <img src="./public/images/sad-face.svg" alt="" class="h-20 mx-auto mt-4">
+
+            <h2 class="text-slate-900 text-xl font-nunito font-bold text-center mx-4 mt-0 md:mt-0">Voting is Pending...</h2>
+
+            <p class="text-slate-900 text-base font-raleway font-medium text-center mx-4 mt-4 md:mx-6 md:leading-[1.8]">Voting has not yet commenced. Please stay tuned for further updates regarding the start of voting.</p>
+
+            <button class="bg-light-orange text-white text-base font-medium rounded-full w-28 h-12 mx-auto mt-5 mb-6 md:mt-2 md:mb-8 hover:bg-dark-orange" id="got-it-btn">Got it</button>
+            
+        </div>
+    </section>
+
+    <!------------------  Purchase Vote  modal ---------------------->
+    <section class="hidden fixed w-[100vw] h-[100vh] left-0 top-0 z-[100] bg-[rgba(0,0,0,0.4)] overflow-y-auto md:items-center md:justify-center" id="vote-modal">
+
+        <!--- Main content--->
+        <div class="flex flex-col bg-white rounded-lg mt-[7rem] mx-8 md:mx-auto md:w-[50%!important] md:mt-0 lg:w-[35%!important]" style="width: calc(100% - 4rem)" id="vote-modal-main">
+            <img src="./public/images/close-icon.svg" alt="" class="h-7 mr-4 ml-auto mt-4" id="close-vote-modal-icon">
+
+            <img src="./public/images/purchase-votes.svg" alt="" class="h-28 mx-auto mt-0">
+
+
+            <!-- <h2 class="text-slate-900 text-xl font-nunito font-bold mx-4 mt-0 md:mt-0 md:mx-6">Purchase Votes</h2> -->
+
+            <p class="text-slate-900 text-base font-raleway font-medium mx-4 mt-1 md:mx-6">Kindly enter the number of votes you wish to purchase for <span class="font-bold uppercase" id="voted-star-name">NAME</span> and provide your email addresss below</p>
+            
+            <!--- Client side validation already effected ---->
+            <form class="sign-up-form w-full flex flex-col space-y-1 font-nunito text-base font-medium pt-2 pb-5 px-4 md:px-6" id="sign-up-form">
+                <!-- Star Id  -->
+                <!--- Hidden, for backend purposes only ---->
+                <div class="hidden w-full">
+                    <label for="price" class="">Star ID</label>
+                    <input type="text" name="star-id" class="w-full font-raleway bg-white p-2 h-7 border-2 border-slate-900 rounded-md focus:!bg-white focus-within:!bg-white" required disabled id="price">
+                </div>
+
+                 <!-- Email Address input -->
+                 <div class="w-full">
+                    <label for="vote-email" class="">Email Address</label>
+                    <input type="text" name="vote-email" class="w-full font-raleway bg-white p-2 h-7 border-2 border-slate-900 rounded-md focus:!bg-white focus-within:!bg-white" oninput="this.value = this.value.replace(/[^a-z0-9@.]/g, '')" required id="vote-email">
+
+                    <!-- Error message for email input-->
+                    <div class="hidden text-[0.8rem] text-error-red" id="vote-email-error">Invalid email address</div>
+                </div>
+
+                <!-- Number of votes input -->
+                <div class="w-full">
+                    <label for="vote-number" class="">Number of Votes</label>
+                    <input type="text" name="vote-number" class="w-full font-raleway bg-white p-2 h-7 border-2 border-slate-900 rounded-md focus:!bg-white focus-within:!bg-white" oninput="this.value = this.value.replace(/\D/g, '')" required id="vote-number">
+
+                    <!-- Error message for phone-number input-->
+                    <div class="hidden text-[0.8rem] text-error-red" id="vote-number-error">Field is required</div>
+                </div>
+
+                <!-- Price -->
+                <!--- Disabled and auto calculated -->
+                <div class="w-full">
+                    <label for="price" class="">Price</label>
+                    <input type="text" name="price" class="w-full font-raleway bg-white p-2 h-7 border-2 border-slate-900 rounded-md focus:!bg-white focus-within:!bg-white" required disabled id="price">
+                </div>
+
+                <!-- Proceed to Payment -->
+                <div class="w-full">
+                    <button type="submit" class="w-full font-raleway h-9 bg-gradient-to-br from-light-orange to-dark-orange text-white rounded-md mt-3 ease-linear duration-200 hover:from-dark-orange hover:to-light-orange" onclick="validateSignUp(event)" id="submit-sign-up">Proceed to Payment</button>
+                </div>
+            </form>
+        </div>
+    </section>
 
     <!-- Stars content -->
     <main class="w-full mt-[80px] px-4 py-6 font-nunito md:mt-[96px] md:px-[8%] md:py-12">
@@ -165,19 +235,17 @@
 
                     <!-----Buttons----->
                     <div class="flex flex-col space-y-1">
+                        <!-- Vote Star button -->
+                        <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900 vote-btn" starname="Ayodele" starid="1">
+                            <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                            <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                        </button>
+
                         <!-- View profile button -->
                         <a href="./stars/profiles/ayodele-olorunfemi.html">
                             <button class="flex items-center justify-center space-x-1 bg-white backdrop-blur-[50px] w-44 h-10 rounded-full">
                                 <img src="./public/images/profile-icon.svg" alt="" class="h-5">
                                 <p class="font-raleway font-medium text-lg text-slate-900">View Profile</p>
-                            </button>
-                        </a>
-
-                        <!-- Vote Star button -->
-                        <a href="#">
-                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
-                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
-                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
                             </button>
                         </a>
                     </div>
@@ -202,12 +270,10 @@
                     <!-----Buttons----->
                     <div class="flex flex-col space-y-1">
                         <!-- Vote Star button -->
-                        <a href="#">
-                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
-                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
-                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
-                            </button>
-                        </a>
+                        <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900 vote-btn" starname="Omowunmi" starid="2">
+                            <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                            <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                        </button>
 
                         <!-- View profile button -->
                         <a href="./stars/profiles/omowunmi-oyedepo.html">
@@ -238,12 +304,11 @@
                     <!-----Buttons----->
                     <div class="flex flex-col space-y-1">
                         <!-- Vote Star button -->
-                        <a href="#">
-                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
-                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
-                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
-                            </button>
-                        </a>
+                        <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900 vote-btn" starname="Chiwendu" starid="3">
+                            <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                            <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                        </button>
+
                         <!-- View profile button -->
                         <a href="./stars/profiles/chinwendu-jonah.html">
                             <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
@@ -273,12 +338,10 @@
                     <!-----Buttons----->
                     <div class="flex flex-col space-y-1">
                         <!-- Vote Star button -->
-                        <a href="#">
-                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
-                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
-                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
-                            </button>
-                        </a>
+                        <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900 vote-btn" starname="Stephen" starid="4">
+                            <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                            <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                        </button>
 
                         <!-- View profile button -->
                         <a href="./stars/profiles/stephen-adekanmbi.html">
@@ -309,12 +372,10 @@
                     <!-----Buttons----->
                     <div class="flex flex-col space-y-1">
                         <!-- Vote Star button -->
-                        <a href="#">
-                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
-                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
-                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
-                            </button>
-                        </a>
+                        <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900 vote-btn" starname="Sharon" starid="5">
+                            <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                            <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                        </button>
 
                         <!-- View profile button -->
                         <a href="./stars/profiles/ponmile-sharon.html">
@@ -345,12 +406,10 @@
                     <!-----Buttons----->
                     <div class="flex flex-col space-y-1">
                         <!-- Vote Star button -->
-                        <a href="#">
-                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
-                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
-                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
-                            </button>
-                        </a>
+                        <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900 vote-btn" starname="Benjamin" starid="6">
+                            <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                            <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                        </button>
                         
                         <!-- View profile button -->
                         <a href="./stars/profiles/benjamin-okafor.html">
@@ -381,12 +440,10 @@
                     <!-----Buttons----->
                     <div class="flex flex-col space-y-1">
                         <!-- Vote Star button -->
-                        <a href="#">
-                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
-                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
-                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
-                            </button>
-                        </a>
+                        <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900 vote-btn" starname="Onyedika" starid="7">
+                            <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                            <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                        </button>
 
                         <!-- View profile button -->
                         <a href="./stars/profiles/onyedika-nwosu.html">
@@ -417,12 +474,11 @@
                     <!-----Buttons----->
                     <div class="flex flex-col space-y-1">
                         <!-- Vote Star button -->
-                        <a href="#">
-                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
-                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
-                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
-                            </button>
-                        </a>
+                        <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900 vote-btn" starname="Sunday" starid="8">
+                            <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                            <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                        </button>
+
                         <!-- View profile button -->
                         <a href="./stars/profiles/sunday-adeniji.html">
                             <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
@@ -452,12 +508,11 @@
                     <!-----Buttons----->
                     <div class="flex flex-col space-y-1">
                         <!-- Vote Star button -->
-                        <a href="#">
-                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
-                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
-                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
-                            </button>
-                        </a>
+                        <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900 vote-btn" starname="Pelumi" starid="9">
+                            <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                            <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                        </button>
+
                         <!-- View profile button -->
                         <a href="./stars/profiles/olayiwola-pelumi.html">
                             <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
@@ -487,12 +542,10 @@
                     <!-----Buttons----->
                     <div class="flex flex-col space-y-1">
                         <!-- Vote Star button -->
-                        <a href="#">
-                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
-                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
-                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
-                            </button>
-                        </a>
+                        <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900 vote-btn" starname="Olawale" starid="10">
+                            <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                            <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                        </button>
 
                         <!-- View profile button -->
                         <a href="./stars/profiles/olawale-adelerin.html">
@@ -523,12 +576,10 @@
                     <!-----Buttons----->
                     <div class="flex flex-col space-y-1">      
                         <!-- Vote Star button -->
-                        <a href="#">
-                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
-                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
-                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
-                            </button>
-                        </a>
+                        <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900 vote-btn" starname="Babasanya" starid="11">
+                            <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                            <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                        </button>
                         
                         <!-- View profile button -->
                         <a href="./stars/profiles/babasanya-ademide.html">
@@ -559,12 +610,11 @@
                     <!-----Buttons----->
                     <div class="flex flex-col space-y-1">
                         <!-- Vote Star button -->
-                        <a href="#">
-                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
-                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
-                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
-                            </button>
-                        </a>
+                        <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900 vote-btn" starname="Funke" starid="12">
+                            <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                            <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                        </button>
+
                         <!-- View profile button -->
                         <a href="./stars/profiles/oluwafunke-jibodu.html">
                             <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
