@@ -82,9 +82,33 @@ const signUpName = document.getElementById("sign-up-name")
 const nameError = document.getElementById("name-error")
 const signUpEmail = document.getElementById('sign-up-email')
 const emailError = document.getElementById('email-error')
+var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
 const signUpPhoneNumber = document.getElementById("sign-up-phone-number")
 const phoneNumberError = document.getElementById('phone-number-error')
 
+//This redos all error styles if input matches email format
+signUpEmail.addEventListener("input" , ()=> {
+    if(emailPattern.test(signUpEmail.value)){
+        emailError.classList.add("hidden")
+        signUpEmail.style.borderColor = "#0f1729"
+    }
+})
+
+//This redos all error styles if input is not empty
+signUpName.addEventListener("input" , ()=> {
+    if(signUpName.value !== ""){
+        nameError.classList.add("hidden")
+        signUpName.style.borderColor = "#0f1729"
+    }
+})
+
+//This redos all error styles if input is not empty
+signUpPhoneNumber.addEventListener("input" , ()=> {
+    if(signUpPhoneNumber.value !== ""){
+        phoneNumberError.classList.add("hidden")
+        signUpPhoneNumber.style.borderColor = "#0f1729"
+    }
+})
 
 /********* The function below validates the entire sign up form and submits if all conditions are met*/
 function validateSignUp(event) {
@@ -106,7 +130,6 @@ function validateSignUp(event) {
     }
 
     //Prevent empty email and incorrect email format
-    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/
 
     if(signUpEmail.value.trim() === ""){
         emailError.classList.remove("hidden")

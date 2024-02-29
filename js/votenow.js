@@ -150,6 +150,8 @@ function removeVotedStarDetails() {
   voteEmailError.classList.add("hidden")
   // remove number of votes
   voteNumber.value = ""
+  voteNumber.style.borderColor = ""
+  voteNumberError.classList.add("hidden")
   //remove price
   price.value = ""
 }
@@ -194,14 +196,16 @@ voteNumber.addEventListener("input", ()=> {
   }
 })
 
-voteEmail.addEventListener("change" , ()=> {
+//This redos all error styles if input matches email format
+voteEmail.addEventListener("input" , ()=> {
   if(emailPattern.test(voteEmail.value)){
     voteEmailError.classList.add("hidden")
     voteEmail.style.borderColor = "#0f1729"
   }
 })
 
-voteNumber.addEventListener("change" , ()=> {
+//This redos all error styles if input is not empty
+voteNumber.addEventListener("input" , ()=> {
   if(voteNumber.value !== ""){
     voteNumberError.classList.add("hidden")
     voteNumber.style.borderColor = "#0f1729"
@@ -251,7 +255,7 @@ function validateVote(event) {
     k -= 1;
   }else{
       if(!voteNumber.classList.contains("hidden")){
-          voteNumberError.classList.add("hidden")
+        voteNumberError.classList.add("hidden")
       };
       voteNumber.style.borderColor = "#0f1729"
   }
