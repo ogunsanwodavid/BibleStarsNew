@@ -164,7 +164,7 @@
 
             <!-- <h2 class="text-slate-900 text-xl font-nunito font-bold mx-4 mt-0 md:mt-0 md:mx-6">Purchase Votes</h2> -->
 
-            <p class="text-slate-900 text-base font-raleway font-medium mx-4 mt-1 md:mx-6">Kindly enter the number of votes you wish to purchase for <span class="font-bold uppercase" id="voted-star-name">NAME</span> and provide your email addresss below</p>
+            <p class="text-slate-900 text-base font-raleway font-medium mx-4 mt-1 md:mx-6">Kindly enter the number of votes you wish to purchase for <span class="font-bold uppercase" id="voted-star-name">NAME</span> and provide your email address below. Each vote costs ₦200</p>
             
             <!--- Client side validation already effected ---->
             <form class="sign-up-form w-full flex flex-col space-y-1 font-nunito text-base font-medium pt-2 pb-5 px-4 md:px-6" id="sign-up-form">
@@ -172,7 +172,7 @@
                 <!--- Hidden, for backend purposes only ---->
                 <div class="hidden w-full">
                     <label for="price" class="">Star ID</label>
-                    <input type="text" name="star-id" class="w-full font-raleway bg-white p-2 h-7 border-2 border-slate-900 rounded-md focus:!bg-white focus-within:!bg-white" required disabled id="price">
+                    <input type="text" name="star-id" class="w-full font-raleway bg-white p-2 h-7 border-2 border-slate-900 rounded-md focus:!bg-white focus-within:!bg-white" required disabled id="star-id">
                 </div>
 
                  <!-- Email Address input -->
@@ -196,13 +196,13 @@
                 <!-- Price -->
                 <!--- Disabled and auto calculated -->
                 <div class="w-full">
-                    <label for="price" class="">Price</label>
+                    <label for="price" class="">Price (₦)</label>
                     <input type="text" name="price" class="w-full font-raleway bg-white p-2 h-7 border-2 border-slate-900 rounded-md focus:!bg-white focus-within:!bg-white" required disabled id="price">
                 </div>
 
                 <!-- Proceed to Payment -->
                 <div class="w-full">
-                    <button type="submit" class="w-full font-raleway h-9 bg-gradient-to-br from-light-orange to-dark-orange text-white rounded-md mt-3 ease-linear duration-200 hover:from-dark-orange hover:to-light-orange" onclick="validateSignUp(event)" id="submit-sign-up">Proceed to Payment</button>
+                    <button type="submit" class="w-full font-raleway h-9 bg-gradient-to-br from-light-orange to-dark-orange text-white rounded-md mt-3 ease-linear duration-200 hover:from-dark-orange hover:to-light-orange" onclick="validateVote(event)" id="submit-sign-up">Proceed to Payment</button>
                 </div>
             </form>
         </div>
