@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-----------Important meta tags----------->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="Christian Quiz, Reality Bible Stars">
+    <meta name="description" content="Bible Star TV Show">
+    <meta name="author" content="">
+    <meta property="og:description" content="Bible Star TV Show">
+    <meta property="og:author" content="">
+    <meta property="og:image" content="">
+    <meta property="og:title" content="">
+    <link href="../public/images/bible-stars-logo.png" rel="shortcut icon" type="image/png">
+    <link href="../public/images/bible-stars-logo.png" rel="apple-touch-icon">
+    <link href="../public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="114x114">
+
+    <!-----------Title---------->
+    <title>Vote Payment Failed</title>
+
+    <!------------Favicon------------->
+    <link rel="shortcut icon" href="../public/images/bible-stars-logo.png" type="image/x-icon">
+
+    <!-------Linked stylesheets, fonts, icons and libraries------------>
+    <link rel="stylesheet" href="../css/output.css">
+
+    <!----------Fontawesome icons---------->
+
+    
+    <!--------Google Fonts----------->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+
+    <!--------------Added Styles------------>
+    <style>
+    </style>
+</head>
+
+<body class="relative">
+    <!------------------  Payment Failed  modal ---------------------->
+    <section class="hidden fixed w-[100vw] h-[100vh] left-0 top-0 z-[100] bg-[rgba(0,0,0,0.4)] overflow-y-auto md:items-center md:justify-center" id="payment-failed-modal">
+
+        <!--- Main content--->
+        <div class="flex flex-col bg-white rounded-lg mt-[7rem] mx-8 md:mx-auto md:w-[50%!important] md:mt-0 lg:w-[35%!important]" style="width: calc(100% - 4rem)">
+            <img src="../public/images/payment-failed.svg" alt="" class="h-24 mx-auto mt-4">
+
+            <h2 class="text-slate-900 text-xl font-nunito font-bold text-center mx-4 mt-0 md:mt-0">Payment Failed</h2>
+
+            <p class="text-slate-900 text-base font-raleway font-medium text-center mx-4 mt-4 md:mx-6 md:leading-[1.8]">We're sorry, but it seems that your payment for the voting process was unsuccessful. Please double-check your payment details. Thank you for your patience and understanding.</p>
+
+            <a href="../votenow.html" class="mx-auto"><button class="bg-[hsl(0,100%,66%)] text-white text-base font-medium rounded-full w-28 h-12 mt-5 mb-6 md:mt-2 md:mb-8">Retry</button></a>
+            
+        </div>
+    </section>
+
+
+    <script>
+        const paymentFailedModal = document.getElementById("payment-failed-modal")
+        var desktopWidth = window.matchMedia("(min-width:900px)")
+
+        function showPaymentFailedModal() {
+            if(desktopWidth.matches){
+                //Display no Voting Modal for desktop
+                paymentFailedModal.classList.remove("hidden")
+                paymentFailedModal.classList.add("flex")
+            }else{
+                //Display no Voting Modal for mobile
+                paymentFailedModal.classList.remove("hidden")
+                paymentFailedModal.classList.add("block")
+            }
+        }
+
+        /////This script ensures a smooth responsiveness of the payment successful Modal
+        function paymentFailedModalResp(e) {
+            if(e.matches && paymentFailedModal.classList.contains("block")){
+                paymentFailedModal.classList.remove("block")
+                paymentFailedModal.classList.add("flex")
+            }else{
+                paymentFailedModal.classList.remove("flex")
+                paymentFailedModal.classList.add("block")
+            }
+        }
+
+        desktopWidth.addListener(paymentFailedModalResp)
+        paymentFailedModalResp(desktopWidth)
+
+        //show payment successful modal on page load
+        window.onload = showPaymentFailedModal
+    </script>
+</body>
