@@ -18,7 +18,7 @@
     <link href="./public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="114x114">
 
     <!-----------Title---------->
-    <title>Bible Stars TV Show : Vote Now!</title>
+    <title>Bible Stars TV Show : Vote For Your Favourite Star</title>
 
     <!------------Favicon------------->
     <link rel="shortcut icon" href="./public/images/bible-stars-logo.png" type="image/x-icon">
@@ -37,7 +37,31 @@
 
     <!--------------Added Styles------------>
     <style>
-        
+        body{
+            background-image: url('./public/images/web-bg-2-compressed.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        .star-image{
+            background-image: url('./assets/stars/stars-bg-image.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            box-shadow: 0px 0px 13px 10px rgba(0, 0, 0, 0.4);
+        }
+
+        .star-card{
+            margin-bottom: 3.5rem;
+        }
+
+        @media (min-width: 900px) {
+            body{
+                background-image: url('./public/images/rotated-web-bg-2.jpg');
+            }
+        }
     </style>
 </head>
 
@@ -53,8 +77,8 @@
             <ul class="flex text-base font-bold space-x-5">
                 <li><a href="index.html" class="hover:underline ease-linear">Home</a></li>
                 <li><a href="blog.html" class="hover:underline ease-linear">Blog</a></li>
-                <li><a href="stars.html" class="hover:underline ease-linear">Stars</a></li>
-                <li><a href="votenow.html" class="page-active hover:underline ease-linear">Vote Now</a></li>
+                <!-- <li><a href="stars.html" class="page-active hover:underline ease-linear">Stars</a></li> -->
+                <li><a href="votenow.html" class="hover:underline ease-linear">Vote Now</a></li>
                 <li><a href="catchtheactions.html" class="hover:underline ease-linear">Catch the Actions</a></li>
                 <li><a href="crew.html" class="hover:underline ease-linear">Crew</a></li>
                 <li><a href="viewersprizeplay.html" class="hover:underline ease-linear">Viewers prize play</a></li>
@@ -86,8 +110,8 @@
                 <!--Blog Link-->
                 <li><a href="blog.html" class="flex items-center space-x-3"><img src="./public/images/blog-icon.svg" alt="" class="w-6"> <span>Blog</span></a></li>
 
-                <!--Stars Link-->
-                <li><a href="stars.html" class="flex items-center space-x-3"><img src="./public/images/stars-icon.svg" alt="" class="w-6"> <span>Stars</span></a></li>
+                <!--Stars Link--><!-- 
+                <li><a href="stars.html" class="flex items-center space-x-3"><img src="./public/images/stars-icon.svg" alt="" class="w-6"> <span>Stars</span></a></li> -->
 
                 <!--Vote Now Link-->
                 <li><a href="votenow.html" class="flex items-center space-x-3"><img src="./public/images/votenow-icon.svg" alt="" class="w-6"> <span>Vote Now</span></a></li>
@@ -113,12 +137,447 @@
     <!---- #0f1729 is equivalent of slate-gray-900 -->
 
 
-    <!-- Site under construction -->
-    <!----- TEMPORARY ---->
-    <section class="w-full px-4 py-10 mt-[80px] md:mt-[96px]">
-        <img src="./public/images/construction-icon.svg" alt="" class="h-52 mx-auto md:h-64">
-        <div class="text-slate-900 text-center text-3xl font-bold font-raleway md:text-5xl">Page Under Construction</div>
-    </section>
+
+    <!-- Stars content -->
+    <main class="w-full mt-[80px] px-4 py-6 font-nunito md:mt-[96px] md:px-[8%] md:py-12">
+
+        <!------ Heading ----->
+        <h2 class="text-darkgold text-4xl text-center font-bold md:text-5xl md:text-center">Meet Our Stars</h2>
+
+        <!------ Stars information ------->
+        <section class="w-full flex flex-wrap justify-around px-8 py-2 mt-5 md:py-5" id="star-cards-container">
+
+
+            <!----- Olorunfemi Ayodele card --->
+            <div class="star-card w-full space-y-3 relative  max-w-[260px] mx-auto cursor-pointer">
+
+                <!-- Contestant image ---->
+                <div class="star-image h-[260px] w-[260px] rounded-2xl overflow-hidden">     
+                    <img src="./assets/stars/olorunfemi-ayodele.png" alt="" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!---- Contestant details ---->
+                <div class="w-full  px-3 flex flex-col space-y-2 items-center justify-center">
+
+                    <!-- Star full name -->
+                    <p class="font-montserrat font-semibold text-xl text-white uppercase">AYODELE</p>
+
+
+                    <!-----Buttons----->
+                    <div class="flex flex-col space-y-1">
+                        <!-- View profile button -->
+                        <a href="./stars/profiles/ayodele-olorunfemi.html">
+                            <button class="flex items-center justify-center space-x-1 bg-white backdrop-blur-[50px] w-44 h-10 rounded-full">
+                                <img src="./public/images/profile-icon.svg" alt="" class="h-5">
+                                <p class="font-raleway font-medium text-lg text-slate-900">View Profile</p>
+                            </button>
+                        </a>
+
+                        <!-- Vote Star button -->
+                        <a href="#">
+                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
+                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Omowunmi Oyedepo card ----->
+            <div class="star-card w-full space-y-3 relative  max-w-[260px] mx-auto cursor-pointer">
+
+                <!-- Contestant image ---->
+                <div class="star-image h-[260px] w-[260px] rounded-2xl overflow-hidden">     
+                    <img src="./assets/stars/omowunmi-oyedepo.png" alt="" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!---- Contestant details ---->
+                <div class="w-full  px-3 flex flex-col space-y-2 items-center justify-center">
+
+                    <!-- Star full name -->
+                    <p class="font-montserrat font-semibold text-xl text-white uppercase">OMOWUNMI</p>
+
+
+                    <!-----Buttons----->
+                    <div class="flex flex-col space-y-1">
+                        <!-- Vote Star button -->
+                        <a href="#">
+                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
+                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                            </button>
+                        </a>
+
+                        <!-- View profile button -->
+                        <a href="./stars/profiles/omowunmi-oyedepo.html">
+                            <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
+                                <img src="./public/images/profile-icon.svg" alt="" class="h-5">
+                                <p class="font-raleway font-medium text-lg text-slate-900">View Profile</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Chiwendu Jonah card ----->
+            <div class="star-card w-full space-y-3 relative  max-w-[260px] mx-auto cursor-pointer">
+
+                <!-- Contestant image ---->
+                <div class="star-image h-[260px] w-[260px] rounded-2xl overflow-hidden">     
+                    <img src="./assets/stars/chiwendu-jonah.png" alt="" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!---- Contestant details ---->
+                <div class="w-full  px-3 flex flex-col space-y-2 items-center justify-center">
+
+                    <!-- Star full name -->
+                    <p class="font-montserrat font-semibold text-xl text-white uppercase">Chiwendu</p>
+
+
+                    <!-----Buttons----->
+                    <div class="flex flex-col space-y-1">
+                        <!-- Vote Star button -->
+                        <a href="#">
+                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
+                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                            </button>
+                        </a>
+                        <!-- View profile button -->
+                        <a href="./stars/profiles/chinwendu-jonah.html">
+                            <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
+                                <img src="./public/images/profile-icon.svg" alt="" class="h-5">
+                                <p class="font-raleway font-medium text-lg text-slate-900">View Profile</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Stephen Adekanmbi card ----->
+            <div class="star-card w-full space-y-3 relative  max-w-[260px] mx-auto cursor-pointer">
+
+                <!-- Contestant image ---->
+                <div class="star-image h-[260px] w-[260px] rounded-2xl overflow-hidden">     
+                    <img src="./assets/stars/stephen-adekanbi.png" alt="" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!---- Contestant details ---->
+                <div class="w-full  px-3 flex flex-col space-y-2 items-center justify-center">
+
+                    <!-- Star full name -->
+                    <p class="font-montserrat font-semibold text-xl text-white uppercase">stephen</p>
+
+
+                    <!-----Buttons----->
+                    <div class="flex flex-col space-y-1">
+                        <!-- Vote Star button -->
+                        <a href="#">
+                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
+                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                            </button>
+                        </a>
+
+                        <!-- View profile button -->
+                        <a href="./stars/profiles/stephen-adekanmbi.html">
+                            <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
+                                <img src="./public/images/profile-icon.svg" alt="" class="h-5">
+                                <p class="font-raleway font-medium text-lg text-slate-900">View Profile</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Sharon Ponmile card ----->
+            <div class="star-card w-full space-y-3 relative  max-w-[260px] mx-auto cursor-pointer">
+
+                <!-- Contestant image ---->
+                <div class="star-image h-[260px] w-[260px] rounded-2xl overflow-hidden">     
+                    <img src="./assets/stars/sharon-ponmile.png" alt="" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!---- Contestant details ---->
+                <div class="w-full  px-3 flex flex-col space-y-2 items-center justify-center">
+
+                    <!-- Star full name -->
+                    <p class="font-montserrat font-semibold text-xl text-white uppercase">sharon</p>
+
+
+                    <!-----Buttons----->
+                    <div class="flex flex-col space-y-1">
+                        <!-- Vote Star button -->
+                        <a href="#">
+                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
+                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                            </button>
+                        </a>
+
+                        <!-- View profile button -->
+                        <a href="./stars/profiles/sharon-ponmile.html">
+                            <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
+                                <img src="./public/images/profile-icon.svg" alt="" class="h-5">
+                                <p class="font-raleway font-medium text-lg text-slate-900">View Profile</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Benjamin Okafor card ----->
+            <div class="star-card w-full space-y-3 relative  max-w-[260px] mx-auto cursor-pointer">
+
+                <!-- Contestant image ---->
+                <div class="star-image h-[260px] w-[260px] rounded-2xl overflow-hidden">     
+                    <img src="./assets/stars/benjamin-okafor.png" alt="" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!---- Contestant details ---->
+                <div class="w-full  px-3 flex flex-col space-y-2 items-center justify-center">
+
+                    <!-- Star full name -->
+                    <p class="font-montserrat font-semibold text-xl text-white uppercase">Benjamin</p>
+
+
+                    <!-----Buttons----->
+                    <div class="flex flex-col space-y-1">
+                        <!-- Vote Star button -->
+                        <a href="#">
+                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
+                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                            </button>
+                        </a>
+                        
+                        <!-- View profile button -->
+                        <a href="./stars/profiles/benjamin-okafor.html">
+                            <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
+                                <img src="./public/images/profile-icon.svg" alt="" class="h-5">
+                                <p class="font-raleway font-medium text-lg text-slate-900">View Profile</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Onyedika Nwosu card ----->
+            <div class="star-card w-full space-y-3 relative  max-w-[260px] mx-auto cursor-pointer">
+
+                <!-- Contestant image ---->
+                <div class="star-image h-[260px] w-[260px] rounded-2xl overflow-hidden">     
+                    <img src="./assets/stars/onyedika-nwosu.png" alt="" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!---- Contestant details ---->
+                <div class="w-full  px-3 flex flex-col space-y-2 items-center justify-center">
+
+                    <!-- Star full name -->
+                    <p class="font-montserrat font-semibold text-xl text-white uppercase">Onyedika</p>
+
+
+                    <!-----Buttons----->
+                    <div class="flex flex-col space-y-1">
+                        <!-- Vote Star button -->
+                        <a href="#">
+                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
+                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                            </button>
+                        </a>
+
+                        <!-- View profile button -->
+                        <a href="./stars/profiles/onyedika-nwosu.html">
+                            <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
+                                <img src="./public/images/profile-icon.svg" alt="" class="h-5">
+                                <p class="font-raleway font-medium text-lg text-slate-900">View Profile</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Sunday Adeniji ----->
+            <div class="star-card w-full space-y-3 relative  max-w-[260px] mx-auto cursor-pointer">
+
+                <!-- Contestant image ---->
+                <div class="star-image h-[260px] w-[260px] rounded-2xl overflow-hidden">     
+                    <img src="./assets/stars/sunday-adeniji.png" alt="" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!---- Contestant details ---->
+                <div class="w-full  px-3 flex flex-col space-y-2 items-center justify-center">
+
+                    <!-- Star full name -->
+                    <p class="font-montserrat font-semibold text-xl text-white uppercase">Sunday</p>
+
+
+                    <!-----Buttons----->
+                    <div class="flex flex-col space-y-1">
+                        <!-- Vote Star button -->
+                        <a href="#">
+                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
+                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                            </button>
+                        </a>
+                        <!-- View profile button -->
+                        <a href="./stars/profiles/sunday-adeniji.html">
+                            <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
+                                <img src="./public/images/profile-icon.svg" alt="" class="h-5">
+                                <p class="font-raleway font-medium text-lg text-slate-900">View Profile</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Pelumi Olayiwola card ----->
+            <div class="star-card w-full space-y-3 relative  max-w-[260px] mx-auto cursor-pointer">
+
+                <!-- Contestant image ---->
+                <div class="star-image h-[260px] w-[260px] rounded-2xl overflow-hidden">     
+                    <img src="./assets/stars/pelumi-olayiwola.png" alt="" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!---- Contestant details ---->
+                <div class="w-full  px-3 flex flex-col space-y-2 items-center justify-center">
+
+                    <!-- Star full name -->
+                    <p class="font-montserrat font-semibold text-xl text-white uppercase">Pelumi</p>
+
+
+                    <!-----Buttons----->
+                    <div class="flex flex-col space-y-1">
+                        <!-- Vote Star button -->
+                        <a href="#">
+                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
+                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                            </button>
+                        </a>
+                        <!-- View profile button -->
+                        <a href="./stars/profiles/olayiwola-pelumi.html">
+                            <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
+                                <img src="./public/images/profile-icon.svg" alt="" class="h-5">
+                                <p class="font-raleway font-medium text-lg text-slate-900">View Profile</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Olawale Adelerin card ----->
+            <div class="star-card w-full space-y-3 relative  max-w-[260px] mx-auto cursor-pointer">
+
+                <!-- Contestant image ---->
+                <div class="star-image h-[260px] w-[260px] rounded-2xl overflow-hidden">     
+                    <img src="./assets/stars/olawale-adelerin.png" alt="" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!---- Contestant details ---->
+                <div class="w-full  px-3 flex flex-col space-y-2 items-center justify-center">
+
+                    <!-- Star full name -->
+                    <p class="font-montserrat font-semibold text-xl text-white uppercase">Olawale</p>
+
+
+                    <!-----Buttons----->
+                    <div class="flex flex-col space-y-1">
+                        <!-- Vote Star button -->
+                        <a href="#">
+                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
+                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                            </button>
+                        </a>
+
+                        <!-- View profile button -->
+                        <a href="./stars/profiles/olawale-adelerin.html">
+                            <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
+                                <img src="./public/images/profile-icon.svg" alt="" class="h-5">
+                                <p class="font-raleway font-medium text-lg text-slate-900">View Profile</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Babasanya Ademide card ----->
+            <div class="star-card w-full space-y-3 relative  max-w-[260px] mx-auto cursor-pointer">
+
+                <!-- Contestant image ---->
+                <div class="star-image h-[260px] w-[260px] rounded-2xl overflow-hidden">     
+                    <img src="./assets/stars/babasanya-ademide.png" alt="" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!---- Contestant details ---->
+                <div class="w-full  px-3 flex flex-col space-y-2 items-center justify-center">
+
+                    <!-- Star full name -->
+                    <p class="font-montserrat font-semibold text-xl text-white uppercase">Babasanya</p>
+
+
+                    <!-----Buttons----->
+                    <div class="flex flex-col space-y-1">      
+                        <!-- Vote Star button -->
+                        <a href="#">
+                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
+                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                            </button>
+                        </a>
+                        
+                        <!-- View profile button -->
+                        <a href="./stars/profiles/babasanya-ademide.html">
+                            <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
+                                <img src="./public/images/profile-icon.svg" alt="" class="h-5">
+                                <p class="font-raleway font-medium text-lg text-slate-900">View Profile</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!----- Funke Jibodu card ----->
+            <div class="star-card w-full space-y-3 relative  max-w-[260px] mx-auto cursor-pointer">
+
+                <!-- Contestant image ---->
+                <div class="star-image h-[260px] w-[260px] rounded-2xl overflow-hidden">     
+                    <img src="./assets/stars/funke-jibodu.png" alt="" class="w-full h-full object-cover" loading="lazy">
+                </div>
+
+                <!---- Contestant details ---->
+                <div class="w-full  px-3 flex flex-col space-y-2 items-center justify-center">
+
+                    <!-- Star full name -->
+                    <p class="font-montserrat font-semibold text-xl text-white uppercase">Funke</p>
+
+
+                    <!-----Buttons----->
+                    <div class="flex flex-col space-y-1">
+                        <!-- Vote Star button -->
+                        <a href="#">
+                            <button class="flex items-center justify-center space-x-1 border-[1.5px] border-white w-44 h-10 rounded-full group hover:border-slate-900 hover:bg-slate-900">
+                                <img src="./public/images/white-votenow-icon.svg" alt="" class="h-4">
+                                <p class="font-raleway font-medium text-lg text-white group-hover:text-white">Vote</p>
+                            </button>
+                        </a>
+                        <!-- View profile button -->
+                        <a href="./stars/profiles/oluwafunke-jibodu.html">
+                            <button class="flex items-center justify-center space-x-1 bg-white w-44 h-10 rounded-full">
+                                <img src="./public/images/profile-icon.svg" alt="" class="h-5">
+                                <p class="font-raleway font-medium text-lg text-slate-900">View Profile</p>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </main>
 
      <!---------  Footer ---------->
      <footer class="w-full bg-slate-900 px-4 py-6 pb-28 font-nunito text-base md:px-[5%]">
@@ -216,6 +675,6 @@
     <!--General js file-->
     <script src="./js/main.js"></script>
 
-    <!--Js file for viewersprizeplay.html only-->
-    <script src="./js/viewersprizeplay.js"></script>
+    <!--Js file for votenow.html only-->
+    <script src="./js/votenow.js"></script>
 </body>
