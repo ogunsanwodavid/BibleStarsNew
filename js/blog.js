@@ -118,8 +118,10 @@ const mainBlogContents = document.getElementsByClassName("blog-content")
 const mainBlogImages = document.getElementsByClassName("blog-image")
 const mainBlogTitles = document.getElementsByClassName("blog-title")
 const mainBlogDates = document.getElementsByClassName("blog-date")
+const showMoreBtn = document.getElementById("show-more-btn")
+const noSearchResults = document.getElementById("no-search-results")
 
-
+/******* Dynamically edits contents of blog divs on page load*/
 for (let i = 0; i < mainBlogContents.length; i++) {
     mainBlogContents[i].href = mainBlogJSON[i].href
     mainBlogContents[i].alt = mainBlogJSON[i].alt
@@ -127,11 +129,23 @@ for (let i = 0; i < mainBlogContents.length; i++) {
     mainBlogImages[i].srcset = mainBlogJSON[i].image
     mainBlogTitles[i].innerHTML = mainBlogJSON[i].title
     mainBlogDates[i].innerHTML = mainBlogJSON[i].date
+    
+    //Hides the show more button if the blog divs are 6 or less
+    if(mainBlogContents.length <= 6){
+        showMoreBtn.classList.add("hidden")
+        showMoreBtn.classList.add("md:hidden")
+    }
+
+    //Displays the show more button if the blog divs are more than 6
+    if(mainBlogContents.length > 6) {
+        showMoreBtn.classList.remove("hidden")
+        showMoreBtn.classList.remove("md:hidden")
+    }
 }
 
 
 
-/********** This script is for the search input */
+/********** This script is for the search input functionality */
 const blogSearch = document.getElementById("blog-search")
 const currentSearchResults = document.getElementsByClassName("current-search")
 
@@ -159,9 +173,30 @@ function searchBlogs() {
         if(i > 5){
             currentSearchResults[i].classList.add("hidden")
             currentSearchResults[i].classList.add("md:hidden")
-        }    
+        } 
     }
 
+    //Shows "No Results Found" if there are no search results
+    if(searchQuery != "" && currentSearchResults.length == 0){
+        noSearchResults.classList.remove("hidden")
+        noSearchResults.classList.remove("md:hidden")
+    }else{
+        noSearchResults.classList.add("hidden")
+        noSearchResults.classList.add("md:hidden")
+    }
+
+    //Hides Show more button if there are six or less search results
+    if(currentSearchResults.length <= 6){
+        showMoreBtn.classList.add("hidden")
+        showMoreBtn.classList.add("md:hidden")
+    }
+
+    //Displays Show more button if there are more than six search results
+    if(currentSearchResults.length > 6) {
+        showMoreBtn.classList.remove("hidden")
+        showMoreBtn.classList.remove("md:hidden")
+    }
+    
 }
 
 
@@ -170,10 +205,9 @@ for (let i = 0; i < mainBlogContents.length; i++) {
     if(i > 5){
         mainBlogContents[i].classList.add("hidden")
         mainBlogContents[i].classList.add("md:hidden")
-    }    
+    }
 }
 
-const showMoreBtn = document.getElementById("show-more-btn")
 
 
 //adding onclick event on the showmore btn to show 6 more blog contents on each click

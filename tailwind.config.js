@@ -17,6 +17,10 @@ module.exports = {
       "raleway": "Nunito",
       "montserrat": "Montserrat",
     },
+    listStyleType: {
+      square: 'square',
+      disc: 'disc'
+    },
     extend: {
       colors: {
         ...colors,
