@@ -75,9 +75,6 @@ for (let i = 0; i < accordionCtrls.length; i++) {
 /********** Script that shows contribution amount itself ********/
 const readyToPartner = document.getElementById("ready-to-partner")
 const signUpForm = document.getElementById("sign-up-form")
-
-
-
 const signUpName = document.getElementById("sign-up-name")
 const nameError = document.getElementById("name-error")
 const signUpEmail = document.getElementById('sign-up-email')
@@ -109,6 +106,11 @@ signUpPhoneNumber.addEventListener("input" , ()=> {
         signUpPhoneNumber.style.borderColor = "#0f1729"
     }
 })
+
+/*** Scroll to sign up form  */
+function scrollToSignUp() {
+    readyToPartner.scrollIntoView();
+}
 
 /********* The function below validates the entire sign up form and submits if all conditions are met*/
 function validateSignUp(event) {
@@ -287,10 +289,7 @@ const swiper = new Swiper('.swiper', {
 var amount = document.getElementById("amount")
 var partnershipCategory = document.getElementById("partnership-category") */
 
-/*** Scroll to sign up form  */
-/* function scrollToSignUp() {
-    readyToPartner.scrollIntoView();
-} */
+
 
 // This JSON stores the item name and respective amount as a string
 /* const contributionJSON = [
