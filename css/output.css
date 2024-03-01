@@ -1661,6 +1661,16 @@ video {
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
+.text-\[hsl\(0\2c 100\%\2c 66\%\)\] {
+  --tw-text-opacity: 1;
+  color: hsl(0 100% 66% / var(--tw-text-opacity));
+}
+
+.text-\[\#5cb85c\] {
+  --tw-text-opacity: 1;
+  color: rgb(92 184 92 / var(--tw-text-opacity));
+}
+
 .underline {
   text-decoration-line: underline;
 }
@@ -2035,6 +2045,11 @@ input,select{
     max-width: 720px;
   }
 
+  .blogxmd\:-translate-x-\[10vw\] {
+    --tw-translate-x: -10vw;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
   .blogxmd\:flex-row {
     flex-direction: row;
   }
@@ -2271,12 +2286,26 @@ input,select{
     width: 90px;
   }
 
+  .md\:w-full {
+    width: 100%;
+  }
+
   .md\:max-w-full {
     max-width: 100%;
   }
 
   .md\:-translate-x-\[10vw\] {
     --tw-translate-x: -10vw;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:-translate-x-\[8vw\] {
+    --tw-translate-x: -8vw;
+    transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  }
+
+  .md\:-translate-x-\[0vw\] {
+    --tw-translate-x: -0vw;
     transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
   }
 
@@ -2487,6 +2516,15 @@ input,select{
 
   .md\:hover\:underline:hover {
     text-decoration-line: underline;
+  }
+}
+
+@media not all and (min-width: 680px) {
+  @media (min-width: 900px) {
+    .max-blogxmd\:md\:-translate-x-\[10vw\] {
+      --tw-translate-x: -10vw;
+      transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+    }
   }
 }
 
