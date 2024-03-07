@@ -37,14 +37,39 @@
 
     <!--------------Added Styles------------>
     <style>
-        
+        /* body{
+            background-image: url('./public/images/web-bg-2-compressed.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+
+        @media (min-width: 900px) {
+            body{
+                background-image: url('./public/images/rotated-web-bg-2.jpg');
+            }
+        } */
+
+        .category-active{
+            background-color: rgb(2 6 23);
+            font-weight: 600;
+        }
+
+        .move-left{
+            transform: translateX(-100px);
+        }
+
+        .move-right{
+            transform: translateX(100px);
+        }
     </style>
 </head>
 
 <body class="relative">
     
     <!--Navbar is fixed to the top of the webpage-->
-    <nav class="fixed top-0 left-0 w-full flex items-center justify-between bg-slate-900 px-4 py-0 z-40 md:px-[5%]">
+    <nav class="fixed top-0 left-0 w-full flex items-center justify-between bg-slate-950 px-4 py-0 z-40 md:px-[5%]">
         <!--Logo-->
         <a href="index.html"><img src="./public/images/bible-stars-logo.png" alt="" class="h-20 md:h-24" ></a>
 
@@ -120,8 +145,36 @@
         <div class="text-slate-900 text-center text-3xl font-bold font-raleway md:text-5xl">Page Under Construction</div>
     </section>
 
-     <!---------  Footer ---------->
-     <footer class="w-full bg-slate-900 px-4 py-6 pb-28 font-nunito text-base md:px-[5%]">
+    <!---- Header ----->
+    <header class="hidden w-full mt-[80px] px-5 pt-6 pb-3 font-nunito mx-auto md:mt-[96px] lg:px-0">
+        <h2 class="w-max text-slate-900 text-3xl font-bold mx-auto md:text-4xl lg:mx-0">Catch The Actions</h2>
+    </header>
+
+    <!-- Video category selection -->
+    <section class="hidden relative w-full max-w-[600px] mx-auto cursor-pointer px-0" id="video-categories-nav">
+        <!-- <div class="absolute top-0 left-0 bg-light-orange h-full p-2 flex items-center justify-center"  id="previous-icon">
+            <img src="./public/images/previous-icon.svg" alt="" class="h-5">
+        </div> -->
+
+        <main class="w-full flex space-x-2 overflow-hidden bg-slate-900 no-wrap whitespace-nowrap touch-none" id="video-categories-contents">
+            <div class="category-active uppercase p-3 text-white font-nunito">Category 1</div>
+            <div class="uppercase p-3 text-white font-nunito">Category 2</div>
+            <div class="uppercase p-3 text-white font-nunito">Category 3</div>
+            <div class="uppercase p-3 text-white font-nunito">Category 4</div>
+            <div class="uppercase p-3 text-white font-nunito">Category 5</div>
+            <div class="uppercase p-3 text-white font-nunito">Category 6</div>
+            <div class="uppercase p-3 text-white font-nunito">Category 7</div>
+        </main>
+
+        <!-- <div class="absolute top-0 right-0 bg-light-orange h-full p-2 flex items-center justify-center"  id="next-icon">
+            <img src="./public/images/next-icon.svg" alt="" class="h-5">
+        </div> -->
+
+    </section>
+
+    
+    <!---------  Footer ---------->
+    <footer class="w-full bg-slate-950 px-4 py-6 pb-28 font-nunito text-base md:px-[5%]">
 
         <!-- Everything except copyright -->
         <section class="w-full">

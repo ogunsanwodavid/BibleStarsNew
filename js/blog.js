@@ -1,11 +1,11 @@
 /******* This script dynamically changes the features of the heading blog content using the data stored in the object below*/
 const headingBlogData = 
     {
-        "href": "./blog/eachblogpage.html",
-        "alt": "some description",
-        "image": "./assets/home/stock1.jpg",
-        "title" : "Heading Blog Title. Heading Blog Title",
-        "date": "31st January, 2023"
+        "href": "./blog/the-organisers-are-set-to-raise-100-partners.html",
+        "alt": "The Organisers of Bible Stars are set to raise 100 Partners for Bible Stars Reality Show",
+        "image": "./assets/blog/blog-1.jpg",
+        "title" : "Breaking News: The Organisers of Bible Stars are set to raise 100 Partners for Bible Stars Reality Show",
+        "date": "7th March, 2024"
     }
 
 

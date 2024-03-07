@@ -5,6 +5,7 @@ module.exports = {
   content: ["./*.{html,js}", './blog/*.{html,js}', './stars/profiles/*.html' , './votenow/*.html'],
   theme: {
     screens: {
+      xsmd: "450px",
       ssmd: "540px",
       smd: "630px",
       blogxmd: "680px",
