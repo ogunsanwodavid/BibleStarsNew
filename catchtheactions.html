@@ -55,22 +55,9 @@
             }
         } */
 
-        .category-active{
-            background-color: rgb(2 6 23);
-            font-weight: 600;
-        }
-
-        .move-left{
-            transform: translateX(-100px);
-        }
-
-        .move-right{
-            transform: translateX(100px);
-        }
-
-        .blog-content{
+        /* .video-content{
             width: 100%;
-        }
+        } */
 
         :root{
             --swiper-navigation-size: 25px;
@@ -154,18 +141,56 @@
 
     <!-- Site under construction -->
     <!----- TEMPORARY ---->
-    <section class="w-full px-4 py-10 mt-[80px] md:mt-[96px]">
+    <section class="hidden w-full px-4 py-10 mt-[80px] md:mt-[96px]">
         <img src="./public/images/construction-icon.svg" alt="" class="h-52 mx-auto md:h-64">
         <div class="text-slate-900 text-center text-3xl font-bold font-raleway md:text-5xl">Page Under Construction</div>
     </section>
 
+    <!-- Video showcase modal -->
+    <!-- This modal shows to play any video -->
+    <section class="hidden fixed w-[100vw] h-[100vh] left-0 top-0 z-[100] bg-[rgba(0,0,0,0.9)] overflow-y-auto ease-linear md:items-center md:justify-center" id="video-showcase-modal">
+
+        <!--- Main content--->
+        <div class="flex flex-col rounded-lg space-y-3 mt-[3rem] mx-8 smd:mx-auto max-w-[600px] md:mt-0 " style="width: calc(100% - 4rem)" id="video-showcase-main">
+
+            <!-- Close Video Showcase icon -->
+            <img src="./public/images/white-close-icon.svg" alt="" class="h-7 mr-0 ml-auto mt-0" id="close-video-showcase-icon">
+
+            <!-- Video iframe -->
+            <iframe src="" title="Partners video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen class="w-full h-52 rounded-lg smd:h-[17rem] md:h-80" id="video-showcase-iframe"></iframe>
+
+            <!-- Video showcase title -->
+            <div class="video-showcase-title text-white text-lg font-nunito font-bold word-wrap line-clamp-2 text-ellipsis overflow-hidden md:text-xl" id="video-showcase-title">Video Showcase Title Will Be Here.</div>
+
+            <!-- Video tag and Date-->
+            <div class="flex justify-between">
+
+                <!-- Video tag -->
+                <div class="flex items-center space-x-2">
+                    <img src="./public/images/white-play-icon.svg" alt="" class="h-4">
+                    <span class="text-white text-base font-raleway font-semibold md:text-lg">Video</span>
+                </div>
+
+                <!-- Video showcase date -->
+                <div class="flex items-center space-x-2">
+                    <img src="./public/images/white-date-icon.svg" alt="" class="h-4">
+                    <span class="text-white text-sm font-raleway font-semibold md:text-base" id="video-showcase-date">8th March, 2024</span>
+                </div>
+            </div>
+
+            <!-- Video Showcase Details -->
+            <div class="text-white text-sm font-raleway font-medium word-wrap line-clamp-3 overflow-hidden text-ellipsis smd:line-clamp-2 md:text-base" id="video-showcase-details">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit reiciendis quod beatae dolorum deleniti dolore nesciunt voluptas sint cumque sit, rem ex maxime quas error, fuga, sequi fugiat ducimus blanditiis tempora expedita nihil! Optio voluptatum aspernatur voluptatem recusandae vel voluptate facilis alias tempora eligendi eaque voluptates, modi rerum tempore consequuntur officiis necessitatibus esse obcaecati, tenetur totam? Nihil a illum ea velit ipsum soluta facilis dolorem provident tempore commodi impedit qui tenetur laboriosam atque laborum maxime, similique quos quae rem. Similique nihil, ipsum optio, obcaecati explicabo ratione sunt dicta beatae nobis qui perspiciatis labore. Blanditiis culpa quis nesciunt laborum unde soluta id magni ipsum animi deserunt nostrum corrupti voluptatem voluptatum ratione illo, optio perspiciatis nisi ducimus dolorum pariatur mollitia nobis quos.
+            </div>
+        </div>
+    </section>
+
     <!---- Header ----->
-    <header class="hidden w-full mt-[80px] px-5 pt-6 pb-3 font-nunito mx-auto md:mt-[96px] lg:px-0">
+    <header class="w-full mt-[80px] px-5 pt-6 pb-3 font-nunito mx-auto md:mt-[96px] lg:px-0">
         <h2 class="w-max text-slate-900 text-3xl font-bold mx-auto md:text-4xl">Catch The Actions</h2>
     </header>
 
     <!--------- THE EXCLUSIVE HOUR SECTION STARTS ----------->
-    <section class="hidden w-full flex flex-col py-3 md:py-6 space-y-4 bg-slate-900">
+    <section class="w-full flex flex-col py-6 md:py-10 space-y-4 bg-slate-900">
         <section class="relative w-full flex justify-between font-nunito max-w-[333px] blogxmd:max-w-[690px] lg:max-w-[1047px] mx-auto">
 
             <!-- Title -->
@@ -188,121 +213,121 @@
                 <!-- Video Slides -->
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="10th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info other-info group-hover:bg-[rgba(255,255,255,0.3)]">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: The Exclusive Hour</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: The Exclusive Hour</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur quisquam officia dignissimos aliquid, sit laboriosam delectus unde porro recusandae, ullam mollitia sapiente culpa adipisci ipsum veritatis eligendi nesciunt, placeat dolores.</div>
                         </div>
                     </div>
                 </a>
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="9th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock2.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: The Exclusive Hour</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: The Exclusive Hour</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laudantium</div>
                         </div>
                     </div>
                 </a>
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="8th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock3.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: The Exclusive Hour</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: The Exclusive Hour</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, explicabo? Amet neque ullam tempora nihil qui! Temporibus!</div>
                         </div>
                     </div>
                 </a>
                 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="8th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock4.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: The Exclusive Hour</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: The Exclusive Hour</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ab doloribus! Architecto molestiae voluptates delectus pariatur at deserunt nostrum?</div>
                         </div>
                     </div>
                 </a>
                 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="7th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: The Exclusive Hour</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: The Exclusive Hour</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere aut nemo amet enim distinctio optio hic mollitia asperiores? Impedit quam asperiores alias!</div>
                         </div>
                     </div>
                 </a>
@@ -313,7 +338,7 @@
     <!--------- THE EXCLUSIVE HOUR SECTION ENDS ----------->
     
     <!--------- CATCH A GLIMPSE SECTION STARTS ----------->
-    <section class="hidden w-full flex flex-col py-3 md:py-6 space-y-4">
+    <section class="w-full flex flex-col py-6 md:py-10 space-y-4">
         <section class="relative w-full flex justify-between font-nunito max-w-[333px] blogxmd:max-w-[690px] lg:max-w-[1047px] mx-auto">
 
             <!-- Title -->
@@ -334,122 +359,123 @@
             <div class="swiper-wrapper">
 
                 <!-- Video Slides -->
+
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="10th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: Catch A Glimpse</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: Catch A Glimpse</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quos temporibus distinctio eius iste omnis amet consequatur veniam unde doloremque, ducimus quaerat animi?</div>
                         </div>
                     </div>
                 </a>
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="9th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock2.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: Catch A Glimpse</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: Catch A Glimpse</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora vitae officia debitis omnis esse?</div>
                         </div>
                     </div>
                 </a>
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="8th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock3.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: Catch A Glimpse</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: Catch A Glimpse</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorum sapiente aliquam natus praesentium, suscipit sequi aut delectus.</div>
                         </div>
                     </div>
                 </a>
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="7th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock4.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: Catch A Glimpse</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: Catch A Glimpse</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laudantium minima nulla?</div>
                         </div>
                     </div>
                 </a>
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="7th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: Catch A Glimpse</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: Catch A Glimpse</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quis assumenda</div>
                         </div>
                     </div>
                 </a>
@@ -460,7 +486,7 @@
     <!--------- THE CATCH A GLIMPSE SECTION ENDS ----------->
 
     <!--------- ON YOUR MANDATE SECTION STARTS ----------->
-    <section class="hidden w-full flex flex-col py-3 md:py-6 space-y-4 bg-slate-900">
+    <section class="w-full flex flex-col py-6 md:py-10 space-y-4 bg-slate-900">
         <section class="relative w-full flex justify-between font-nunito max-w-[333px] blogxmd:max-w-[690px] lg:max-w-[1047px] mx-auto">
 
             <!-- Title -->
@@ -483,124 +509,125 @@
                 <!-- Video Slides -->
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="10th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: On Your Mandate</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: On Your Mandate</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur quisquam officia dignissimos aliquid, sit laboriosam delectus unde porro recusandae, ullam mollitia sapiente culpa adipisci ipsum veritatis eligendi nesciunt, placeat dolores.</div>
                         </div>
                     </div>
                 </a>
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="9th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock2.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: On Your Mandate</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: On Your Mandate</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laudantium</div>
                         </div>
                     </div>
                 </a>
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="8th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock3.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: On Your Mandate</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: On Your Mandate</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, explicabo? Amet neque ullam tempora nihil qui! Temporibus!</div>
                         </div>
                     </div>
                 </a>
                 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="7th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock4.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: On Your Mandate</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: On Your Mandate</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ab doloribus! Architecto molestiae voluptates delectus pariatur at deserunt nostrum?</div>
                         </div>
                     </div>
                 </a>
                 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="6th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: On Your Mandate</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: On Your Mandate</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere aut nemo amet enim distinctio optio hic mollitia asperiores? Impedit quam asperiores alias!</div>
                         </div>
                     </div>
                 </a>
+
 
             </div>
         </div>
@@ -608,9 +635,8 @@
     <!--------- ON YOUR MANDATE SECTION ENDS ----------->
 
 
-
     <!--------- LIFE IN THE BIG HOUSE SECTION STARTS ----------->
-    <section class="hidden w-full flex flex-col py-3 md:py-6 space-y-4">
+    <section class="w-full flex flex-col py-6 md:py-10 space-y-4">
         <section class="relative w-full flex justify-between font-nunito max-w-[333px] blogxmd:max-w-[690px] lg:max-w-[1047px] mx-auto">
 
             <!-- Title -->
@@ -631,122 +657,123 @@
             <div class="swiper-wrapper">
 
                 <!-- Video Slides -->
+                
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="10th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: Life in the Big House</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: Life in The Big House</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quos temporibus distinctio eius iste omnis amet consequatur veniam unde doloremque, ducimus quaerat animi?</div>
                         </div>
                     </div>
                 </a>
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="9th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock2.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: Life in the Big House</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: Life in The Big House</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora vitae officia debitis omnis esse?</div>
                         </div>
                     </div>
                 </a>
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="8th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock3.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: Life in the Big House</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: Life in The Big House</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorum sapiente aliquam natus praesentium, suscipit sequi aut delectus.</div>
                         </div>
                     </div>
                 </a>
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="7th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock4.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: Life in the Big House</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: Life in The Big House</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laudantium minima nulla?</div>
                         </div>
                     </div>
                 </a>
 
                 <!-- Individual video slide content -->
-                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="6th March, 2024">
 
                     <!-- Video showcase image -->
                     <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
 
                     <!-- Other info -->
-                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
                             <span class="font-semibold text-sm">Video</span>
                         </div>
 
                         <!-- Video Title -->
-                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: Life in the Big House</div>
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: Life in The Big House</div>
 
-                        <!-- Video Date -->
+                        <!-- Video Details -->
                         <div class="flex space-x-1 items-center">
-                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
-                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quis assumenda</div>
                         </div>
                     </div>
                 </a>
@@ -754,10 +781,466 @@
             </div>
         </div>
     </section>
-    <!--------- THE CATCH A GLIMPSE SECTION ENDS ----------->
+    <!--------- THE LIFE IN THE BIG HOUSE SECTION ENDS ----------->
+
+
+
+    <!--------- NEXT ON THE SHOW SECTION STARTS ----------->
+    <section class="w-full flex flex-col py-6 md:py-10 space-y-4 bg-slate-900">
+        <section class="relative w-full flex justify-between font-nunito max-w-[333px] blogxmd:max-w-[690px] lg:max-w-[1047px] mx-auto">
+
+            <!-- Title -->
+            <h3 class="text-white text-2xl text-wrap font-bold md:text-3xl">Next On The Show</h3>
+
+            <!-- Carousel navigation buttons -->
+            <div class="flex relative w-[60px]">
+                <div class="next-on-the-show-swiper-button-prev swiper-button-prev !text-white"></div>
+                <div class="next-on-the-show-swiper-button-next swiper-button-next !text-white"></div>
+            </div>
+        </section>
+
+        <!-- Carousel -->
+        <div class="next-on-the-show-swiper w-full overflow-hidden max-w-[333px] mx-auto rounded-lg blogxmd:max-w-[690px] mt-10 lg:max-w-[1047px]">
+            
+            
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+                <!-- Video Slides -->
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="10th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: Next On The Show</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur quisquam officia dignissimos aliquid, sit laboriosam delectus unde porro recusandae, ullam mollitia sapiente culpa adipisci ipsum veritatis eligendi nesciunt, placeat dolores.</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="9th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock2.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: Next On The Show</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laudantium</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="8th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock3.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: Next On The Show</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, explicabo? Amet neque ullam tempora nihil qui! Temporibus!</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="7th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock4.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: Next On The Show</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ab doloribus! Architecto molestiae voluptates delectus pariatur at deserunt nostrum?</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="6th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: Next On The Show</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere aut nemo amet enim distinctio optio hic mollitia asperiores? Impedit quam asperiores alias!</div>
+                        </div>
+                    </div>
+                </a>
+
+
+            </div>
+        </div>
+    </section>
+    <!--------- NEXT ON THE SHOW SECTION ENDS ----------->
+
+
+
+    
+    <!--------- THE BIG SURPRISE SECTION STARTS ----------->
+    <section class="w-full flex flex-col py-6 md:py-10 space-y-4">
+        <section class="relative w-full flex justify-between font-nunito max-w-[333px] blogxmd:max-w-[690px] lg:max-w-[1047px] mx-auto">
+
+            <!-- Title -->
+            <h3 class="text-slate-900 text-2xl text-wrap font-bold md:text-3xl">The Big Surprise!</h3>
+
+            <!-- Carousel navigation buttons -->
+            <div class="flex relative w-[60px]">
+                <div class="swiper-button-prev the-big-surprise-swiper-button-prev !text-[#0f1729]"></div>
+                <div class="swiper-button-next the-big-surprise-swiper-button-next !text-[#0f1729]"></div>
+            </div>
+        </section>
+
+        <!-- Carousel -->
+        <div class="the-big-surprise-swiper w-full overflow-hidden max-w-[333px] mx-auto rounded-lg blogxmd:max-w-[690px] mt-10 lg:max-w-[1047px]">
+            
+            
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+                <!-- Video Slides -->
+                
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="10th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: The Big Surprise!</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus quos temporibus distinctio eius iste omnis amet consequatur veniam unde doloremque, ducimus quaerat animi?</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="9th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock2.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: The Big Surprise!</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate tempora vitae officia debitis omnis esse?</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="8th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock3.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: The Big Surprise!</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero dolorum sapiente aliquam natus praesentium, suscipit sequi aut delectus.</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="7th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock4.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: The Big Surprise!</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat laudantium minima nulla?</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="6th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: The Big Surprise!</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus quis assumenda</div>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!--------- THE BIG SURPRISE SECTION ENDS ----------->
+
+
+
+
+    <!--------- TODAY AT THE BIG HOUSE SECTION STARTS ----------->
+    <section class="w-full flex flex-col py-6 md:py-10 space-y-4 bg-slate-900">
+        <section class="relative w-full flex justify-between font-nunito max-w-[333px] blogxmd:max-w-[690px] lg:max-w-[1047px] mx-auto">
+
+            <!-- Title -->
+            <h3 class="text-white text-2xl text-wrap font-bold md:text-3xl">Today At The Big House</h3>
+
+            <!-- Carousel navigation buttons -->
+            <div class="flex relative w-[60px]">
+                <div class="today-at-big-house-swiper-button-prev swiper-button-prev !text-white"></div>
+                <div class="today-at-big-house-swiper-button-next swiper-button-next !text-white"></div>
+            </div>
+        </section>
+
+        <!-- Carousel -->
+        <div class="today-at-big-house-swiper w-full overflow-hidden max-w-[333px] mx-auto rounded-lg blogxmd:max-w-[690px] mt-10 lg:max-w-[1047px]">
+            
+            
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+                <!-- Video Slides -->
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="10th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: Today At The Big House</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur quisquam officia dignissimos aliquid, sit laboriosam delectus unde porro recusandae, ullam mollitia sapiente culpa adipisci ipsum veritatis eligendi nesciunt, placeat dolores.</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="9th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock2.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: Today At The Big House</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere laudantium</div>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="8th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock3.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: Today At The Big House</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Ut, explicabo? Amet neque ullam tempora nihil qui! Temporibus!</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="7th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock4.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: Today At The Big House</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, ab doloribus! Architecto molestiae voluptates delectus pariatur at deserunt nostrum?</div>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Individual video slide content -->
+                <a class="swiper-slide video-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group" iframe-src="https://www.youtube.com/embed/K2HAiebWTEk" video-date="6th March, 2024">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] h-[149px] other-info group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-4">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="video-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: Today At The Big House</div>
+
+                        <!-- Video Details -->
+                        <div class="flex space-x-1 items-center">
+                            <!-- <img src="./public/images/white-date-icon.svg" alt="#" class="h-3"> -->
+                            <div class="video-details font-semibold text-[0.84rem] line-clamp-3 overflow-hidden text-ellipsis">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere aut nemo amet enim distinctio optio hic mollitia asperiores? Impedit quam asperiores alias!</div>
+                        </div>
+                    </div>
+                </a>
+
+
+            </div>
+        </div>
+    </section>
+    <!--------- TODAY THE THE BIG SHOW SECTION ENDS ----------->
+
+
     
     <!---------  Footer ---------->
-    <footer class="w-full bg-slate-900 px-4 py-6 pb-28 font-nunito text-base md:px-[5%]">
+    <footer class="mt-10 w-full bg-slate-900 px-4 py-6 pb-28 font-nunito text-base md:px-[5%]">
 
         <!-- Everything except copyright -->
         <section class="w-full">
