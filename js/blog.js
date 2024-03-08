@@ -4,7 +4,7 @@ const headingBlogData =
         "href": "./blog/the-organisers-are-set-to-raise-100-partners.html",
         "alt": "The Organisers of Bible Stars are set to raise 100 Partners for Bible Stars Reality Show",
         "image": "./assets/blog/blog-1.jpg",
-        "title" : "Breaking News: The Organisers of Bible Stars are set to raise 100 Partners for Bible Stars Reality Show",
+        "title" : "BREAKING NEWS: The Organisers of Bible Stars are set to raise 100 Partners for Bible Stars Reality Show",
         "date": "7th March, 2024"
     }
 
@@ -32,7 +32,7 @@ const mainBlogJSON = [
         "href": "./blog/your-dream-reality-show-is-set-to-hit-your-screen.html",
         "alt": "Your Dream Reality Show is set to hit your screens",
         "image": "./assets/blog/blog-3.jpg",
-        "title": "Breaking News: Your Dream Reality Show is set to hit your screens – GET READY TO TUNE IN!",
+        "title": "BREAKING NEWS: Your Dream Reality Show is set to hit your screens – Get Ready to Tune in!",
         "date": "8th March, 2024"
     },
 ]
