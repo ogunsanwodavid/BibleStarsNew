@@ -29,88 +29,11 @@ headingBlogDate.innerHTML = headingBlogData.date
 const mainBlogJSON = [
     ////// ADD NEW CONTENTS FROM THE TOP PLEASE AND ADD NEW DIVS IN THE HTML FILE TO COMPLEMENT THE CHANGE
     {
-        "href": "#",
-        "alt": "some description",
-        "image": "./assets/home/stock2.jpg",
-        "title": "Blog Title 1 Here. Blog Title 1 Here.",
-        "date": "29th January, 2023"
-    },
-    {
-        "href": "#",
-        "alt": "some description",
-        "image": "./assets/home/stock3.jpg",
-        "title": "Blog Title 2 Here. Blog Title 2 Here.",
-        "date": "28th January, 2023"
-    },
-    {
-        "href": "#",
-        "alt": "some description",
-        "image": "./assets/home/stock4.jpg",
-        "title": "Blog Title 3 Here. Blog Title 3 Here.",
-        "date": "27th January, 2023"
-    },
-    {
-        "href": "#",
-        "alt": "some description",
-        "image": "./assets/home/stock1.jpg",
-        "title": "Blog Title 4 Here. Blog Title 4 Here.",
-        "date": "26th January, 2023"
-    },
-    {
-        "href": "#",
-        "alt": "some description",
-        "image": "./assets/home/stock2.jpg",
-        "title": "Blog Title 5 Here. Blog Title 5 Here.",
-        "date": "25th January, 2023"
-    },
-    {
-        "href": "#",
-        "alt": "some description",
-        "image": "./assets/home/stock3.jpg",
-        "title": "Blog Title 6 Here. Blog Title 6 Here.",
-        "date": "24th January, 2023"
-    },
-    {
-        "href": "#",
-        "alt": "some description",
-        "image": "./assets/home/stock4.jpg",
-        "title": "Blog Title 7 Here. Blog Title 7 Here.",
-        "date": "23th January, 2023"
-    },
-    {
-        "href": "#",
-        "alt": "some description",
-        "image": "./assets/home/stock1.jpg",
-        "title": "Blog Title 8 Here. Blog Title 8 Here.",
-        "date": "22nd January, 2023"
-    },
-    {
-        "href": "#",
-        "alt": "some description",
-        "image": "./assets/home/stock2.jpg",
-        "title": "Blog Title 9 Here. Blog Title 9 Here.",
-        "date": "21st January, 2023"
-    },
-    {
-        "href": "#",
-        "alt": "some description",
-        "image": "./assets/home/stock3.jpg",
-        "title": "Blog Title 10 Here. Blog Title 10 Here.",
-        "date": "20th January, 2023"
-    },
-    {
-        "href": "#",
-        "alt": "some description",
-        "image": "./assets/home/stock4.jpg",
-        "title": "Blog Title 11 Here. Blog Title 11 Here.",
-        "date": "19th January, 2023"
-    },
-    {
-        "href": "#",
-        "alt": "some description",
-        "image": "./assets/home/stock1.jpg",
-        "title": "Blog Title 12 Here. Blog Title 12 Here.",
-        "date": "18th January, 2023"
+        "href": "./blog/your-dream-reality-show-is-set-to-hit-your-screen.html",
+        "alt": "Your Dream Reality Show is set to hit your screens",
+        "image": "./assets/blog/blog-3.jpg",
+        "title": "Breaking News: Your Dream Reality Show is set to hit your screens – GET READY TO TUNE IN!",
+        "date": "8th March, 2024"
     },
 ]
 

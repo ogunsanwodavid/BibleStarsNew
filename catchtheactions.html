@@ -33,6 +33,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!---- Swiper js ---->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     
 
     <!--------------Added Styles------------>
@@ -63,13 +67,23 @@
         .move-right{
             transform: translateX(100px);
         }
+
+        .blog-content{
+            width: 100%;
+        }
+
+        :root{
+            --swiper-navigation-size: 25px;
+            --swiper-navigation-top-offset: 50%;
+            --swiper-navigation-sides-offset: 10px;
+        }
     </style>
 </head>
 
 <body class="relative">
     
     <!--Navbar is fixed to the top of the webpage-->
-    <nav class="fixed top-0 left-0 w-full flex items-center justify-between bg-slate-950 px-4 py-0 z-40 md:px-[5%]">
+    <nav class="fixed top-0 left-0 w-full flex items-center justify-between bg-slate-900 px-4 py-0 z-40 md:px-[5%]">
         <!--Logo-->
         <a href="index.html"><img src="./public/images/bible-stars-logo.png" alt="" class="h-20 md:h-24" ></a>
 
@@ -147,34 +161,603 @@
 
     <!---- Header ----->
     <header class="hidden w-full mt-[80px] px-5 pt-6 pb-3 font-nunito mx-auto md:mt-[96px] lg:px-0">
-        <h2 class="w-max text-slate-900 text-3xl font-bold mx-auto md:text-4xl lg:mx-0">Catch The Actions</h2>
+        <h2 class="w-max text-slate-900 text-3xl font-bold mx-auto md:text-4xl">Catch The Actions</h2>
     </header>
 
-    <!-- Video category selection -->
-    <section class="hidden relative w-full max-w-[600px] mx-auto cursor-pointer px-0" id="video-categories-nav">
-        <!-- <div class="absolute top-0 left-0 bg-light-orange h-full p-2 flex items-center justify-center"  id="previous-icon">
-            <img src="./public/images/previous-icon.svg" alt="" class="h-5">
-        </div> -->
+    <!--------- THE EXCLUSIVE HOUR SECTION STARTS ----------->
+    <section class="hidden w-full flex flex-col py-3 md:py-6 space-y-4 bg-slate-900">
+        <section class="relative w-full flex justify-between font-nunito max-w-[333px] blogxmd:max-w-[690px] lg:max-w-[1047px] mx-auto">
 
-        <main class="w-full flex space-x-2 overflow-hidden bg-slate-900 no-wrap whitespace-nowrap touch-none" id="video-categories-contents">
-            <div class="category-active uppercase p-3 text-white font-nunito">Category 1</div>
-            <div class="uppercase p-3 text-white font-nunito">Category 2</div>
-            <div class="uppercase p-3 text-white font-nunito">Category 3</div>
-            <div class="uppercase p-3 text-white font-nunito">Category 4</div>
-            <div class="uppercase p-3 text-white font-nunito">Category 5</div>
-            <div class="uppercase p-3 text-white font-nunito">Category 6</div>
-            <div class="uppercase p-3 text-white font-nunito">Category 7</div>
-        </main>
+            <!-- Title -->
+            <h3 class="text-white text-2xl text-wrap font-bold md:text-3xl">The Exclusive Hour</h3>
 
-        <!-- <div class="absolute top-0 right-0 bg-light-orange h-full p-2 flex items-center justify-center"  id="next-icon">
-            <img src="./public/images/next-icon.svg" alt="" class="h-5">
-        </div> -->
+            <!-- Carousel navigation buttons -->
+            <div class="flex relative w-[60px]">
+                <div class="exclusive-hour-swiper-button-prev swiper-button-prev !text-white"></div>
+                <div class="exclusive-hour-swiper-button-next swiper-button-next !text-white"></div>
+            </div>
+        </section>
 
+        <!-- Carousel -->
+        <div class="exclusive-hour-swiper w-full overflow-hidden max-w-[333px] mx-auto rounded-lg blogxmd:max-w-[690px] mt-10 lg:max-w-[1047px]">
+            
+            
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+                <!-- Video Slides -->
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: The Exclusive Hour</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock2.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: The Exclusive Hour</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock3.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: The Exclusive Hour</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock4.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: The Exclusive Hour</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: The Exclusive Hour</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
     </section>
+    <!--------- THE EXCLUSIVE HOUR SECTION ENDS ----------->
+    
+    <!--------- CATCH A GLIMPSE SECTION STARTS ----------->
+    <section class="hidden w-full flex flex-col py-3 md:py-6 space-y-4">
+        <section class="relative w-full flex justify-between font-nunito max-w-[333px] blogxmd:max-w-[690px] lg:max-w-[1047px] mx-auto">
 
+            <!-- Title -->
+            <h3 class="text-slate-900 text-2xl text-wrap font-bold md:text-3xl">Catch A Glimpse</h3>
+
+            <!-- Carousel navigation buttons -->
+            <div class="flex relative w-[60px]">
+                <div class="swiper-button-prev catch-a-glimpse-swiper-button-prev !text-[#0f1729]"></div>
+                <div class="swiper-button-next catch-a-glimpse-swiper-button-next !text-[#0f1729]"></div>
+            </div>
+        </section>
+
+        <!-- Carousel -->
+        <div class="catch-a-glimpse-swiper w-full overflow-hidden max-w-[333px] mx-auto rounded-lg blogxmd:max-w-[690px] mt-10 lg:max-w-[1047px]">
+            
+            
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+                <!-- Video Slides -->
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: Catch A Glimpse</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock2.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: Catch A Glimpse</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock3.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: Catch A Glimpse</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock4.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: Catch A Glimpse</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: Catch A Glimpse</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!--------- THE CATCH A GLIMPSE SECTION ENDS ----------->
+
+    <!--------- ON YOUR MANDATE SECTION STARTS ----------->
+    <section class="hidden w-full flex flex-col py-3 md:py-6 space-y-4 bg-slate-900">
+        <section class="relative w-full flex justify-between font-nunito max-w-[333px] blogxmd:max-w-[690px] lg:max-w-[1047px] mx-auto">
+
+            <!-- Title -->
+            <h3 class="text-white text-2xl text-wrap font-bold md:text-3xl">On Your Mandate</h3>
+
+            <!-- Carousel navigation buttons -->
+            <div class="flex relative w-[60px]">
+                <div class="on-your-mandate-swiper-button-prev swiper-button-prev !text-white"></div>
+                <div class="on-your-mandate-swiper-button-next swiper-button-next !text-white"></div>
+            </div>
+        </section>
+
+        <!-- Carousel -->
+        <div class="on-your-mandate-swiper w-full overflow-hidden max-w-[333px] mx-auto rounded-lg blogxmd:max-w-[690px] mt-10 lg:max-w-[1047px]">
+            
+            
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+                <!-- Video Slides -->
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: On Your Mandate</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock2.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: On Your Mandate</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock3.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: On Your Mandate</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock4.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: On Your Mandate</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+                
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 text-white bg-[rgba(255,255,255,0.2)] ease-linear duration-300 transition-[background-color] group-hover:bg-[rgba(255,255,255,0.3)]">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: On Your Mandate</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/white-date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!--------- ON YOUR MANDATE SECTION ENDS ----------->
+
+
+
+    <!--------- LIFE IN THE BIG HOUSE SECTION STARTS ----------->
+    <section class="hidden w-full flex flex-col py-3 md:py-6 space-y-4">
+        <section class="relative w-full flex justify-between font-nunito max-w-[333px] blogxmd:max-w-[690px] lg:max-w-[1047px] mx-auto">
+
+            <!-- Title -->
+            <h3 class="text-slate-900 text-2xl text-wrap font-bold md:text-3xl">Life in The Big House</h3>
+
+            <!-- Carousel navigation buttons -->
+            <div class="flex relative w-[60px]">
+                <div class="swiper-button-prev life-in-the-big-house-swiper-button-prev !text-[#0f1729]"></div>
+                <div class="swiper-button-next life-in-the-big-house-swiper-button-next !text-[#0f1729]"></div>
+            </div>
+        </section>
+
+        <!-- Carousel -->
+        <div class="life-in-the-big-house-swiper w-full overflow-hidden max-w-[333px] mx-auto rounded-lg blogxmd:max-w-[690px] mt-10 lg:max-w-[1047px]">
+            
+            
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+
+                <!-- Video Slides -->
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 5: Life in the Big House</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock2.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 4: Life in the Big House</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock3.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 3: Life in the Big House</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock4.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 2: Life in the Big House</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Individual video slide content -->
+                <a class="swiper-slide blog-content rounded-lg overflow-hidden font-nunito text-slate-900 max-w-[333px] max-h-[382px] blogxmd:mx-0 group">
+
+                    <!-- Video showcase image -->
+                    <img src="./assets/home/stock1.jpg" alt="" class="blog-image w-full h-[190px] object-cover" >
+
+                    <!-- Other info -->
+                    <div class="flex flex-col space-y-2 px-5 py-3 bg-[#f5f7fa] ease-linear duration-300 transition-[background-color] group-hover:bg-slate-200">
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/play-icon.svg" alt="#" class="h-5">
+                            <span class="font-semibold text-sm">Video</span>
+                        </div>
+
+                        <!-- Video Title -->
+                        <div class="blog-title font-bold text-lg line-clamp-2 overflow-hidden text-ellipsis blogxmd:line-clamp-1">Day 1: Life in the Big House</div>
+
+                        <!-- Video Date -->
+                        <div class="flex space-x-1 items-center">
+                            <img src="./public/images/date-icon.svg" alt="#" class="h-3">
+                            <span class="blog-date font-semibold text-[0.84rem]">Some date</span>
+                        </div>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+    </section>
+    <!--------- THE CATCH A GLIMPSE SECTION ENDS ----------->
     
     <!---------  Footer ---------->
-    <footer class="w-full bg-slate-950 px-4 py-6 pb-28 font-nunito text-base md:px-[5%]">
+    <footer class="w-full bg-slate-900 px-4 py-6 pb-28 font-nunito text-base md:px-[5%]">
 
         <!-- Everything except copyright -->
         <section class="w-full">

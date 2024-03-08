@@ -582,7 +582,7 @@
             <main class="w-full rounded-xl bg-[#f5f7fa] p-4 md:flex md:space-x-8">
                 <!--The large content div-->
                 <a href="./blog/the-organisers-are-set-to-raise-100-partners.html" class="w-full flex flex-col md:w-3/5">
-                    <img src="./assets/blog/blog-1.jpg" alt="#" class="rounded-lg md:h-[380px] md:rounded-xl">
+                    <img src="./assets/blog/blog-1.jpg" alt="#" class="rounded-lg object-cover md:h-[380px] md:rounded-xl">
 
                     <!--Its type and title-->
                     <div class="flex items-center space-x-4 py-2 font-nunito text-slate-900 text-lg font-bold md:text-xl">
@@ -591,15 +591,27 @@
                 </a>
 
                 <!-- Other contents -->
-                <div class="w-full flex flex-col space-y-4 h-[300px] mt-5 mr-4 overflow-y-auto overflow-x-hidden md:mt-0 md:mr-0 md:w-2/5 md:h-[380px] md:space-y-6" id="latest-con-slide">
-                    <!--Individual content div -->
-                    <a href="#" class="hidden w-full flex space-x-4">
-                        <img src="./assets/home/stock2.jpg" alt="#" class="h-[85px] w-[130px] rounded-md">
+                <div class="w-full flex flex-col space-y-4 max-h-[300px] mt-5 mr-4 overflow-y-auto overflow-x-hidden md:mt-0 md:mr-0 md:w-2/5 md:h-[380px] md:space-y-6" id="latest-con-slide">
+                    <!--Individual content div: TEMPLATE USE ONLY!!! IT IS HIDDEN!! -->
+                    <!-- <a href="#" class="hidden w-full space-x-4">
+                        <img src="./assets/home/stock2.jpg" alt="#" class="h-[85px] w-[130px] rounded-md object-cover"> -->
 
-                        <!-- Its type and title-->
+                        <!-- Its title and part of its content -->
+
+                       <!--  <div class="w flex flex-col justify-center font-nunito text-slate-900" style="width: calc(100% - 146px)">
+                            <h3 class="text-base font-bold overflow-hidden text-ellipsis text-nowrap">Some title is here</h3>
+                            <p class="w-full text-sm text-ellipsis font-raleway overflow-hidden whitespace-nowrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eos minima vel id error facilis sapiente ad accusamus eum deserunt.</p>
+                        </div>
+                    </a> -->
+
+                    <!--Individual content div -->
+                    <a href="./blog/your-dream-reality-show-is-set-to-hit-your-screen.html" class="w-full flex space-x-4">
+                        <img src="./assets/blog/blog-3.jpg" alt="#" class="h-[85px] w-[130px] rounded-md object-cover">
+
+                        <!-- Its title and part of its content-->
                         <div class="w flex flex-col justify-center font-nunito text-slate-900" style="width: calc(100% - 146px)">
-                            <h3 class="text-base font-bold text-ellipsis text-nowrap">Some title is here</h3>
-                            <p class="w-full text-sm text-ellipsis overflow-hidden whitespace-nowrap">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis eos minima vel id error facilis sapiente ad accusamus eum deserunt.</p>
+                            <h3 class="text-base font-bold line-clamp-2 overflow-hidden text-ellipsis">Breaking News: Your Dream Reality Show is set to hit your screens – GET READY TO TUNE IN!</h3>
+                            <p class="w-full text-sm text-ellipsis font-raleway overflow-hidden whitespace-nowrap">How many times have you said this to yourself: "I am bored! What can I watch that is not negatively addictive?"</p>
                         </div>
                     </a>
 
