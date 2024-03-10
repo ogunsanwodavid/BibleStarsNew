@@ -906,10 +906,6 @@ video {
   height: max-content;
 }
 
-.h-\[100vw\] {
-  height: 100vw;
-}
-
 .max-h-\[300px\] {
   max-height: 300px;
 }
