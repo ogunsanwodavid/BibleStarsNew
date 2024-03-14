@@ -2,7 +2,7 @@
 const colors = require('tailwindcss/colors')
 
 module.exports = {
-  content: ["./*.{html,js}", './blog/*.{html,js}', './stars/profiles/*.html' , './votenow/*.html'],
+  content: ["./*.{html,js}", './blog/*.{html,js}', './stars/profiles/*.html' , './votenow/*.html', './viewersprizeplay/*.html'],
   theme: {
     screens: {
       xsmd: "450px",

@@ -12,19 +12,19 @@
     <meta property="og:author" content="">
     <meta property="og:image" content="">
     <meta property="og:title" content="">
-    <link href="./public/images/bible-stars-logo.png" rel="shortcut icon" type="image/png">
-    <link href="./public/images/bible-stars-logo.png" rel="apple-touch-icon">
-    <link href="./public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="72x72">
-    <link href="./public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="../public/images/bible-stars-logo.png" rel="shortcut icon" type="image/png">
+    <link href="../public/images/bible-stars-logo.png" rel="apple-touch-icon">
+    <link href="../public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="114x114">
 
     <!-----------Title---------->
-    <title>Bible Stars TV Show : Viewers' Prize Play</title>
+    <title>Viewers' Prize Play: Enter Pin</title>
 
     <!------------Favicon------------->
-    <link rel="shortcut icon" href="./public/images/bible-stars-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../public/images/bible-stars-logo.png" type="image/x-icon">
 
     <!-------Linked stylesheets, fonts, icons and libraries------------>
-    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="../css/output.css">
 
     <!----------Fontawesome icons---------->
 
@@ -122,7 +122,6 @@
 
         .buttons{
             margin-top: 15px;
-            margin-bottom: 45px;
         }
 
         .page-btn{
@@ -135,6 +134,39 @@
             font-family: 'Raleway' , sans-serif;
             border-radius: 10px;
             margin-top: 10px;
+        }
+
+        form{
+            width: 100%;
+            margin-top: 15px;
+            margin-bottom: 50px;
+        }
+
+        .input-field{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 8px;
+        }
+
+        .input-field label{
+            font-family: 'Nunito', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .input-field input{
+            width: 100%;
+            height: 1.8rem;
+            padding:0.5rem;
+            border: 2px solid #0f1729;
+            border-radius: 0.4rem;
+        }
+
+        .error-msg{
+            display: none;
+            font-size: 0.8rem;
+            color: hsl(0,100%,66%);
         }
 
         @media (min-width: 450px) {
@@ -155,6 +187,14 @@
                 font-size: 1.2rem
             }
 
+            .input-field label{
+                font-size: 1.2rem;
+            }
+
+            .input-field input{
+                height: 2rem;
+            }
+
             .page-btn{
                 height: 50px;
                 font-size: 1.1rem;
@@ -164,35 +204,80 @@
 </head>
 
 <body class="relative">
-    <!-- Site under construction -->
-    <!----- TEMPORARY ---->
-    <section class="hidden w-full px-4 py-10 mt-[80px] md:mt-[96px]">
-        <img src="./public/images/construction-icon.svg" alt="" class="h-52 mx-auto md:h-64">
-        <div class="text-slate-900 text-center text-3xl font-bold font-raleway md:text-5xl">Page Under Construction</div>
-    </section>
-
     <!-- Desktop background video -->
     <video muted loop autoplay id="bg-video-desktop">
-        <source src="./assets/viewersprizeplay/bg-video-desktop.mp4">
+        <source src="../assets/viewersprizeplay/bg-video-desktop.mp4">
     </video>
 
     <!-- Mobile background video -->
     <video muted loop autoplay id="bg-video-mobile">
-        <source src="./assets/viewersprizeplay/bg-video-mobile.mp4">
+        <source src="../assets/viewersprizeplay/bg-video-mobile.mp4">
     </video>
 
     <!-- Page main content -->
     <main class="main-content">
-        <h2>Welcome to Bible Stars Viewers Prize Play</h2>
+        <h2>Enter PIN</h2>
 
-        <h3>To participate in our quiz competition, you'll need to obtain a one-time PIN. Each PIN costs ₦200 and grants you access to one quiz session. Click "Obtain PIN" below to get one or "Enter PIN" if you have purchased one.</h3>
+        <h3>Enter your one-time PIN below to unlock access to our exciting quizzes!</h3>
 
-        <!-- Buttons -->
-        <div class="buttons">
-            <a href="./viewersprizeplay/obtain-pin.html"><button class="page-btn">OBTAIN PIN</button></a>
+        <!------ Form ------>
+        <form action="">
 
-            <a href="./viewersprizeplay/enter-pin.html"><button class="page-btn">ENTER PIN</button></a>
-        </div>
+            <!-- PIN input -->
+            <div class="input-field">
+                <label for="pin" class="">PIN</label>
+                <input type="text" name="pin" class="" oninput="this.value = this.value.replace(/\D/g, '')" required id="pin">
 
+                <!-- Error message for phone-number input-->
+                <div class="error-msg" id="pin-error">Field is required</div>
+            </div>
+
+            <!-- Start Quiz Button -->
+            <button class="page-btn" onclick="validateVote(event)">Start Quiz</button>
+        </form>
     </main>
+
+    <!-------- Script for form -------->
+    <script>
+        const pin = document.getElementById("pin")
+        const pinError = document.getElementById("pin-error")
+
+        //This redos all error styles if input is not empty
+        pin.addEventListener("input" , ()=> {
+            if(pin.value !== ""){
+                pinError.style.display = "none"
+                pin.style.borderColor = "#0f1729"
+            }
+        })
+
+        function validateVote(event) {
+            let k = 1;
+            
+            //Prevent default
+            event.preventDefault();
+
+            //Prevent empty phone number
+            if(pin.value.trim() === ""){
+                pinError.style.display = "block"
+                pin.style.borderColor = "hsl(0, 100%, 66%)"
+                k -= 1;
+            }else{
+                pinError.style.display = "none"
+                pin.style.borderColor = "#0f1729"
+            }
+
+            /***************** BACK END DEV TO ADD CODE FOR START QUIZ FUNCTION ****************/
+            function startQuiz() {
+                
+            }
+
+            /**** Proceeds to payment if every condition is met */
+            if (k == 1){
+                startQuiz()
+            }else{
+                return
+            }
+        }
+
+    </script>
 </body>

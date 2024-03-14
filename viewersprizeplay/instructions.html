@@ -12,19 +12,19 @@
     <meta property="og:author" content="">
     <meta property="og:image" content="">
     <meta property="og:title" content="">
-    <link href="./public/images/bible-stars-logo.png" rel="shortcut icon" type="image/png">
-    <link href="./public/images/bible-stars-logo.png" rel="apple-touch-icon">
-    <link href="./public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="72x72">
-    <link href="./public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="114x114">
+    <link href="../public/images/bible-stars-logo.png" rel="shortcut icon" type="image/png">
+    <link href="../public/images/bible-stars-logo.png" rel="apple-touch-icon">
+    <link href="../public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="72x72">
+    <link href="../public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="114x114">
 
     <!-----------Title---------->
-    <title>Bible Stars TV Show : Viewers' Prize Play</title>
+    <title>Viewers' Prize Play: Instructions</title>
 
     <!------------Favicon------------->
-    <link rel="shortcut icon" href="./public/images/bible-stars-logo.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../public/images/bible-stars-logo.png" type="image/x-icon">
 
     <!-------Linked stylesheets, fonts, icons and libraries------------>
-    <link rel="stylesheet" href="./css/output.css">
+    <link rel="stylesheet" href="../css/output.css">
 
     <!----------Fontawesome icons---------->
 
@@ -82,7 +82,7 @@
             left: 50%;
             overflow-y: scroll;
             height: 400px;
-            max-width: 500px;
+            max-width: 600px;
             margin-top: 230px;
             transform: translateX(-50%);
             padding: 0 20px 30px 20px;
@@ -120,9 +120,31 @@
             margin-top: 10px;
         }
 
-        .buttons{
-            margin-top: 15px;
-            margin-bottom: 45px;
+        .main-content .instructions{
+            width: 100%;
+            background-color: rgba(255,255,255,0.5);
+            text-align: center;
+            color: #0f1729;
+            padding: 20px 50px 20px 50px;
+            border-radius: 10px;
+            margin-top: 20px;
+            margin-bottom: 50px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .instructions h3{
+            font-size: 1.2rem;
+            font-weight: 600;
+            font-family: 'Nunito' , sans-serif;
+            margin-top: 0;
+        }
+
+        .instructions p{
+            font-size: 1rem;
+            font-weight: 600;
+            font-family: 'Nunito' , sans-serif;
+            margin: 5px 0;
         }
 
         .page-btn{
@@ -137,6 +159,7 @@
             margin-top: 10px;
         }
 
+        
         @media (min-width: 450px) {
             #bg-video-desktop{
                 display: block;
@@ -147,12 +170,20 @@
             }
 
             .main-content h2{
-                font-size: 1.8rem;
+                font-size: 2rem;
                 line-height: 2rem;
             }
 
             .main-content h3{
                 font-size: 1.2rem
+            }
+
+            .instructions h3{
+                font-size: 1.3rem;
+            }
+
+            .instructions p{
+                font-size: 1.1rem;
             }
 
             .page-btn{
@@ -164,35 +195,37 @@
 </head>
 
 <body class="relative">
-    <!-- Site under construction -->
-    <!----- TEMPORARY ---->
-    <section class="hidden w-full px-4 py-10 mt-[80px] md:mt-[96px]">
-        <img src="./public/images/construction-icon.svg" alt="" class="h-52 mx-auto md:h-64">
-        <div class="text-slate-900 text-center text-3xl font-bold font-raleway md:text-5xl">Page Under Construction</div>
-    </section>
-
     <!-- Desktop background video -->
     <video muted loop autoplay id="bg-video-desktop">
-        <source src="./assets/viewersprizeplay/bg-video-desktop.mp4">
+        <source src="../assets/viewersprizeplay/bg-video-desktop.mp4">
     </video>
 
     <!-- Mobile background video -->
     <video muted loop autoplay id="bg-video-mobile">
-        <source src="./assets/viewersprizeplay/bg-video-mobile.mp4">
+        <source src="../assets/viewersprizeplay/bg-video-mobile.mp4">
     </video>
 
     <!-- Page main content -->
     <main class="main-content">
-        <h2>Welcome to Bible Stars Viewers Prize Play</h2>
 
-        <h3>To participate in our quiz competition, you'll need to obtain a one-time PIN. Each PIN costs ₦200 and grants you access to one quiz session. Click "Obtain PIN" below to get one or "Enter PIN" if you have purchased one.</h3>
+        <h2>Welcome to where it is more than a show</h2>
 
-        <!-- Buttons -->
-        <div class="buttons">
-            <a href="./viewersprizeplay/obtain-pin.html"><button class="page-btn">OBTAIN PIN</button></a>
+        <div class="instructions">
 
-            <a href="./viewersprizeplay/enter-pin.html"><button class="page-btn">ENTER PIN</button></a>
+            <!-- Name on sign up will be loaded here -->
+            <h3>Welcome Firstname Lastname!</h3>
+
+            <p>This quiz is a five step drill.</p>
+
+            <p>Each step slide contains one question and three answer options (one correct and two wrong)</p>
+
+            <p>You are expected to click on any option you think is the right answer to each slide</p>
+            
+            <p>You have 1 minute (60 seconds) to attempt all the questions and if you correctly answer the 5 questions in that time frame, you will get a special number to partake in a raffle draw.</p>
+
+            <p>Don't forget to click on "Next" to proceed to the next slide and "Submit" to round up.</p>
+
+            <a href="../viewersprizeplay/quiz.html"><button class="page-btn">Click here to start</button></a>
         </div>
-
     </main>
 </body>
