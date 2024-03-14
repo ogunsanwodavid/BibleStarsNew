@@ -165,6 +165,75 @@
             background-color: #0f1729;
             z-index: -10;
         }
+
+        .option-field{
+            display: flex;
+            position: relative;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            width: 85%;
+            height: 35px;
+            font-family: 'Raleway' , sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #0f1729;
+            border: 2px solid #0f1729;
+            border-radius: 9999px;
+            margin: 3px auto;
+            background-color: rgba(255,255,255,0.5);
+        }
+
+        .field-active{
+            background-color: rgba(142, 31, 61, 1.0);
+        }
+
+        .option-field .line-1{
+            position: absolute;
+            left:0;
+            transform: translate(-100%);
+            width: 8.8235%;
+            height: 2px;
+            background-color: #0f1729;
+            z-index: -10;
+        }
+
+        .option-field .line-2{
+            position: absolute;
+            right:0;
+            transform: translate(100%);
+            width: 8.8235%;
+            height: 2px;
+            background-color: #0f1729;
+            z-index: -10;
+        }
+
+        /* .option-field .option-radio::before{
+            position: absolute;
+            top:0;
+            left:0;
+            appearance: none;
+            width: 100%;
+            height: 100%;
+            border-radius: 9999px;
+            z-index: -10;
+            background-color: rgba(142, 31, 61, 1.0);
+        }
+
+        .option-field .option-radio:checked::before{
+            content: '';
+        } */
+
+        .option-radio{
+            position: absolute;
+            appearance: none;
+            top:0;
+            left:0;
+            width: 100%;
+            height: 100%;
+            border-radius: 9999px;
+            z-index: 20;
+        }
         
 
         .page-btn{
@@ -233,14 +302,42 @@
 
         <!--- Options --->
         <div class="options">
-            <div class="option-btn">Numbers</div>
+            <!-- <div class="option-btn">Numbers</div>
             <div class="option-btn">Nahum</div>
             <div class="option-btn">Mark</div>
-            <div class="option-btn">Ezra</div>
+            <div class="option-btn">Ezra</div> -->
+            
+            <div class="option-field">
+                <input type="radio" id="" name="options" value="option-1" class="option-radio">
+                <label for="option-1">Numbers</label>
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+            </div>
+
+            <div class="option-field">
+                <input type="radio" id="" name="options" value="option-2" class="option-radio">
+                <label for="option-2">Nahum</label>
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+            </div>
+
+            <div class="option-field">
+                <input type="radio" id="" name="options" value="option-3" class="option-radio"> 
+                <label for="option-3">Mark</label>
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+            </div>
+
+            <div class="option-field">
+                <input type="radio" id="" name="options" value="option-4" class="option-radio"> 
+                <label for="option-4">Ezra</label>
+                <div class="line-1"></div>
+                <div class="line-2"></div>
+            </div>
         </div>
 
         <!-- Next Button -->
-        <button class="next-btn">Next</button>
+        <button class="next-btn" id="next-btn">Next</button>
     </main>
 
     <script>
@@ -294,6 +391,45 @@
         //     clearInterval(intervalId);
         // }, 60000); // Stop after 1 minute (adjust as needed)
 
+
+        const optionFields = document.querySelectorAll(".option-field")
+        const optionRadios = document.querySelectorAll(".option-field .option-radio")
+        const radioLabels = document.querySelectorAll(".option-field label")
+        const nextButton = document.getElementById("next-btn")
         
+        //This block handles the styling of the option fields onclick
+        for (let i = 0; i < optionRadios.length; i++) {
+            optionRadios[i].addEventListener("click" , ()=> {
+                if(!optionFields[i].classList.contains("field-active")){
+                    radioLabels[i].style.color = "#fff"
+                    console.log(`radio ${i} is checked`)
+                    optionFields[i].classList.add("field-active")
+
+                    for (let k = 0; k < optionFields.length; k++) {
+                        if (k != i){
+                            radioLabels[k].style.color = "#0f1729"
+                            optionFields[k].classList.remove("field-active")
+                        }
+                    }
+                }
+            })
+        }
+
+        //Ensures user selects an option before next question
+        nextButton.addEventListener("click" , ()=> {
+            a = 0;
+
+            for (let i = 0; i < optionFields.length; i++) {
+                if(optionFields[i].classList.contains("field-active")){
+                    a++
+                }
+            }
+
+            console.log(a)
+
+            if(a == 0){
+                alert("You are expected to select an option")
+            }
+        })
     </script>
 </body>
