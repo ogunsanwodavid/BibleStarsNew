@@ -18,7 +18,7 @@
     <link href="../public/images/bible-stars-logo.png" rel="apple-touch-icon" sizes="114x114">
 
     <!-----------Title---------->
-    <title>Bible Stars TV Show : Results</title>
+    <title>Bible Stars TV Show : Failed to Complete Quiz</title>
 
     <!------------Favicon------------->
     <link rel="shortcut icon" href="../public/images/bible-stars-logo.png" type="image/x-icon">
@@ -77,15 +77,17 @@
         }
 
         .main-content{
-            width: 100%;
+            width: calc(100% - 20px);
             position: fixed;
             left: 50%;
             overflow-y: scroll;
-            height: 400px;
+            height: 300px;
             max-width: 500px;
-            margin-top: 230px;
+            margin: 230px auto 10px auto;
             transform: translateX(-50%);
-            padding: 0 20px 30px 20px;
+            padding: 15px 20px 30px 20px;
+            border-radius: 15px;
+            background-color: rgba(255,255,255,0.8);
         }
 
         .main-content::-webkit-scrollbar {
@@ -166,23 +168,23 @@
 <body class="relative">
     <!-- Desktop background video -->
     <video muted loop autoplay id="bg-video-desktop">
-        <source src="../assets/viewersprizeplay/results-bg-video-desktop.mp4">
+        <source src="../assets/viewersprizeplay/failed-bg-video-desktop.mp4">
     </video>
 
     <!-- Mobile background video -->
     <video muted loop autoplay id="bg-video-mobile">
-        <source src="../assets/viewersprizeplay/results-bg-video-mobile.mp4">
+        <source src="../assets/viewersprizeplay/failed-bg-video-mobile.mp4">
     </video>
 
     <!-- Page main content -->
     <main class="main-content">
-        <h2>Thanks for participating in the Bible Stars Viewers Prize Play!</h2>
+        <h2>Let's Get You Back on Track!</h2>
 
-        <h3>You have successfully answered all your questions and a special number has been forwarded to you to partake in the raffle draw. We do hope to have you attempt our quizzes more times.</h3>
+        <h3>It seems that you may have selected the wrong answer or your time is up during the quiz, leading to a pause in your progress. No worries! Everyone makes mistakes, click below to obtain another PIN and stand a chance to partake in the raffle draw.</h3>
 
         <!-- Buttons -->
         <div class="buttons">
-            <a href="../viewersprizeplay.html"><button class="page-btn">BACK TO HOME</button></a>
+            <a href="./obtain-pin.html"><button class="page-btn">OBTAIN PIN</button></a>
         </div>
 
     </main>
