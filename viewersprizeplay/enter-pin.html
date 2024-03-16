@@ -218,7 +218,7 @@
     <main class="main-content">
         <h2>Enter PIN</h2>
 
-        <h3>Enter your one-time PIN below to unlock access to our exciting quizzes!</h3>
+        <h3>Enter your one-time PIN below to unlock access to our Viewers Prize Play</h3>
 
         <!------ Form ------>
         <form action="">
@@ -233,11 +233,11 @@
             </div>
 
             <!-- Start Quiz Button -->
-            <button class="page-btn" onclick="validateVote(event)">Start Quiz</button>
+            <button class="page-btn" onclick="validateForm(event)">Start Quiz</button>
         </form>
     </main>
 
-    <!-------- Script for form -------->
+    <!-------- Script for form client-side verification -------->
     <script>
         const pin = document.getElementById("pin")
         const pinError = document.getElementById("pin-error")
@@ -250,7 +250,8 @@
             }
         })
 
-        function validateVote(event) {
+        //validate form
+        function validateForm(event) {
             let k = 1;
             
             //Prevent default
@@ -271,7 +272,7 @@
                 
             }
 
-            /**** Proceeds to payment if every condition is met */
+            /**** Starts quiz if every condition is met */
             if (k == 1){
                 startQuiz()
             }else{

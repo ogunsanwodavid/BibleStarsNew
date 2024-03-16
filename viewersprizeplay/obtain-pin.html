@@ -218,7 +218,7 @@
     <main class="main-content">
         <h2>Obtain PIN</h2>
 
-        <h3>Are you ready to put your knowledge to the test and compete in our exciting quiz challenges? Get started by registering below and obtaining your one-time PIN to unlock access to our quizzes!</h3>
+        <h3>Are you ready to put your knowledge to the test and compete in our exciting challenges? Get started by registering below and obtain your one-time PIN to unlock access to our Viewers Prize Play!</h3>
 
         <!------ Form ------>
         <form action="">
@@ -250,7 +250,7 @@
             </div>
 
             <!-- Proceed to Payment -->
-            <button class="page-btn" onclick="validateVote(event)">Proceed to Payment</button>
+            <button class="page-btn" onclick="validateForm(event)">Proceed to Payment</button>
         </form>
     </main>
 
@@ -288,7 +288,9 @@
             }
         })
 
-        function validateVote(event) {
+
+        //validates form
+        function validateForm(event) {
             let k = 4;
             
             //Prevent default
