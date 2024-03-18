@@ -194,7 +194,7 @@ function validateVote(event) {
 
 ////// BACKEND DEV SHOULD ADD CODE FOR PROCEEDING TO PAYMENT FUNCTION 
 function proceedPayment() {
-  window.alert("proceeded to payment")
+  alert("proceeded to payment")
 }
 
  /************************** This script for the PERMANENT voting functionality ****************************************/
